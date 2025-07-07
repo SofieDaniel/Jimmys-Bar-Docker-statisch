@@ -1,0 +1,231 @@
+/* Standorte Page Styles */
+
+.locations-page {
+    background: linear-gradient(145deg, 
+        #2D1F1A 0%,   /* Dark Brown */
+        #3D2B1F 30%,  /* Medium Brown */
+        #2D1F1A 60%,  /* Dark Brown */
+        #3D2B1F 100%  /* Medium Brown */
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Locations Section */
+.locations-section {
+    padding: 4rem 0;
+    background: var(--medium-brown);
+}
+
+.locations-grid {
+    display: grid;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Location Cards */
+.location-card {
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid var(--warm-brown);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.location-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.location-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover .location-img {
+    transform: scale(1.05);
+}
+
+.location-content {
+    padding: 2rem;
+}
+
+.location-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--warm-beige);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.location-address {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.location-address p {
+    color: var(--light-beige);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.location-address strong {
+    color: var(--warm-beige);
+    font-size: 1.25rem;
+}
+
+/* Location Details */
+.location-details {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .location-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.detail-item {
+    background: var(--medium-brown);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--warm-brown);
+}
+
+.detail-item h3 {
+    color: var(--warm-beige);
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detail-item p,
+.detail-item a {
+    color: var(--light-beige);
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.detail-item a:hover {
+    color: var(--warm-beige);
+}
+
+.opening-hours p {
+    margin-bottom: 0.25rem;
+}
+
+.opening-hours strong {
+    color: var(--warm-beige);
+}
+
+.opening-hours em {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+}
+
+/* Location Actions */
+.location-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .location-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Additional Info Section */
+.additional-info {
+    padding: 4rem 0;
+    background: var(--dark-brown);
+}
+
+.info-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .info-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.info-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--medium-brown);
+    border-radius: 0.5rem;
+    border: 1px solid var(--warm-brown);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.info-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--warm-beige);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-description {
+    color: var(--light-beige);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .location-name {
+        font-size: 1.5rem;
+    }
+    
+    .location-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-actions {
+        flex-direction: column;
+    }
+}
