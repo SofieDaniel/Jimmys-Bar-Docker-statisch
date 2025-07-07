@@ -1,0 +1,292 @@
+/* Kontakt Page Styles - PROFESSIONELL */
+
+.contact-page {
+    background: linear-gradient(145deg, 
+        #2D1F1A 0%,   /* Dark Brown */
+        #3D2B1F 30%,  /* Medium Brown */
+        #2D1F1A 60%,  /* Dark Brown */
+        #3D2B1F 100%  /* Medium Brown */
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Contact Info Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
+.contact-info-section {
+    padding: 4rem 0;
+    background: var(--medium-brown);
+}
+
+.contact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    color: var(--warm-beige);
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-info-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact-location {
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+    border-radius: 8px; /* Weniger rund = professioneller */
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-location:hover {
+    transform: translateY(-4px); /* Weniger Animation = professioneller */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: #F5E6D3;
+}
+
+.location-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--warm-beige);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--light-beige);
+    font-size: 0.95rem;
+}
+
+.contact-detail:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    font-size: 1.25rem;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-link {
+    color: #4285F4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #3367D6;
+    text-decoration: underline;
+}
+
+/* Contact Form Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
+.contact-form-section {
+    padding: 4rem 0;
+    background: var(--dark-brown);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+    border-radius: 8px; /* Weniger rund = professioneller */
+    padding: 3rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--warm-beige);
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+/* Form Elements - PROFESSIONELL GESTYLT */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    color: var(--warm-beige);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(245, 230, 211, 0.1);
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+    border-radius: 4px; /* Weniger rund = professioneller */
+    color: var(--light-beige);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #F5E6D3;
+    background: rgba(245, 230, 211, 0.15);
+    box-shadow: 0 0 0 3px rgba(245, 230, 211, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(245, 230, 211, 0.6);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Checkbox Styling - PROFESSIONELL */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.form-checkbox {
+    margin-top: 0.25rem;
+    accent-color: #FFFFFF;
+}
+
+.checkbox-label {
+    color: var(--light-beige);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* Submit Button - PROFESSIONELL MIT WEISSEM DESIGN */
+.submit-button {
+    width: 100%;
+    background: #FFFFFF; /* Weißer Hintergrund */
+    color: #2D1F1A; /* Dunkle Schrift */
+    border: 2px solid #FFFFFF; /* Weiße Umrandung */
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background: #F5E6D3; /* Hover: Beige */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Required Field Indicator */
+.required {
+    color: #ff6b6b;
+    margin-left: 0.25rem;
+}
+
+.form-note {
+    color: var(--light-beige);
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+/* Quick Contact Section - PROFESSIONELL */
+.quick-contact-section {
+    padding: 3rem 0;
+    background: var(--medium-brown);
+    text-align: center;
+}
+
+.quick-contact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--warm-beige);
+    margin-bottom: 2rem;
+}
+
+.quick-contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-contact-btn {
+    background: #FFFFFF; /* Weißer Hintergrund */
+    color: #2D1F1A; /* Dunkle Schrift */
+    border: 2px solid #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quick-contact-btn:hover {
+    background: #F5E6D3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        margin: 0 1rem;
+    }
+    
+    .form-container {
+        margin: 0 1rem;
+        padding: 2rem;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    .quick-contact-buttons {
+        flex-direction: column;
+        align-items: center;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .quick-contact-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
