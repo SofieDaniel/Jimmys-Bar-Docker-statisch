@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über uns - Jimmy's Tapas Bar</title>
-    <meta name="description" content="Erfahren Sie mehr über die Geschichte von Jimmy's Tapas Bar und unsere Leidenschaft für authentische spanische Küche">
+    <meta name="description" content="Erfahren Sie mehr über Jimmy's Tapas Bar - authentische spanische Küche an der Ostsee seit 2018.">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,165 +12,232 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/ueber-uns.css">
+    
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 </head>
 <body class="about-page">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Lade Seite...</p>
+    </div>
+
     <!-- Fixed Navigation Header -->
     <header class="fixed-header">
-        <nav class="nav-container">
-            <div class="nav-content">
-                <div class="nav-logo">
-                    <a href="../index.html" class="logo-link">
-                        <span class="logo-text">JIMMY'S</span>
-                        <span class="logo-subtext">TAPAS BAR</span>
-                    </a>
-                </div>
-                
-                <div class="nav-menu desktop-menu">
-                    <a href="../index.html" class="nav-link">Startseite</a>
-                    <a href="standorte.html" class="nav-link">Standorte</a>
-                    <a href="speisekarte.html" class="nav-link">Speisekarte</a>
-                    <a href="bewertungen.html" class="nav-link">Bewertungen</a>
-                    <a href="ueber-uns.html" class="nav-link active">Über uns</a>
-                    <a href="kontakt.html" class="nav-link">Kontakt</a>
-                </div>
-                
-                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menü öffnen">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <span class="logo-text">Jimmy's Tapas Bar</span>
+                </a>
             </div>
             
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="../index.html" class="mobile-nav-link">Startseite</a>
-                <a href="standorte.html" class="mobile-nav-link">Standorte</a>
-                <a href="speisekarte.html" class="mobile-nav-link">Speisekarte</a>
-                <a href="bewertungen.html" class="mobile-nav-link">Bewertungen</a>
-                <a href="ueber-uns.html" class="mobile-nav-link active">Über uns</a>
-                <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
-            </div>
-        </nav>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Startseite</a></li>
+                    <li><a href="speisekarte.html" class="nav-link">Speisekarte</a></li>
+                    <li><a href="standorte.html" class="nav-link">Standorte</a></li>
+                    <li><a href="bewertungen.html" class="nav-link">Bewertungen</a></li>
+                    <li><a href="ueber-uns.html" class="nav-link active">Über uns</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <main id="main-content" class="about-page">
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">Über uns</h1>
-                <p class="page-subtitle">Die Geschichte von Jimmy's Tapas Bar</p>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Über Jimmy's Tapas Bar</h1>
+                <p class="hero-subtitle">Authentische spanische Küche an der Ostsee</p>
             </div>
         </section>
 
-        <section class="about-story">
+        <!-- Story Section -->
+        <section class="story-section">
             <div class="container">
                 <div class="story-content">
-                    <h2 class="section-title">Unsere Geschichte</h2>
-                    <p class="story-text">
-                        Jimmy's Tapas Bar entstand aus der Leidenschaft für authentische spanische Küche und der Liebe zur Ostsee. 
-                        Unser Gründer Jimmy verbrachte viele Jahre in Spanien und brachte die traditionellen Rezepte und die 
-                        entspannte mediterrane Lebensart nach Schleswig-Holstein.
-                    </p>
-                    <p class="story-text">
-                        Seit 2018 verwöhnen wir unsere Gäste mit original spanischen Tapas, frischen Meeresfrüchten und 
-                        der besten Paella nördlich von Barcelona - und das alles mit dem einzigartigen Ostsee-Ambiente.
-                    </p>
+                    <h2 class="story-title">Unsere Geschichte</h2>
+                    <div class="story-text">
+                        <p>
+                            Jimmy's Tapas Bar wurde 2018 mit einer Vision gegründet: Die authentische spanische Küche und mediterrane Lebensart nach Schleswig-Holstein zu bringen. Was als kleiner Traum begann, hat sich zu zwei erfolgreichen Standorten an der Ostsee entwickelt.
+                        </p>
+                        <p>
+                            Unser Gründer Jimmy Rodriguez bringt über 15 Jahre Erfahrung in der spanischen Gastronomie mit und arbeitet ausschließlich mit original spanischen Rezepten und hochwertigen Zutaten. Jedes Gericht wird mit Leidenschaft und Respekt vor der Tradition zubereitet.
+                        </p>
+                        <p>
+                            Heute verwöhnen wir unsere Gäste in Neustadt in Holstein und Großenbrode mit der besten Paella nördlich von Barcelona, frischen Meeresfrüchten und einer großen Auswahl an authentischen Tapas.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Team Section -->
         <section class="team-section">
             <div class="container">
                 <h2 class="section-title">Unser Team</h2>
                 <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-avatar">👨‍🍳</div>
-                        <h3 class="member-name">Jimmy Rodriguez</h3>
-                        <p class="member-role">Inhaber & Küchenchef</p>
-                        <p class="member-description">15 Jahre Erfahrung in der spanischen Gastronomie</p>
+                    <div class="team-card">
+                        <div class="team-member-image">
+                            <div class="member-initials">JR</div>
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="member-name">Jimmy Rodriguez</h3>
+                            <p class="member-role">Inhaber & Küchenchef</p>
+                            <p class="member-description">
+                                15 Jahre Erfahrung in der spanischen Gastronomie. Spezialist für traditionelle Paellas und regionale Spezialitäten aus ganz Spanien.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div class="team-member">
-                        <div class="member-avatar">👩‍💼</div>
-                        <h3 class="member-name">Maria Schmidt</h3>
-                        <p class="member-role">Geschäftsführerin</p>
-                        <p class="member-description">Sorgt für den reibungslosen Ablauf in beiden Standorten</p>
+                    <div class="team-card">
+                        <div class="team-member-image">
+                            <div class="member-initials">MS</div>
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="member-name">Maria Schmidt</h3>
+                            <p class="member-role">Geschäftsführerin</p>
+                            <p class="member-description">
+                                Verantwortlich für den reibungslosen Ablauf in beiden Standorten. Spezialistin für Gästebetreuung und Eventplanung.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div class="team-member">
-                        <div class="member-avatar">👨‍🍳</div>
-                        <h3 class="member-name">Carlos Mendez</h3>
-                        <p class="member-role">Sous Chef</p>
-                        <p class="member-description">Spezialist für Paellas und Meeresfrüchte</p>
+                    <div class="team-card">
+                        <div class="team-member-image">
+                            <div class="member-initials">CM</div>
+                        </div>
+                        <div class="team-member-info">
+                            <h3 class="member-name">Carlos Mendez</h3>
+                            <p class="member-role">Sous Chef</p>
+                            <p class="member-description">
+                                Experte für Meeresfrüchte und Fischgerichte. Sorgt für die gleichbleibend hohe Qualität unserer Speisen.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Values Section -->
         <section class="values-section">
             <div class="container">
-                <h2 class="section-title">Unsere Werte</h2>
+                <h2 class="section-title">Unsere Philosophie</h2>
                 <div class="values-grid">
                     <div class="value-card">
-                        <div class="value-icon">🥘</div>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
                         <h3 class="value-title">Authentizität</h3>
-                        <p class="value-description">Originalrezepte aus den verschiedenen Regionen Spaniens</p>
+                        <p class="value-description">
+                            Originalrezepte aus den verschiedenen Regionen Spaniens, zubereitet mit traditionellen Methoden und hochwertigen Zutaten.
+                        </p>
                     </div>
                     
                     <div class="value-card">
-                        <div class="value-icon">🌊</div>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </div>
                         <h3 class="value-title">Frische</h3>
-                        <p class="value-description">Täglich frische Zutaten aus der Region und dem Mittelmeer</p>
+                        <p class="value-description">
+                            Täglich frische Zutaten von lokalen Lieferanten und direkt aus Spanien importierte Spezialitäten für authentischen Geschmack.
+                        </p>
                     </div>
                     
                     <div class="value-card">
-                        <div class="value-icon">❤️</div>
-                        <h3 class="value-title">Herzlichkeit</h3>
-                        <p class="value-description">Spanische Gastfreundschaft an der Ostsee</p>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Gastfreundschaft</h3>
+                        <p class="value-description">
+                            Spanische Herzlichkeit und professioneller Service schaffen eine warme, einladende Atmosphäre für alle Gäste.
+                        </p>
                     </div>
                     
                     <div class="value-card">
-                        <div class="value-icon">🌍</div>
-                        <h3 class="value-title">Nachhaltigkeit</h3>
-                        <p class="value-description">Regionale Lieferanten und umweltbewusste Küche</p>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Qualität</h3>
+                        <p class="value-description">
+                            Höchste Qualitätsstandards in Zubereitung, Präsentation und Service. Jedes Gericht wird mit Sorgfalt und Liebe zum Detail kreiert.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Besuchen Sie uns</h2>
+                    <p class="cta-description">
+                        Erleben Sie authentische spanische Küche in entspannter Atmosphäre direkt an der Ostsee.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="standorte.html" class="btn btn-primary">Standorte</a>
+                        <a href="speisekarte.html" class="btn btn-secondary">Speisekarte</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-title">Jimmy's Tapas Bar</h3>
-                    <p class="footer-text">Authentische spanische Küche an der Ostsee</p>
+                    <p class="footer-description">Authentische spanische Küche an der Ostsee</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Standorte</h3>
-                    <div class="footer-location">
-                        <p><strong>Neustadt</strong></p>
-                        <p>Am Strande 21 Promenade</p>
-                        <p>23730 Neustadt in Holstein</p>
-                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
-                    </div>
-                    <div class="footer-location">
-                        <p><strong>Großenbrode</strong></p>
-                        <p>Südstrand 54 Promenade</p>
-                        <p>23755 Großenbrode</p>
-                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
-                    </div>
+                    <h4 class="footer-subtitle">Standorte</h4>
+                    <ul class="footer-links">
+                        <li><a href="standorte.html">Neustadt in Holstein</a></li>
+                        <li><a href="standorte.html">Großenbrode</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Kontakt</h3>
-                    <p>Telefon: +49 4561 123456</p>
-                    <p>E-Mail: info@jimmys-tapasbar.de</p>
+                    <h4 class="footer-subtitle">Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="speisekarte.html">Speisekarte</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="bewertungen.html">Bewertungen</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Rechtliches</h3>
-                    <a href="impressum.html" class="footer-link">Impressum</a>
-                    <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                    <h4 class="footer-subtitle">Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
                 </div>
             </div>
             
@@ -180,16 +247,7 @@
         </div>
     </footer>
 
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Nach oben scrollen">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </button>
-
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-spinner"></div>
-    </div>
-
+    <!-- Scripts -->
     <script src="../js/main.js"></script>
 </body>
 </html>

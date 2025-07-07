@@ -17,281 +17,289 @@
     <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 </head>
 <body class="contact-page">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Lade Seite...</p>
+    </div>
+
     <!-- Fixed Navigation Header -->
     <header class="fixed-header">
-        <nav class="nav-container">
-            <div class="nav-content">
-                <!-- Logo -->
-                <div class="nav-logo">
-                    <a href="../index.html" class="logo-link">
-                        <span class="logo-text">JIMMY'S</span>
-                        <span class="logo-subtext">TAPAS BAR</span>
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="nav-menu desktop-menu">
-                    <a href="../index.html" class="nav-link">Startseite</a>
-                    <a href="standorte.html" class="nav-link">Standorte</a>
-                    <a href="speisekarte.html" class="nav-link">Speisekarte</a>
-                    <a href="bewertungen.html" class="nav-link">Bewertungen</a>
-                    <a href="ueber-uns.html" class="nav-link">Über uns</a>
-                    <a href="kontakt.html" class="nav-link active">Kontakt</a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menü öffnen">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <span class="logo-text">Jimmy's Tapas Bar</span>
+                </a>
             </div>
             
-            <!-- Mobile Navigation -->
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="../index.html" class="mobile-nav-link">Startseite</a>
-                <a href="standorte.html" class="mobile-nav-link">Standorte</a>
-                <a href="speisekarte.html" class="mobile-nav-link">Speisekarte</a>
-                <a href="bewertungen.html" class="mobile-nav-link">Bewertungen</a>
-                <a href="ueber-uns.html" class="mobile-nav-link">Über uns</a>
-                <a href="kontakt.html" class="mobile-nav-link active">Kontakt</a>
-            </div>
-        </nav>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Startseite</a></li>
+                    <li><a href="speisekarte.html" class="nav-link">Speisekarte</a></li>
+                    <li><a href="standorte.html" class="nav-link">Standorte</a></li>
+                    <li><a href="bewertungen.html" class="nav-link">Bewertungen</a></li>
+                    <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
+                    <li><a href="kontakt.html" class="nav-link active">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
     <!-- Main Content -->
-    <main id="main-content" class="contact-page">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">Kontakt</h1>
-                <p class="page-subtitle">Wir freuen uns auf Ihre Nachricht</p>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Kontakt</h1>
+                <p class="hero-subtitle">Wir freuen uns auf Ihre Nachricht</p>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
+        <!-- Contact Info Section -->
+        <section class="contact-info-section">
             <div class="container">
-                <div class="contact-grid">
-                    <!-- Contact Info -->
-                    <div class="contact-info">
-                        <h2 class="contact-title">Kontaktinformationen</h2>
-                        
-                        <div class="contact-locations">
-                            <!-- Neustadt Contact -->
-                            <div class="contact-location">
-                                <h3 class="location-title">📍 Neustadt in Holstein</h3>
-                                <div class="contact-details">
-                                    <div class="contact-item">
-                                        <strong>📧 E-Mail:</strong>
-                                        <a href="mailto:neustadt@jimmys-tapasbar.de">neustadt@jimmys-tapasbar.de</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>📞 Telefon:</strong>
-                                        <a href="tel:+4945611234567">+49 4561 123456</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>📍 Adresse:</strong>
-                                        <span>Am Strande 21 Promenade<br>23730 Neustadt in Holstein</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>🕒 Öffnungszeiten:</strong>
-                                        <span>Mo-So: 12:00 - 22:00 Uhr</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Großenbrode Contact -->
-                            <div class="contact-location">
-                                <h3 class="location-title">📍 Großenbrode</h3>
-                                <div class="contact-details">
-                                    <div class="contact-item">
-                                        <strong>📧 E-Mail:</strong>
-                                        <a href="mailto:grossenbrode@jimmys-tapasbar.de">grossenbrode@jimmys-tapasbar.de</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>📞 Telefon:</strong>
-                                        <a href="tel:+4943481234567">+49 4348 123456</a>
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>📍 Adresse:</strong>
-                                        <span>Südstrand 54 Promenade<br>23755 Großenbrode</span>
-                                    </div>
-                                    <div class="contact-item">
-                                        <strong>🕒 Öffnungszeiten:</strong>
-                                        <span>Mo-So: 12:00 - 22:00 Uhr</span>
-                                    </div>
-                                </div>
-                            </div>
+                <h2 class="section-title">Unsere Standorte</h2>
+                <div class="contact-locations-grid">
+                    <!-- Neustadt Contact -->
+                    <div class="contact-location-card">
+                        <div class="location-header">
+                            <h3 class="location-name">Neustadt in Holstein</h3>
+                            <p class="location-address">Am Strande 21 Promenade<br>23730 Neustadt in Holstein</p>
                         </div>
-
-                        <!-- General Contact -->
-                        <div class="general-contact">
-                            <h3 class="contact-subtitle">🏢 Allgemeine Anfragen</h3>
-                            <div class="contact-details">
-                                <div class="contact-item">
-                                    <strong>📧 E-Mail:</strong>
-                                    <a href="mailto:info@jimmys-tapasbar.de">info@jimmys-tapasbar.de</a>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
                                 </div>
-                                <div class="contact-item">
-                                    <strong>👔 Geschäftsführung:</strong>
-                                    <a href="mailto:management@jimmys-tapasbar.de">management@jimmys-tapasbar.de</a>
+                                <div class="contact-text">
+                                    <span class="contact-label">E-Mail</span>
+                                    <a href="mailto:neustadt@jimmys-tapasbar.de" class="contact-link">neustadt@jimmys-tapasbar.de</a>
                                 </div>
-                                <div class="contact-item">
-                                    <strong>🎉 Events & Catering:</strong>
-                                    <a href="mailto:events@jimmys-tapasbar.de">events@jimmys-tapasbar.de</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Telefon</span>
+                                    <a href="tel:+4945611234567" class="contact-link">+49 4561 123456</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Öffnungszeiten</span>
+                                    <span class="contact-value">Mo-So: 12:00 - 22:00 Uhr</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact Form -->
-                    <div class="contact-form-section">
-                        <h2 class="form-title">Nachricht senden</h2>
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="contactName">Vor- und Nachname *</label>
-                                    <input type="text" id="contactName" name="contactName" required>
+                    <!-- Großenbrode Contact -->
+                    <div class="contact-location-card">
+                        <div class="location-header">
+                            <h3 class="location-name">Großenbrode</h3>
+                            <p class="location-address">Südstrand 54 Promenade<br>23755 Großenbrode</p>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
                                 </div>
-                                
-                                <div class="form-group">
-                                    <label for="contactEmail">E-Mail-Adresse *</label>
-                                    <input type="email" id="contactEmail" name="contactEmail" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="contactPhone">Telefonnummer (optional)</label>
-                                    <input type="tel" id="contactPhone" name="contactPhone">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="contactLocation">Standort</label>
-                                    <select id="contactLocation" name="contactLocation">
-                                        <option value="">Bitte wählen</option>
-                                        <option value="neustadt">Neustadt in Holstein</option>
-                                        <option value="grossenbrode">Großenbrode</option>
-                                        <option value="both">Beide Standorte</option>
-                                        <option value="general">Allgemeine Anfrage</option>
-                                    </select>
+                                <div class="contact-text">
+                                    <span class="contact-label">E-Mail</span>
+                                    <a href="mailto:grossenbrode@jimmys-tapasbar.de" class="contact-link">grossenbrode@jimmys-tapasbar.de</a>
                                 </div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="contactSubject">Betreff *</label>
-                                <select id="contactSubject" name="contactSubject" required>
-                                    <option value="">Bitte wählen</option>
-                                    <option value="reservation">Tischreservierung</option>
-                                    <option value="event">Event & Catering</option>
-                                    <option value="feedback">Lob & Kritik</option>
-                                    <option value="complaint">Beschwerde</option>
-                                    <option value="job">Bewerbung</option>
-                                    <option value="press">Presseanfrage</option>
-                                    <option value="other">Sonstiges</option>
-                                </select>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Telefon</span>
+                                    <a href="tel:+4943481234567" class="contact-link">+49 4348 123456</a>
+                                </div>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="contactMessage">Ihre Nachricht *</label>
-                                <textarea id="contactMessage" name="contactMessage" rows="6" placeholder="Teilen Sie uns mit, wie wir Ihnen helfen können..." required></textarea>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Öffnungszeiten</span>
+                                    <span class="contact-value">Mo-So: 12:00 - 22:00 Uhr</span>
+                                </div>
                             </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="contactPrivacy" name="contactPrivacy" required>
-                                    <span class="checkmark"></span>
-                                    Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere diese. *
-                                </label>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="contactNewsletter" name="contactNewsletter">
-                                    <span class="checkmark"></span>
-                                    Ich möchte den Newsletter mit Angeboten und Neuigkeiten erhalten.
-                                </label>
-                            </div>
-                            
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">Nachricht senden</button>
-                                <p class="form-note">* Pflichtfelder<br>Wir antworten in der Regel innerhalb von 24 Stunden.</p>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Quick Contact -->
-        <section class="quick-contact">
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
             <div class="container">
-                <h2 class="section-title">Schneller Kontakt</h2>
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2 class="form-title">Nachricht senden</h2>
+                        <p class="form-subtitle">Haben Sie Fragen oder möchten Sie einen Tisch reservieren? Wir helfen Ihnen gerne weiter.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">Vor- und Nachname <span class="required">*</span></label>
+                                <input type="text" id="contactName" name="contactName" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">E-Mail-Adresse <span class="required">*</span></label>
+                                <input type="email" id="contactEmail" name="contactEmail" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactPhone" class="form-label">Telefonnummer</label>
+                                <input type="tel" id="contactPhone" name="contactPhone" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactLocation" class="form-label">Standort</label>
+                                <select id="contactLocation" name="contactLocation" class="form-select">
+                                    <option value="">Bitte wählen</option>
+                                    <option value="neustadt">Neustadt in Holstein</option>
+                                    <option value="grossenbrode">Großenbrode</option>
+                                    <option value="both">Beide Standorte</option>
+                                    <option value="general">Allgemeine Anfrage</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject" class="form-label">Betreff <span class="required">*</span></label>
+                            <input type="text" id="contactSubject" name="contactSubject" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage" class="form-label">Nachricht <span class="required">*</span></label>
+                            <textarea id="contactMessage" name="contactMessage" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="contactPrivacy" name="contactPrivacy" class="form-checkbox" required>
+                            <label for="contactPrivacy" class="checkbox-label">
+                                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" class="privacy-link">Datenschutzerklärung</a> zu. <span class="required">*</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Nachricht senden</button>
+                        
+                        <p class="form-note">
+                            Felder mit <span class="required">*</span> sind Pflichtfelder.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Section -->
+        <section class="quick-contact-section">
+            <div class="container">
+                <h2 class="section-title">Schnellkontakt</h2>
                 <div class="quick-contact-grid">
-                    <a href="tel:+4945611234567" class="quick-contact-card">
-                        <div class="quick-icon">📞</div>
-                        <h3 class="quick-title">Anrufen</h3>
-                        <p class="quick-description">Neustadt: +49 4561 123456</p>
-                    </a>
+                    <div class="quick-contact-card">
+                        <div class="quick-contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3 class="quick-contact-title">Reservierung</h3>
+                        <p class="quick-contact-description">Rufen Sie uns an für eine schnelle Tischreservierung</p>
+                        <a href="tel:+4945611234567" class="quick-contact-btn">Jetzt anrufen</a>
+                    </div>
                     
-                    <a href="tel:+4943481234567" class="quick-contact-card">
-                        <div class="quick-icon">📞</div>
-                        <h3 class="quick-title">Anrufen</h3>
-                        <p class="quick-description">Großenbrode: +49 4348 123456</p>
-                    </a>
+                    <div class="quick-contact-card">
+                        <div class="quick-contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h3 class="quick-contact-title">E-Mail</h3>
+                        <p class="quick-contact-description">Schreiben Sie uns für allgemeine Anfragen</p>
+                        <a href="mailto:info@jimmys-tapasbar.de" class="quick-contact-btn">E-Mail schreiben</a>
+                    </div>
                     
-                    <a href="mailto:info@jimmys-tapasbar.de" class="quick-contact-card">
-                        <div class="quick-icon">📧</div>
-                        <h3 class="quick-title">E-Mail</h3>
-                        <p class="quick-description">info@jimmys-tapasbar.de</p>
-                    </a>
-                    
-                    <a href="https://wa.me/4945611234567" target="_blank" class="quick-contact-card">
-                        <div class="quick-icon">💬</div>
-                        <h3 class="quick-title">WhatsApp</h3>
-                        <p class="quick-description">Schnelle Antwort</p>
-                    </a>
+                    <div class="quick-contact-card">
+                        <div class="quick-contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="quick-contact-title">Standorte</h3>
+                        <p class="quick-contact-description">Finden Sie uns in Neustadt oder Großenbrode</p>
+                        <a href="standorte.html" class="quick-contact-btn">Standorte anzeigen</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-title">Jimmy's Tapas Bar</h3>
-                    <p class="footer-text">Authentische spanische Küche an der Ostsee</p>
+                    <p class="footer-description">Authentische spanische Küche an der Ostsee</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Standorte</h3>
-                    <div class="footer-location">
-                        <p><strong>Neustadt</strong></p>
-                        <p>Am Strande 21 Promenade</p>
-                        <p>23730 Neustadt in Holstein</p>
-                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
-                    </div>
-                    <div class="footer-location">
-                        <p><strong>Großenbrode</strong></p>
-                        <p>Südstrand 54 Promenade</p>
-                        <p>23755 Großenbrode</p>
-                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
-                    </div>
+                    <h4 class="footer-subtitle">Standorte</h4>
+                    <ul class="footer-links">
+                        <li><a href="standorte.html">Neustadt in Holstein</a></li>
+                        <li><a href="standorte.html">Großenbrode</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Kontakt</h3>
-                    <p>Telefon: +49 4561 123456</p>
-                    <p>E-Mail: info@jimmys-tapasbar.de</p>
+                    <h4 class="footer-subtitle">Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="speisekarte.html">Speisekarte</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="bewertungen.html">Bewertungen</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Rechtliches</h3>
-                    <a href="impressum.html" class="footer-link">Impressum</a>
-                    <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                    <h4 class="footer-subtitle">Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
                 </div>
             </div>
             
@@ -301,19 +309,7 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Nach oben scrollen">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </button>
-
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-spinner"></div>
-    </div>
-
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script src="../js/main.js"></script>
 </body>
 </html>
