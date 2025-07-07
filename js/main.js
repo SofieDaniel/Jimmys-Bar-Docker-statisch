@@ -408,12 +408,10 @@ function showLoadingScreen() {
 function hideLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
     if (loadingScreen) {
+        loadingScreen.classList.add('hidden');
         setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }, 1000);
+            loadingScreen.style.display = 'none';
+        }, 500);
     }
 }
 
