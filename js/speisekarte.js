@@ -33,6 +33,12 @@ async function initializeSpeisekarte() {
         // Hide loading screen
         if (window.JimmysApp) {
             window.JimmysApp.hideLoadingScreen();
+        } else {
+            // Direct hide if JimmysApp is not available
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.display = 'none';
+            }
         }
         
         console.log('Speisekarte initialized successfully');
