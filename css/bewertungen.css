@@ -1,0 +1,194 @@
+/* Bewertungen Page Styles - Original Design */
+
+.reviews-page {
+    background: linear-gradient(145deg, 
+        #2D1F1A 0%,   /* Dark Brown */
+        #3D2B1F 30%,  /* Medium Brown */
+        #2D1F1A 60%,  /* Dark Brown */
+        #3D2B1F 100%  /* Medium Brown */
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Google Reviews Section - Original Design */
+.google-reviews-section {
+    padding: 4rem 0;
+    background: var(--medium-brown);
+}
+
+.google-reviews-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #8B4513;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.google-logo {
+    margin-bottom: 2rem;
+}
+
+.google-logo h2 {
+    font-size: 4rem;
+    color: #4285F4;
+    margin: 0;
+    font-weight: 500;
+}
+
+.google-logo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--warm-beige);
+    margin: 0.5rem 0 0 0;
+}
+
+.google-description {
+    color: var(--light-beige);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Review Stats */
+.review-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(139, 69, 19, 0.2);
+    border-radius: 0.5rem;
+    border: 1px solid #8B4513;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.stat-label {
+    color: var(--warm-beige);
+    font-weight: 600;
+    flex: 1;
+    text-align: left;
+}
+
+.stat-desc {
+    color: var(--light-beige);
+    font-size: 0.875rem;
+    flex: 2;
+    text-align: left;
+}
+
+/* Google Reviews Button */
+.google-reviews-btn {
+    background: #4285F4;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.google-reviews-btn:hover {
+    background: #3367D6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+.google-footer {
+    color: var(--light-beige);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Review Info Section */
+.review-info-section {
+    padding: 4rem 0;
+    background: var(--dark-brown);
+}
+
+.review-info-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .review-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.review-info-card {
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #8B4513;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.review-info-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--warm-beige);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.review-info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.review-info-card li {
+    color: var(--light-beige);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.review-info-card p {
+    color: var(--light-beige);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .google-reviews-card {
+        margin: 0 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .google-logo h2 {
+        font-size: 3rem;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .stat-label,
+    .stat-desc {
+        text-align: center;
+    }
+    
+    .review-info-grid {
+        margin: 0 1rem;
+    }
+}
