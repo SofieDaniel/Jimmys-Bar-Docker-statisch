@@ -290,15 +290,15 @@
 }
 
 .detail-price {
-    color: var(--warm-beige);
+    color: #2D1F1A;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: rgba(139, 69, 19, 0.8);
+    background: #FFFFFF; /* Weißer Hintergrund */
     padding: 0.5rem 1rem;
     border-radius: 20px;
     display: inline-block;
-    border: 1px solid rgba(245, 230, 211, 0.3);
+    border: 1px solid #FFFFFF;
 }
 
 .detail-description {
