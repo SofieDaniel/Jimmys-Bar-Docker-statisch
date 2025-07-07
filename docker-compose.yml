@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  jimmys-tapas:
+    build: .
+    container_name: jimmys-tapas-bar
+    ports:
+      - "80:80"
+      - "8001:8001"
+    environment:
+      - MYSQL_ROOT_PASSWORD=jimmy2024
+      - MYSQL_DATABASE=jimmys_tapas_bar
+      - JWT_SECRET_KEY=jimmy-tapas-bar-mysql-secret-2024
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - backup_data:/app/backups
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  mysql_data:
+    driver: local
+  backup_data:
+    driver: local
