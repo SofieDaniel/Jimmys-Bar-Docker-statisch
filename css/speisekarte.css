@@ -166,13 +166,13 @@
 }
 
 .menu-item-price-original {
-    color: var(--warm-beige);
+    color: #2D1F1A;
     font-weight: 700;
     font-size: 1.125rem;
-    background: rgba(139, 69, 19, 0.7);
+    background: #FFFFFF; /* Weißer Hintergrund für Preise */
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
-    border: 1px solid rgba(245, 230, 211, 0.3);
+    border: 1px solid #FFFFFF;
 }
 
 .menu-item-description-original {
