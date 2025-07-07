@@ -1,0 +1,194 @@
+/* Über uns Page Styles - PROFESSIONELL */
+
+.about-page {
+    background: linear-gradient(145deg, 
+        #2D1F1A 0%,   /* Dark Brown */
+        #3D2B1F 30%,  /* Medium Brown */
+        #2D1F1A 60%,  /* Dark Brown */
+        #3D2B1F 100%  /* Medium Brown */
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Story Section - PROFESSIONELL */
+.story-section {
+    padding: 4rem 0;
+    background: var(--medium-brown);
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--warm-beige);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.story-text {
+    color: var(--light-beige);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+/* Team Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
+.team-section {
+    padding: 4rem 0;
+    background: var(--dark-brown);
+}
+
+.team-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    color: var(--warm-beige);
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+}
+
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.team-member {
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+    border-radius: 8px; /* Weniger rund = professioneller */
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-4px); /* Weniger Animation = professioneller */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: #F5E6D3;
+}
+
+.member-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.member-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--warm-beige);
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    color: var(--light-beige);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.member-description {
+    color: var(--light-beige);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Values Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
+.values-section {
+    padding: 4rem 0;
+    background: var(--medium-brown);
+}
+
+.values-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    color: var(--warm-beige);
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+}
+
+.values-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.value-item {
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+    border-radius: 8px; /* Weniger rund = professioneller */
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-4px); /* Weniger Animation = professioneller */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: #F5E6D3;
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: block;
+}
+
+.value-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--warm-beige);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.value-description {
+    color: var(--light-beige);
+    line-height: 1.6;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .story-title {
+        font-size: 2rem;
+    }
+    
+    .team-title,
+    .values-title {
+        font-size: 1.75rem;
+    }
+    
+    .team-member,
+    .value-item {
+        margin: 0 1rem;
+    }
+}
