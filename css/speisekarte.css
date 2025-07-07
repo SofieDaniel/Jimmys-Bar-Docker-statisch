@@ -228,9 +228,9 @@
 }
 
 .tag-origin {
-    background: rgba(139, 69, 19, 0.8);
+    background: #2D1F1A;
     color: var(--warm-beige);
-    border: 1px solid rgba(245, 230, 211, 0.3);
+    border: 1px solid #FFFFFF; /* Weiße Umrandung */
 }
 
 .tag-category {
