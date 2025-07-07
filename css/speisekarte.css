@@ -34,7 +34,7 @@
     margin: 0 auto;
 }
 
-/* Menu Categories */
+/* Menu Categories - Original Design */
 .menu-categories {
     padding: 2rem 0;
     background: var(--medium-brown);
@@ -44,22 +44,26 @@
 .categories-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .category-btn {
     background: rgba(139, 69, 19, 0.7);
     border: 1px solid rgba(245, 230, 211, 0.4);
     color: var(--warm-beige);
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
     font-weight: 500;
+    font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
+    white-space: nowrap;
 }
 
 .category-btn:hover,
@@ -67,126 +71,285 @@
     background: var(--warm-beige);
     color: var(--dark-brown);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Menu Section */
-.menu-section {
-    padding: 4rem 0;
-    background: var(--medium-brown);
-}
-
-.menu-grid {
+/* Menu Layout - Original Side-by-Side Design */
+.menu-layout {
     display: grid;
+    grid-template-columns: 1fr 400px;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1024px) {
+    .menu-layout {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .menu-detail-panel {
+        order: -1;
     }
 }
 
-@media (min-width: 1200px) {
-    .menu-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* Menu List - Original Design */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-/* Menu Item Cards */
-.menu-item {
+.menu-category-section {
+    margin-bottom: 3rem;
+}
+
+.menu-category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.875rem;
+    color: var(--warm-beige);
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--warm-brown);
+    padding-bottom: 1rem;
+}
+
+/* Menu Item - Original List Style */
+.menu-item-original {
     background: rgba(45, 31, 26, 0.85);
-    border: 1px solid rgba(245, 230, 211, 0.15);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(245, 230, 211, 0.1);
+    border-radius: 0;
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
     cursor: pointer;
+    transition: all 0.3s ease;
     position: relative;
 }
 
-.menu-item:hover {
+.menu-item-original:hover {
     background: rgba(61, 43, 31, 0.95);
     border-color: rgba(245, 230, 211, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateX(5px);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.menu-item-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.menu-item-original.active {
+    background: rgba(61, 43, 31, 0.95);
+    border-left: 4px solid var(--warm-beige);
 }
 
-.menu-item:hover .menu-item-image {
-    transform: scale(1.05);
-}
-
-.menu-item-content {
-    padding: 1.5rem;
-}
-
-.menu-item-header {
+.menu-item-header-original {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
-.menu-item-title {
+.menu-item-title-original {
     font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: var(--warm-beige);
     font-weight: 600;
     letter-spacing: 0.025em;
     flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.menu-item-price {
+.menu-item-price-original {
     color: var(--warm-beige);
     font-weight: 700;
     font-size: 1.125rem;
-    margin-left: 1rem;
+    background: rgba(139, 69, 19, 0.7);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    border: 1px solid rgba(245, 230, 211, 0.3);
 }
 
-.menu-item-description {
+.menu-item-description-original {
     color: var(--light-beige);
     font-weight: 300;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
 }
 
-.menu-item-meta {
+.menu-item-meta-original {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
 }
 
-.menu-item-origin {
-    color: var(--light-beige);
-    font-size: 0.875rem;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-.menu-item-vegetarian {
-    background: #16a34a;
-    color: white;
+.menu-item-tag {
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 12px;
     font-weight: 500;
 }
 
-.menu-item-allergens {
-    color: #ef4444;
-    font-size: 0.75rem;
+.tag-vegetarian {
+    background: #16a34a;
+    color: white;
+}
+
+.tag-origin {
+    background: rgba(139, 69, 19, 0.8);
+    color: var(--warm-beige);
+    border: 1px solid rgba(245, 230, 211, 0.3);
+}
+
+.tag-category {
+    background: rgba(245, 230, 211, 0.2);
+    color: var(--warm-beige);
+    border: 1px solid rgba(245, 230, 211, 0.3);
+}
+
+/* Menu Detail Panel - Original Right Side */
+.menu-detail-panel {
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid var(--warm-brown);
+    border-radius: 8px;
+    padding: 2rem;
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+.detail-placeholder {
+    text-align: center;
+    color: var(--light-beige);
+    opacity: 0.7;
+}
+
+.detail-placeholder .detail-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.detail-placeholder p {
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.menu-detail-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.detail-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--warm-beige);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detail-price {
+    color: var(--warm-beige);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: rgba(139, 69, 19, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid rgba(245, 230, 211, 0.3);
+}
+
+.detail-description {
+    color: var(--light-beige);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.detail-info-section {
+    background: var(--medium-brown);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.detail-info-title {
+    color: var(--warm-beige);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detail-info-grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.detail-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(245, 230, 211, 0.1);
+}
+
+.detail-info-label {
+    color: var(--light-beige);
     font-weight: 500;
+    font-size: 0.875rem;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+}
+
+.detail-info-value {
+    color: var(--warm-beige);
+    font-size: 0.875rem;
+    text-align: right;
+    flex: 1;
+}
+
+.detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .categories-wrapper {
+        gap: 0.5rem;
+    }
+    
+    .category-btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .menu-detail-panel {
+        position: static;
+        max-height: none;
+    }
 }
 
 /* Menu Item Detail Modal */
