@@ -30,19 +30,20 @@
     }
 }
 
-/* Location Cards - EXACT wie Bild 2 - GROSSE KARTEN */
+/* Location Cards - PROFESSIONELL und ELEGANT */
 .location-card-large {
     background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #8B4513;
-    border-radius: 1rem;
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung wie gewünscht */
+    border-radius: 8px; /* Weniger rund = professioneller */
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .location-card-large:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px); /* Weniger Bewegung = professioneller */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: #F5E6D3; /* Hover: beige */
 }
 
 /* Hero Image - EXACT wie Bild 2 */
