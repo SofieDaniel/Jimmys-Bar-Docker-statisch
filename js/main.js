@@ -184,7 +184,11 @@ function initializeScrollToTop() {
  */
 async function loadMenuData() {
     try {
-        const response = await fetch('config/menu.ini');
+        // Detect if we're in a subdirectory
+        const isSubDirectory = window.location.pathname.includes('/pages/');
+        const menuPath = isSubDirectory ? '../config/menu.ini' : 'config/menu.ini';
+        
+        const response = await fetch(menuPath);
         const iniText = await response.text();
         menuData = parseINI(iniText);
         
