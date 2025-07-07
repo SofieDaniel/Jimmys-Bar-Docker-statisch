@@ -34,7 +34,7 @@
     margin: 0 auto;
 }
 
-/* Menu Categories - Original Design */
+/* Menu Categories - Original Design with Fixed Colors */
 .menu-categories {
     padding: 2rem 0;
     background: var(--medium-brown);
@@ -52,24 +52,28 @@
 }
 
 .category-btn {
-    background: rgba(139, 69, 19, 0.7);
-    border: 1px solid rgba(245, 230, 211, 0.4);
-    color: var(--warm-beige);
+    background: #8B4513;
+    border: 1px solid #D2B48C;
+    color: #F5E6D3;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-weight: 500;
     font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
     white-space: nowrap;
 }
 
-.category-btn:hover,
+.category-btn:hover {
+    background: #A0522D;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 .category-btn.active {
-    background: var(--warm-beige);
-    color: var(--dark-brown);
+    background: #D2B48C;
+    color: #2D1F1A;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
