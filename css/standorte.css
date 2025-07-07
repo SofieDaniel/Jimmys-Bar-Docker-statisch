@@ -1,4 +1,4 @@
-/* Standorte Page Styles - Original Design */
+/* Standorte Page Styles - EXACT wie Bild 2 */
 
 .locations-page {
     background: linear-gradient(145deg, 
@@ -11,7 +11,7 @@
     min-height: 100vh;
 }
 
-/* Locations Section - Original Design */
+/* Locations Section - EXACT wie Bild 2 */
 .locations-section {
     padding: 4rem 0;
     background: var(--medium-brown);
@@ -30,8 +30,8 @@
     }
 }
 
-/* Location Cards - Original Design */
-.location-card-original {
+/* Location Cards - EXACT wie Bild 2 - GROSSE KARTEN */
+.location-card-large {
     background: rgba(45, 31, 26, 0.95);
     border: 2px solid #8B4513;
     border-radius: 1rem;
@@ -40,199 +40,172 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.location-card-original:hover {
+.location-card-large:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-.location-image-original {
+/* Hero Image - EXACT wie Bild 2 */
+.location-hero {
     position: relative;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
 }
 
-.location-bg {
+.location-hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.location-card-original:hover .location-bg {
+.location-card-large:hover .location-hero-image {
     transform: scale(1.05);
 }
 
-.location-overlay {
+.location-title-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-    padding: 2rem 1rem 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 3rem 2rem 1.5rem;
 }
 
-.location-name {
+.location-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    color: var(--warm-beige);
+    font-size: 2.25rem;
+    color: white;
     margin: 0;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Location Details Grid - Original Design */
-.location-details-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    padding: 1.5rem;
+/* Location Info - EXACT wie Bild 2 */
+.location-info {
+    padding: 2rem;
 }
 
-.detail-section {
-    padding: 1rem;
-    border-right: 1px solid #8B4513;
-    border-bottom: 1px solid #8B4513;
-    background: rgba(139, 69, 19, 0.1);
+.info-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.3);
 }
 
-.detail-section:nth-child(even) {
-    border-right: none;
-}
-
-.detail-section:nth-child(n+5) {
+.info-section:last-of-type {
     border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.detail-section.full-width {
-    grid-column: 1 / -1;
-    border-right: none;
-    text-align: center;
-    background: rgba(139, 69, 19, 0.2);
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-.detail-icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.info-icon {
+    font-size: 1.25rem;
 }
 
-.detail-section h3 {
+.info-header h3 {
     color: var(--warm-beige);
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    margin: 0;
     font-weight: 600;
 }
 
-.detail-section p {
+.info-section p {
     color: var(--light-beige);
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.5;
     margin: 0;
 }
 
-/* Opening Times - Original Design */
-.opening-times {
+/* Opening Schedule - EXACT wie Bild 2 */
+.opening-schedule {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
 }
 
-.time-row {
+.schedule-row {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--light-beige);
+    padding: 0.25rem 0;
 }
 
-.time-row span:first-child {
+.schedule-row span:first-child {
     color: var(--warm-beige);
     font-weight: 500;
 }
 
-/* Route Button - Original Design */
-.route-btn {
+/* Features Tags - EXACT wie Bild 2 */
+.features-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-tag {
+    background: #8B4513;
+    color: var(--warm-beige);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid rgba(245, 230, 211, 0.3);
+}
+
+/* Route Button - EXACT wie Bild 2 */
+.route-button {
+    width: 100%;
     background: #D2B48C;
     color: #2D1F1A;
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
-.route-btn:hover {
+.route-button:hover {
     background: #F5E6D3;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Review Quote Section - Original Design */
-.review-quote-section {
-    padding: 4rem 0;
-    background: var(--dark-brown);
-}
-
-.quote-card {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #8B4513;
-    border-radius: 1rem;
-    padding: 3rem 2rem;
-}
-
-.quote-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--warm-beige);
-    margin-bottom: 1.5rem;
-}
-
-.quote-text {
-    font-style: italic;
+.route-icon {
     font-size: 1.25rem;
-    color: var(--warm-beige);
-    margin-bottom: 1rem;
-    font-weight: 300;
 }
 
-.quote-subtitle {
-    font-style: italic;
-    font-size: 1.125rem;
-    color: #D2B48C;
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-
-.quote-description {
-    color: var(--light-beige);
-    line-height: 1.6;
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Mobile responsive adjustments */
+/* Mobile Responsive - EXACT wie Bild 2 */
 @media (max-width: 768px) {
-    .location-details-grid {
-        grid-template-columns: 1fr;
+    .location-title {
+        font-size: 1.875rem;
     }
     
-    .detail-section {
-        border-right: none;
-        border-bottom: 1px solid #8B4513;
+    .location-hero {
+        height: 250px;
     }
     
-    .detail-section:last-child {
-        border-bottom: none;
+    .location-info {
+        padding: 1.5rem;
     }
     
-    .location-name {
-        font-size: 1.5rem;
-    }
-    
-    .quote-card {
-        margin: 0 1rem;
-        padding: 2rem 1.5rem;
+    .features-tags {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
