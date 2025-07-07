@@ -1,0 +1,430 @@
+/* Speisekarte Page Styles */
+
+.menu-page {
+    background: linear-gradient(145deg, 
+        #2D1F1A 0%,   /* Dark Brown */
+        #3D2B1F 30%,  /* Medium Brown */
+        #2D1F1A 60%,  /* Dark Brown */
+        #3D2B1F 100%  /* Medium Brown */
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Page Header */
+.page-header {
+    padding: 6rem 0 4rem;
+    background: var(--dark-brown);
+    text-align: center;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--warm-beige);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--light-beige);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Menu Categories */
+.menu-categories {
+    padding: 2rem 0;
+    background: var(--medium-brown);
+    border-bottom: 1px solid var(--warm-brown);
+}
+
+.categories-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-btn {
+    background: rgba(139, 69, 19, 0.7);
+    border: 1px solid rgba(245, 230, 211, 0.4);
+    color: var(--warm-beige);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--warm-beige);
+    color: var(--dark-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 4rem 0;
+    background: var(--medium-brown);
+}
+
+.menu-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Menu Item Cards */
+.menu-item {
+    background: rgba(45, 31, 26, 0.85);
+    border: 1px solid rgba(245, 230, 211, 0.15);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-item:hover {
+    background: rgba(61, 43, 31, 0.95);
+    border-color: rgba(245, 230, 211, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-item-image {
+    transform: scale(1.05);
+}
+
+.menu-item-content {
+    padding: 1.5rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.menu-item-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--warm-beige);
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    flex: 1;
+}
+
+.menu-item-price {
+    color: var(--warm-beige);
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-left: 1rem;
+}
+
+.menu-item-description {
+    color: var(--light-beige);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.menu-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.menu-item-origin {
+    color: var(--light-beige);
+    font-size: 0.875rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.menu-item-vegetarian {
+    background: #16a34a;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+}
+
+.menu-item-allergens {
+    color: #ef4444;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Menu Item Detail Modal */
+.menu-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.menu-modal.show {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background: var(--dark-brown);
+    border: 2px solid var(--warm-beige);
+    border-radius: 1rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.95);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--warm-beige);
+    color: var(--dark-brown);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: var(--light-beige);
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--warm-beige);
+    margin-bottom: 0.5rem;
+}
+
+.modal-price {
+    color: var(--warm-beige);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    color: var(--light-beige);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.modal-details {
+    background: var(--medium-brown);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-details h4 {
+    color: var(--warm-beige);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(245, 230, 211, 0.1);
+}
+
+.detail-label {
+    color: var(--light-beige);
+    font-weight: 500;
+}
+
+.detail-value {
+    color: var(--warm-beige);
+}
+
+/* Menu Info Section */
+.menu-info {
+    padding: 4rem 0;
+    background: var(--dark-brown);
+}
+
+.info-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .info-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.info-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--medium-brown);
+    border-radius: 0.5rem;
+    border: 1px solid var(--warm-brown);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.info-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--warm-beige);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-description {
+    color: var(--light-beige);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Animation for menu items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Filter transition */
+.menu-item.hidden {
+    display: none;
+}
+
+.menu-item.show {
+    display: block;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 5rem 0 3rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-wrapper {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .category-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .modal-content {
+        margin: 0.5rem;
+        max-height: 95vh;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+}

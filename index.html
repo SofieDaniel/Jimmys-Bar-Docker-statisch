@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy's Tapas Bar - Authentische spanische Küche an der Ostsee</title>
+    <meta name="description" content="Genießen Sie authentische mediterrane Spezialitäten direkt an der malerischen Ostseeküste bei Jimmy's Tapas Bar">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+</head>
+<body>
+    <!-- Fixed Navigation Header -->
+    <header class="fixed-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="logo-text">JIMMY'S</span>
+                        <span class="logo-subtext">TAPAS BAR</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-menu desktop-menu">
+                    <a href="index.html" class="nav-link active">Startseite</a>
+                    <a href="pages/standorte.html" class="nav-link">Standorte</a>
+                    <a href="pages/speisekarte.html" class="nav-link">Speisekarte</a>
+                    <a href="pages/bewertungen.html" class="nav-link">Bewertungen</a>
+                    <a href="pages/ueber-uns.html" class="nav-link">Über uns</a>
+                    <a href="pages/kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menü öffnen">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html" class="mobile-nav-link active">Startseite</a>
+                <a href="pages/standorte.html" class="mobile-nav-link">Standorte</a>
+                <a href="pages/speisekarte.html" class="mobile-nav-link">Speisekarte</a>
+                <a href="pages/bewertungen.html" class="mobile-nav-link">Bewertungen</a>
+                <a href="pages/ueber-uns.html" class="mobile-nav-link">Über uns</a>
+                <a href="pages/kontakt.html" class="mobile-nav-link">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="main-content" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-headline">
+                        JIMMY'S TAPAS BAR<br>
+                        <span class="hero-subtitle">an der Ostsee</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Genießen Sie authentische mediterrane Spezialitäten direkt an der malerischen Ostseeküste
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="pages/speisekarte.html" class="btn btn-primary">
+                            Zur Speisekarte
+                        </a>
+                        <a href="pages/standorte.html" class="btn btn-secondary">
+                            Unsere Standorte
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mediterrane Tradition</h2>
+                    <p class="section-description">
+                        Erleben Sie authentische mediterrane Gastfreundschaft an der deutschen Ostseeküste
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947" alt="Authentische Tapas" class="feature-image">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Authentische Tapas</h3>
+                            <p class="feature-description">
+                                Traditionelle spanische Gerichte, mit Liebe zubereitet und perfekt zum Teilen
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b" alt="Frische Meeresfrüchte" class="feature-image">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Frische Meeresfrüchte</h3>
+                            <p class="feature-description">
+                                Täglich frisch aus der Ostsee und dem Mittelmeer
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1571197119738-26123cb0d22f" alt="Strandlage" class="feature-image">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Strandlage</h3>
+                            <p class="feature-description">
+                                Genießen Sie Ihr Essen mit direktem Blick auf die Ostsee
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties Section -->
+        <section class="specialties-section">
+            <div class="container">
+                <h2 class="section-title">Unsere Spezialitäten</h2>
+                <div class="specialties-grid" id="specialtiesGrid">
+                    <!-- Dynamic content loaded from menu.ini -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Delivery Section -->
+        <section class="delivery-section">
+            <div class="container">
+                <div class="delivery-content">
+                    <div class="delivery-header">
+                        <h2 class="delivery-title">Lieferung & Bestellung</h2>
+                        <p class="delivery-subtitle">Genießen Sie Jimmy's Tapas zuhause</p>
+                    </div>
+                    
+                    <div class="delivery-grid">
+                        <div class="delivery-card">
+                            <div class="delivery-icon">🚚</div>
+                            <h3 class="delivery-card-title">Schnelle Lieferung</h3>
+                            <p class="delivery-time">30-45 Minuten</p>
+                            <p class="delivery-description">Frisch zubereitet und heiß geliefert</p>
+                        </div>
+                        
+                        <div class="delivery-card">
+                            <div class="delivery-icon">💰</div>
+                            <h3 class="delivery-card-title">Mindestbestellwert</h3>
+                            <p class="delivery-time">15,00€</p>
+                            <p class="delivery-description">Liefergebühr: 2,50€</p>
+                        </div>
+                        
+                        <div class="delivery-card">
+                            <div class="delivery-icon">📱</div>
+                            <h3 class="delivery-card-title">Einfach bestellen</h3>
+                            <p class="delivery-time">Online oder telefonisch</p>
+                            <p class="delivery-description">+49 4561 123456</p>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-buttons">
+                        <a href="pages/speisekarte.html" class="btn btn-primary">Jetzt bestellen</a>
+                        <a href="tel:+4945611234567" class="btn btn-secondary">Anrufen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Jimmy's Tapas Bar</h3>
+                    <p class="footer-text">Authentische spanische Küche an der Ostsee</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Standorte</h3>
+                    <div class="footer-location">
+                        <p><strong>Neustadt</strong></p>
+                        <p>Am Strande 21 Promenade</p>
+                        <p>23730 Neustadt in Holstein</p>
+                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
+                    </div>
+                    <div class="footer-location">
+                        <p><strong>Großenbrode</strong></p>
+                        <p>Südstrand 54 Promenade</p>
+                        <p>23755 Großenbrode</p>
+                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <p>Telefon: +49 4561 123456</p>
+                    <p>E-Mail: info@jimmys-tapasbar.de</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Rechtliches</h3>
+                    <a href="pages/impressum.html" class="footer-link">Impressum</a>
+                    <a href="pages/datenschutz.html" class="footer-link">Datenschutz</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jimmy's Tapas Bar. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <div class="cookie-header">
+                    <span class="cookie-icon">🍪</span>
+                    <h3 class="cookie-title">Diese Website verwendet Cookies</h3>
+                </div>
+                <p class="cookie-description">
+                    Wir verwenden Cookies und ähnliche Technologien, um Ihnen das beste Website-Erlebnis zu bieten. 
+                    <strong>Technisch notwendige Cookies</strong> sind für die Grundfunktionen erforderlich. 
+                    <strong>Optionale Cookies</strong> helfen uns, unsere Website zu verbessern und Ihnen relevante Inhalte anzuzeigen.
+                </p>
+                <p class="cookie-privacy">
+                    Weitere Informationen finden Sie in unserer 
+                    <a href="pages/datenschutz.html" class="cookie-link">Datenschutzerklärung</a>. 
+                    Sie können Ihre Einstellungen jederzeit ändern.
+                </p>
+            </div>
+            
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-settings" id="cookieSettings">⚙️ Einstellungen</button>
+                <button class="cookie-btn cookie-btn-reject" id="cookieReject">❌ Nur Notwendige</button>
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept">✅ Alle akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
