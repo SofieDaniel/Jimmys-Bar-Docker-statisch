@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewertungen - Jimmy's Tapas Bar</title>
+    <meta name="description" content="Lesen Sie Bewertungen unserer Gäste und teilen Sie Ihre eigenen Erfahrungen mit Jimmy's Tapas Bar">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+</head>
+<body>
+    <!-- Fixed Navigation Header -->
+    <header class="fixed-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="../index.html" class="logo-link">
+                        <span class="logo-text">JIMMY'S</span>
+                        <span class="logo-subtext">TAPAS BAR</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-menu desktop-menu">
+                    <a href="../index.html" class="nav-link">Startseite</a>
+                    <a href="standorte.html" class="nav-link">Standorte</a>
+                    <a href="speisekarte.html" class="nav-link">Speisekarte</a>
+                    <a href="bewertungen.html" class="nav-link active">Bewertungen</a>
+                    <a href="ueber-uns.html" class="nav-link">Über uns</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menü öffnen">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="../index.html" class="mobile-nav-link">Startseite</a>
+                <a href="standorte.html" class="mobile-nav-link">Standorte</a>
+                <a href="speisekarte.html" class="mobile-nav-link">Speisekarte</a>
+                <a href="bewertungen.html" class="mobile-nav-link active">Bewertungen</a>
+                <a href="ueber-uns.html" class="mobile-nav-link">Über uns</a>
+                <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="reviews-page">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Gästebewertungen</h1>
+                <p class="page-subtitle">Was unsere Gäste über Jimmy's Tapas Bar sagen</p>
+            </div>
+        </section>
+
+        <!-- Reviews Stats -->
+        <section class="reviews-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">⭐ Durchschnitt</div>
+                        <div class="stat-description">aus 342 Bewertungen</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">👍 Weiterempfehlung</div>
+                        <div class="stat-description">würden wiederkommen</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">🍽️ Essen</div>
+                        <div class="stat-description">Qualität & Geschmack</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">4.7</div>
+                        <div class="stat-label">👥 Service</div>
+                        <div class="stat-description">Freundlichkeit & Tempo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Reviews -->
+        <section class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Aktuelle Bewertungen</h2>
+                
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">MH</div>
+                                <div class="reviewer-details">
+                                    <h3 class="reviewer-name">Maria H.</h3>
+                                    <p class="review-date">vor 3 Tagen</p>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">5/5</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">"Absolut fantastisch! Die Paella Valenciana war perfekt und der Service sehr aufmerksam. Der Meerblick von der Terrasse ist unbezahlbar. Wir kommen definitiv wieder!"</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="review-location">📍 Neustadt</span>
+                            <span class="review-dish">🥘 Paella Valenciana</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">JS</div>
+                                <div class="reviewer-details">
+                                    <h3 class="reviewer-name">Jürgen S.</h3>
+                                    <p class="review-date">vor 1 Woche</p>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">5/5</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">"Endlich authentische spanische Küche an der Ostsee! Die Gambas al Ajillo waren wie in Andalusien. Sehr zu empfehlen, besonders der Standort in Großenbrode."</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="review-location">📍 Großenbrode</span>
+                            <span class="review-dish">🍤 Gambas al Ajillo</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">AK</div>
+                                <div class="reviewer-details">
+                                    <h3 class="reviewer-name">Andrea K.</h3>
+                                    <p class="review-date">vor 2 Wochen</p>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">4/5</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">"Sehr leckeres Essen und gemütliche Atmosphäre. Die Patatas Bravas waren genau richtig würzig. Preise sind fair für die Qualität. Nur die Wartezeit könnte kürzer sein."</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="review-location">📍 Neustadt</span>
+                            <span class="review-dish">🥔 Patatas Bravas</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">TM</div>
+                                <div class="reviewer-details">
+                                    <h3 class="reviewer-name">Thomas M.</h3>
+                                    <p class="review-date">vor 3 Wochen</p>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">5/5</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">"Wir waren mit der ganzen Familie da und alle waren begeistert. Besonders die Kinder haben die Churros geliebt. Das Personal war sehr kinderfreundlich!"</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="review-location">📍 Großenbrode</span>
+                            <span class="review-dish">🍩 Churros con Chocolate</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">SK</div>
+                                <div class="reviewer-details">
+                                    <h3 class="reviewer-name">Sabine K.</h3>
+                                    <p class="review-date">vor 1 Monat</p>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">5/5</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">"Die beste Sangría nördlich von Barcelona! Romantischer Abend zu zweit mit perfektem Sonnenuntergang über der Ostsee. Sehr empfehlenswert!"</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="review-location">📍 Neustadt</span>
+                            <span class="review-dish">🍷 Sangría de la Casa</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">PL</div>
+                                <div class="reviewer-details">
+                                    <h3 class="reviewer-name">Peter L.</h3>
+                                    <p class="review-date">vor 1 Monat</p>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">4/5</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">"Gute Tapas-Auswahl und schöne Lage direkt am Meer. Der Pulpo a la Gallega war ausgezeichnet. Nur die Musik könnte etwas leiser sein."</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="review-location">📍 Großenbrode</span>
+                            <span class="review-dish">🐙 Pulpo a la Gallega</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Form -->
+        <section class="review-form-section">
+            <div class="container">
+                <h2 class="section-title">Bewertung abgeben</h2>
+                <p class="section-description">Teilen Sie Ihre Erfahrung mit anderen Gästen</p>
+                
+                <div class="review-form-container">
+                    <form class="review-form" id="reviewForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reviewerName">Name *</label>
+                                <input type="text" id="reviewerName" name="reviewerName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reviewLocation">Standort *</label>
+                                <select id="reviewLocation" name="reviewLocation" required>
+                                    <option value="">Bitte wählen</option>
+                                    <option value="neustadt">Neustadt in Holstein</option>
+                                    <option value="grossenbrode">Großenbrode</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewRating">Bewertung *</label>
+                            <div class="rating-input">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">⭐</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">⭐</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">⭐</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">⭐</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">⭐</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewText">Ihre Bewertung *</label>
+                            <textarea id="reviewText" name="reviewText" rows="4" placeholder="Beschreiben Sie Ihre Erfahrung..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewDish">Lieblingsgericht (optional)</label>
+                            <input type="text" id="reviewDish" name="reviewDish" placeholder="z.B. Paella Valenciana">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Bewertung abschicken</button>
+                            <p class="form-note">* Pflichtfelder</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Jimmy's Tapas Bar</h3>
+                    <p class="footer-text">Authentische spanische Küche an der Ostsee</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Standorte</h3>
+                    <div class="footer-location">
+                        <p><strong>Neustadt</strong></p>
+                        <p>Am Strande 21 Promenade</p>
+                        <p>23730 Neustadt in Holstein</p>
+                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
+                    </div>
+                    <div class="footer-location">
+                        <p><strong>Großenbrode</strong></p>
+                        <p>Südstrand 54 Promenade</p>
+                        <p>23755 Großenbrode</p>
+                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <p>Telefon: +49 4561 123456</p>
+                    <p>E-Mail: info@jimmys-tapasbar.de</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Rechtliches</h3>
+                    <a href="impressum.html" class="footer-link">Impressum</a>
+                    <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jimmy's Tapas Bar. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
