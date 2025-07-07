@@ -251,58 +251,178 @@ function initializeCategories() {
 }
 
 /**
- * Initialize menu grid
+ * Initialize menu grid - Original Design
  */
 function initializeMenuGrid() {
-    const menuGrid = document.getElementById('menuGrid');
-    if (!menuGrid) return;
+    const menuList = document.getElementById('menuList');
+    if (!menuList) return;
     
-    menuGrid.innerHTML = '';
+    menuList.innerHTML = '';
     
+    // Group items by category
+    const categories = {};
     menuItems.forEach(item => {
-        const menuItemElement = createMenuItemElement(item);
-        menuGrid.appendChild(menuItemElement);
+        if (!categories[item.category]) {
+            categories[item.category] = [];
+        }
+        categories[item.category].push(item);
+    });
+    
+    // Create category sections
+    Object.entries(categories).forEach(([categoryKey, items]) => {
+        const categorySection = document.createElement('div');
+        categorySection.className = 'menu-category-section';
+        categorySection.dataset.category = categoryKey;
+        
+        const categoryTitle = document.createElement('h2');
+        categoryTitle.className = 'menu-category-title';
+        categoryTitle.textContent = getCategoryName(categoryKey);
+        categorySection.appendChild(categoryTitle);
+        
+        items.forEach(item => {
+            const menuItemElement = createMenuItemOriginal(item);
+            categorySection.appendChild(menuItemElement);
+        });
+        
+        menuList.appendChild(categorySection);
     });
 }
 
 /**
- * Create menu item HTML element
+ * Create menu item HTML element - Original Design
  */
-function createMenuItemElement(item) {
+function createMenuItemOriginal(item) {
     const menuItem = document.createElement('div');
-    menuItem.className = 'menu-item';
+    menuItem.className = 'menu-item-original';
     menuItem.dataset.category = item.category;
     
     const currencySymbol = window.menuSettings?.currency_symbol || '€';
-    const vegetarianBadge = item.vegetarian ? '<span class="menu-item-vegetarian">🌿 Vegetarisch</span>' : '';
-    const allergenInfo = item.allergens ? `<span class="menu-item-allergens">Allergene: ${item.allergens}</span>` : '';
+    const vegetarianIcon = item.vegetarian ? '🌿' : '';
     
     menuItem.innerHTML = `
-        <img src="${item.image || 'https://images.unsplash.com/photo-1544025162-d76694265947'}" 
-             alt="${item.name}" 
-             class="menu-item-image">
-        <div class="menu-item-content">
-            <div class="menu-item-header">
-                <h3 class="menu-item-title">${item.name}</h3>
-                <span class="menu-item-price">${item.price}${currencySymbol}</span>
-            </div>
-            <p class="menu-item-description">${item.description}</p>
-            <div class="menu-item-meta">
-                <span class="menu-item-origin">${item.origin || ''}</span>
-                ${vegetarianBadge}
-                ${allergenInfo}
-            </div>
+        <div class="menu-item-header-original">
+            <h3 class="menu-item-title-original">
+                ${vegetarianIcon} ${item.name}
+            </h3>
+            <span class="menu-item-price-original">${item.price}${currencySymbol}</span>
+        </div>
+        <p class="menu-item-description-original">${item.description}</p>
+        <div class="menu-item-meta-original">
+            ${item.origin ? `<span class="menu-item-tag tag-origin">${item.origin}</span>` : ''}
+            ${item.category ? `<span class="menu-item-tag tag-category">${getCategoryName(item.category)}</span>` : ''}
+            ${item.vegetarian ? `<span class="menu-item-tag tag-vegetarian">Vegetarisch</span>` : ''}
         </div>
     `;
     
-    // Add click handler for modal
-    menuItem.onclick = () => showMenuItemModal(item);
+    // Add hover handler for detail panel
+    menuItem.addEventListener('mouseenter', () => showMenuItemDetail(item));
+    menuItem.addEventListener('mouseleave', () => hideMenuItemDetail());
+    menuItem.addEventListener('click', () => {
+        // Remove active from all items
+        document.querySelectorAll('.menu-item-original').forEach(el => el.classList.remove('active'));
+        // Add active to clicked item
+        menuItem.classList.add('active');
+        showMenuItemDetail(item);
+    });
     
     return menuItem;
 }
 
 /**
- * Filter menu items by category
+ * Show menu item detail in right panel - Original Design
+ */
+function showMenuItemDetail(item) {
+    const detailPanel = document.getElementById('menuDetailPanel');
+    if (!detailPanel) return;
+    
+    const currencySymbol = window.menuSettings?.currency_symbol || '€';
+    const vegetarianIcon = item.vegetarian ? '🌿' : '';
+    
+    detailPanel.innerHTML = `
+        <div class="menu-detail-content">
+            <img src="${item.image || 'https://images.unsplash.com/photo-1544025162-d76694265947'}" 
+                 alt="${item.name}" 
+                 class="detail-image">
+            
+            <h2 class="detail-title">${vegetarianIcon} ${item.name}</h2>
+            <div class="detail-price">${item.price}${currencySymbol}</div>
+            
+            <p class="detail-description">
+                ${item.detailed_description || item.description}
+            </p>
+            
+            <div class="detail-info-section">
+                <h3 class="detail-info-title">🍽️ Detaillierte Gericht-Informationen</h3>
+                <div class="detail-info-grid">
+                    ${item.origin ? `
+                        <div class="detail-info-row">
+                            <span class="detail-info-label">🌍 Herkunft:</span>
+                            <span class="detail-info-value">${item.origin}</span>
+                        </div>
+                    ` : ''}
+                    
+                    ${item.preparation ? `
+                        <div class="detail-info-row">
+                            <span class="detail-info-label">👨‍🍳 Zubereitung:</span>
+                            <span class="detail-info-value">${item.preparation}</span>
+                        </div>
+                    ` : ''}
+                    
+                    ${item.ingredients ? `
+                        <div class="detail-info-row">
+                            <span class="detail-info-label">🥘 Zutaten:</span>
+                            <span class="detail-info-value">${item.ingredients}</span>
+                        </div>
+                    ` : ''}
+                    
+                    <div class="detail-info-row">
+                        <span class="detail-info-label">🌱 Vegetarisch:</span>
+                        <span class="detail-info-value">${item.vegetarian ? 'Ja' : 'Nein'}</span>
+                    </div>
+                </div>
+            </div>
+            
+            ${item.allergens ? `
+                <div class="detail-info-section">
+                    <h3 class="detail-info-title">⚠️ Allergene & Zusatzstoffe</h3>
+                    <div class="detail-info-grid">
+                        <div class="detail-info-row">
+                            <span class="detail-info-label">🚨 Allergene:</span>
+                            <span class="detail-info-value">${item.allergens}</span>
+                        </div>
+                    </div>
+                </div>
+            ` : ''}
+            
+            <div class="detail-tags">
+                ${item.vegetarian ? '<span class="menu-item-tag tag-vegetarian">🌿 Vegetarisch</span>' : ''}
+                ${item.origin ? `<span class="menu-item-tag tag-origin">📍 ${item.origin}</span>` : ''}
+                ${item.category ? `<span class="menu-item-tag tag-category">${getCategoryName(item.category)}</span>` : ''}
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Hide menu item detail panel
+ */
+function hideMenuItemDetail() {
+    // Don't hide immediately, allow clicking
+    setTimeout(() => {
+        const detailPanel = document.getElementById('menuDetailPanel');
+        if (detailPanel && !detailPanel.matches(':hover')) {
+            detailPanel.innerHTML = `
+                <div class="detail-placeholder">
+                    <div class="detail-icon">🍽️</div>
+                    <p>Bewegen Sie die Maus über ein Gericht<br>um detaillierte Beschreibungen,<br>Zutaten, Herkunft, Zubereitung<br>und Allergie-Informationen zu erhalten</p>
+                </div>
+            `;
+        }
+    }, 300);
+}
+
+/**
+ * Filter menu items by category - Original Design
  */
 function filterByCategory(category) {
     currentCategory = category;
@@ -315,17 +435,18 @@ function filterByCategory(category) {
         }
     });
     
-    // Filter menu items
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
-        if (category === 'all' || item.dataset.category === category) {
-            item.classList.remove('hidden');
-            item.classList.add('show');
+    // Filter category sections
+    const categorySections = document.querySelectorAll('.menu-category-section');
+    categorySections.forEach(section => {
+        if (category === 'all' || section.dataset.category === category) {
+            section.style.display = 'block';
         } else {
-            item.classList.add('hidden');
-            item.classList.remove('show');
+            section.style.display = 'none';
         }
     });
+    
+    // Reset detail panel
+    hideMenuItemDetail();
 }
 
 /**
