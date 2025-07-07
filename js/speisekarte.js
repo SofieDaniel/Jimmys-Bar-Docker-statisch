@@ -283,7 +283,7 @@ function initializeMenuGrid() {
 }
 
 /**
- * Create menu item HTML element - Original Design
+ * Create menu item HTML element - Original Design with Allergens
  */
 function createMenuItemOriginal(item) {
     const menuItem = document.createElement('div');
@@ -301,6 +301,9 @@ function createMenuItemOriginal(item) {
             <span class="menu-item-price-original">${item.price}${currencySymbol}</span>
         </div>
         <p class="menu-item-description-original">${item.description}</p>
+        ${item.detailed_description && item.detailed_description !== item.description ? 
+            `<p class="menu-item-detailed-description">${item.detailed_description}</p>` : ''}
+        ${item.allergens ? `<p class="menu-item-allergens"><strong>Allergene:</strong> ${item.allergens}</p>` : ''}
         <div class="menu-item-meta-original">
             ${item.origin ? `<span class="menu-item-tag tag-origin">${item.origin}</span>` : ''}
             ${item.category ? `<span class="menu-item-tag tag-category">${getCategoryName(item.category)}</span>` : ''}
