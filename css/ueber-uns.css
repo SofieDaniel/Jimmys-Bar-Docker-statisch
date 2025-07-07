@@ -1,4 +1,4 @@
-/* Über uns Page Styles - ULTRA PROFESSIONELL */
+/* Über uns Page Styles - EXAKT wie Bild 1 */
 
 /* Hero Section */
 .hero-section {
@@ -30,271 +30,149 @@
     opacity: 0.9;
 }
 
-/* Story Section - PROFESSIONELL */
-.story-section {
+/* Jimmy Rodriguez Section - EXAKT wie im Bild */
+.jimmy-section {
     padding: 5rem 0;
     background: var(--medium-brown);
 }
 
-.story-content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.story-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--warm-beige);
-    text-align: center;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
-.story-text p {
-    color: var(--light-beige);
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.story-text p:last-child {
-    margin-bottom: 0;
-}
-
-/* Team Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
-.team-section {
-    padding: 5rem 0;
-    background: var(--dark-brown);
-}
-
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--warm-beige);
-    text-align: center;
-    margin-bottom: 4rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
-.team-grid {
+.jimmy-content {
     display: grid;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-@media (min-width: 768px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.team-card {
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.team-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    border-color: #F5E6D3;
-}
-
-.team-member-image {
-    background: linear-gradient(135deg, #F5E6D3 0%, #D2B48C 100%);
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.jimmy-image {
     position: relative;
 }
 
-.member-initials {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2D1F1A;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.team-member-info {
-    padding: 2rem;
-}
-
-.member-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--warm-beige);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.member-role {
-    color: #F5E6D3;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.member-description {
-    color: var(--light-beige);
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-/* Values Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
-.values-section {
-    padding: 5rem 0;
-    background: var(--medium-brown);
-}
-
-.values-grid {
-    display: grid;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-@media (min-width: 768px) {
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .values-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.value-card {
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+.food-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
     border-radius: 12px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid #FFFFFF; /* Weißer Rand */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-.value-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    border-color: #F5E6D3;
+.jimmy-text {
+    padding-left: 2rem;
 }
 
-.value-icon {
-    color: #F5E6D3;
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: center;
-}
-
-.value-icon svg {
-    stroke-width: 1.5;
-}
-
-.value-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--warm-beige);
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.value-description {
-    color: var(--light-beige);
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-/* CTA Section - PROFESSIONELL */
-.cta-section {
-    padding: 5rem 0;
-    background: var(--dark-brown);
-    text-align: center;
-}
-
-.cta-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.cta-title {
+.jimmy-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     color: var(--warm-beige);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
-.cta-description {
+.jimmy-description {
     color: var(--light-beige);
     font-size: 1.125rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+.jimmy-description:last-child {
+    margin-bottom: 0;
 }
 
-.btn {
-    padding: 1rem 2rem;
-    border-radius: 8px;
+/* Leidenschaft Section - EXAKT wie im Bild */
+.passion-section {
+    padding: 5rem 0;
+    background: var(--dark-brown);
+}
+
+.passion-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--warm-beige);
+    text-align: center;
+    margin-bottom: 1rem;
     font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.passion-subtitle {
+    color: var(--light-beige);
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0.9;
+}
+
+.passion-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.passion-box {
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #FFFFFF; /* Weißer Rand */
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.passion-text {
+    color: var(--light-beige);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.passion-features {
+    margin: 2rem 0;
+}
+
+.passion-features p {
+    color: var(--light-beige);
     font-size: 1rem;
-    border: 2px solid;
-    display: inline-block;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-left: 0;
 }
 
-.btn-primary {
-    background: #FFFFFF;
-    color: #2D1F1A;
-    border-color: #FFFFFF;
+/* Quote Section - EXAKT wie im Bild */
+.quote-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(245, 230, 211, 0.2);
+    text-align: center;
 }
 
-.btn-primary:hover {
-    background: #F5E6D3;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.passion-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--warm-beige);
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    quotes: """ """;
 }
 
-.btn-secondary {
-    background: transparent;
-    color: #FFFFFF;
-    border-color: #FFFFFF;
+.passion-quote:before {
+    content: open-quote;
 }
 
-.btn-secondary:hover {
-    background: #FFFFFF;
-    color: #2D1F1A;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.passion-quote:after {
+    content: close-quote;
+}
+
+.quote-author {
+    color: var(--light-beige);
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.8;
 }
 
 /* Mobile Responsive */
@@ -303,30 +181,29 @@
         font-size: 2.5rem;
     }
     
-    .story-title,
-    .section-title,
-    .cta-title {
+    .jimmy-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .jimmy-text {
+        padding-left: 0;
+    }
+    
+    .food-image {
+        height: 300px;
+    }
+    
+    .jimmy-title,
+    .passion-title {
         font-size: 2rem;
     }
     
-    .story-content,
-    .cta-content {
-        padding: 0 1rem;
+    .passion-box {
+        padding: 2rem;
     }
     
-    .team-grid,
-    .values-grid {
-        padding: 0 1rem;
-        grid-template-columns: 1fr;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn {
-        width: 100%;
-        max-width: 300px;
+    .passion-quote {
+        font-size: 1.25rem;
     }
 }
