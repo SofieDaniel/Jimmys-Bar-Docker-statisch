@@ -153,13 +153,13 @@
 }
 
 .feature-tag {
-    background: #8B4513;
+    background: #2D1F1A;
     color: var(--warm-beige);
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.875rem;
     font-weight: 500;
-    border: 1px solid rgba(245, 230, 211, 0.3);
+    border: 1px solid #FFFFFF; /* Weiße Umrandung */
 }
 
 /* Route Button - EXACT wie Bild 2 */
