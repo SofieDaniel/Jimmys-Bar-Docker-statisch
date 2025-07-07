@@ -546,14 +546,11 @@ function hideMenuItemModal() {
 }
 
 /**
- * Initialize filter functionality
+ * Initialize filter functionality - Original Design
  */
 function initializeFilters() {
-    // Set up "All" button
-    const allButton = document.querySelector('.category-btn[data-category="all"]');
-    if (allButton) {
-        allButton.onclick = () => filterByCategory('all');
-    }
+    // Initialize categories
+    initializeCategories();
     
     // Initial filter (show all)
     filterByCategory('all');
