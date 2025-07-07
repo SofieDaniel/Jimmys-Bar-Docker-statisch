@@ -165,9 +165,9 @@
 /* Route Button - EXACT wie Bild 2 */
 .route-button {
     width: 100%;
-    background: #D2B48C;
-    color: #2D1F1A;
-    border: none;
+    background: #FFFFFF; /* Weißer Hintergrund */
+    color: #2D1F1A; /* Dunkle Schrift */
+    border: 2px solid #FFFFFF; /* Weiße Umrandung */
     padding: 1rem 1.5rem;
     border-radius: 0.75rem;
     font-weight: 600;
@@ -182,7 +182,7 @@
 }
 
 .route-button:hover {
-    background: #F5E6D3;
+    background: #F5E6D3; /* Hover: Beige */
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
