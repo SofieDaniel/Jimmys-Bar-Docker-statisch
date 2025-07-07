@@ -69,23 +69,50 @@
             </div>
         </section>
 
-        <!-- Menu Categories Filter -->
+        <!-- Menu Categories Filter - Original Design -->
         <section class="menu-categories">
             <div class="container">
                 <div class="categories-wrapper">
-                    <button class="category-btn active" data-category="all">Alle Gerichte</button>
-                    <div id="categoryButtons">
-                        <!-- Dynamic content loaded from menu.ini -->
-                    </div>
+                    <button class="category-btn active" data-category="all">Alle Kategorien</button>
+                    <button class="category-btn" data-category="inicio">Inicio / Vorspeisen</button>
+                    <button class="category-btn" data-category="salat">Salat</button>
+                    <button class="category-btn" data-category="kleine-gerichte">Kleine Gerichte</button>
+                    <button class="category-btn" data-category="paellas">Tapa Paella</button>
+                    <button class="category-btn" data-category="vegetarian">Tapas Vegetarian</button>
+                    <button class="category-btn" data-category="tapas-pollo">Tapas de Pollo</button>
+                    <button class="category-btn" data-category="carnes">Tapas de Carne</button>
+                    <button class="category-btn" data-category="pescados">Tapas de Pescado</button>
+                    <button class="category-btn" data-category="kroketten">Kroketten</button>
+                    <button class="category-btn" data-category="pasta">Pasta</button>
+                    <button class="category-btn" data-category="pizza">Pizza</button>
+                    <button class="category-btn" data-category="postres">Dessert</button>
+                    <button class="category-btn" data-category="heissgetraenke">Heißgetränke</button>
+                    <button class="category-btn" data-category="tee">Tee</button>
+                    <button class="category-btn" data-category="softdrinks">Softdrinks</button>
+                    <button class="category-btn" data-category="saefte">Säfte</button>
+                    <button class="category-btn" data-category="aperitifs">Aperitifs</button>
+                    <button class="category-btn" data-category="bier">Bier</button>
+                    <button class="category-btn" data-category="weine">Weine</button>
+                    <button class="category-btn" data-category="cocktails">Cocktails</button>
+                    <button class="category-btn" data-category="bebidas">Spanische Getränke</button>
+                    <button class="category-btn" data-category="spirituosen">Spirituosen</button>
                 </div>
             </div>
         </section>
 
-        <!-- Menu Items -->
+        <!-- Menu Items - Original List Design -->
         <section class="menu-section">
             <div class="container">
-                <div class="menu-grid" id="menuGrid">
-                    <!-- Dynamic content loaded from menu.ini -->
+                <div class="menu-layout">
+                    <div class="menu-list" id="menuList">
+                        <!-- Dynamic content loaded from menu.ini -->
+                    </div>
+                    <div class="menu-detail-panel" id="menuDetailPanel">
+                        <div class="detail-placeholder">
+                            <div class="detail-icon">🍽️</div>
+                            <p>Bewegen Sie die Maus über ein Gericht<br>um detaillierte Beschreibungen,<br>Zutaten, Herkunft, Zubereitung<br>und Allergie-Informationen zu erhalten</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Menu Item Detail Modal -->
