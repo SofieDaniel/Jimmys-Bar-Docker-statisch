@@ -1,4 +1,4 @@
-/* Standorte Page Styles */
+/* Standorte Page Styles - Original Design */
 
 .locations-page {
     background: linear-gradient(145deg, 
@@ -11,7 +11,7 @@
     min-height: 100vh;
 }
 
-/* Locations Section */
+/* Locations Section - Original Design */
 .locations-section {
     padding: 4rem 0;
     background: var(--medium-brown);
@@ -30,202 +30,209 @@
     }
 }
 
-/* Location Cards */
-.location-card {
+/* Location Cards - Original Design */
+.location-card-original {
     background: rgba(45, 31, 26, 0.95);
-    border: 2px solid var(--warm-brown);
+    border: 2px solid #8B4513;
     border-radius: 1rem;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.location-card:hover {
+.location-card-original:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-.location-image {
-    width: 100%;
-    height: 250px;
+.location-image-original {
+    position: relative;
+    height: 200px;
     overflow: hidden;
 }
 
-.location-img {
+.location-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.location-card:hover .location-img {
+.location-card-original:hover .location-bg {
     transform: scale(1.05);
 }
 
-.location-content {
-    padding: 2rem;
+.location-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 2rem 1rem 1rem;
 }
 
 .location-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: var(--warm-beige);
-    margin-bottom: 1rem;
+    margin: 0;
     text-align: center;
 }
 
-.location-address {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.location-address p {
-    color: var(--light-beige);
-    font-size: 1.125rem;
-    line-height: 1.6;
-}
-
-.location-address strong {
-    color: var(--warm-beige);
-    font-size: 1.25rem;
-}
-
-/* Location Details */
-.location-details {
+/* Location Details Grid - Original Design */
+.location-details-grid {
     display: grid;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-    .location-details {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.detail-item {
-    background: var(--medium-brown);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--warm-brown);
 }
 
-.detail-item h3 {
+.detail-section {
+    padding: 1rem;
+    border-right: 1px solid #8B4513;
+    border-bottom: 1px solid #8B4513;
+    background: rgba(139, 69, 19, 0.1);
+}
+
+.detail-section:nth-child(even) {
+    border-right: none;
+}
+
+.detail-section:nth-child(n+5) {
+    border-bottom: none;
+}
+
+.detail-section.full-width {
+    grid-column: 1 / -1;
+    border-right: none;
+    text-align: center;
+    background: rgba(139, 69, 19, 0.2);
+}
+
+.detail-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-section h3 {
     color: var(--warm-beige);
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-weight: 600;
 }
 
-.detail-item p,
-.detail-item a {
+.detail-section p {
     color: var(--light-beige);
-    line-height: 1.5;
-    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
 }
 
-.detail-item a:hover {
+/* Opening Times - Original Design */
+.opening-times {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.time-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--light-beige);
+}
+
+.time-row span:first-child {
     color: var(--warm-beige);
+    font-weight: 500;
 }
 
-.opening-hours p {
-    margin-bottom: 0.25rem;
-}
-
-.opening-hours strong {
-    color: var(--warm-beige);
-}
-
-.opening-hours em {
-    color: #ff6b6b;
+/* Route Button - Original Design */
+.route-btn {
+    background: #D2B48C;
+    color: #2D1F1A;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
     font-size: 0.9rem;
 }
 
-/* Location Actions */
-.location-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+.route-btn:hover {
+    background: #F5E6D3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 768px) {
-    .location-actions {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-/* Additional Info Section */
-.additional-info {
+/* Review Quote Section - Original Design */
+.review-quote-section {
     padding: 4rem 0;
     background: var(--dark-brown);
 }
 
-.info-grid {
-    display: grid;
-    gap: 2rem;
-    max-width: 1000px;
+.quote-card {
+    max-width: 800px;
     margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .info-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.info-card {
     text-align: center;
-    padding: 2rem;
-    background: var(--medium-brown);
-    border-radius: 0.5rem;
-    border: 1px solid var(--warm-brown);
-    transition: all 0.3s ease;
+    background: rgba(45, 31, 26, 0.95);
+    border: 2px solid #8B4513;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
 }
 
-.info-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.info-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.info-title {
+.quote-title {
     font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     color: var(--warm-beige);
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.info-description {
-    color: var(--light-beige);
+.quote-text {
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--warm-beige);
+    margin-bottom: 1rem;
     font-weight: 300;
-    line-height: 1.5;
+}
+
+.quote-subtitle {
+    font-style: italic;
+    font-size: 1.125rem;
+    color: #D2B48C;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.quote-description {
+    color: var(--light-beige);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
 }
 
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
+    .location-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .detail-section {
+        border-right: none;
+        border-bottom: 1px solid #8B4513;
+    }
+    
+    .detail-section:last-child {
+        border-bottom: none;
+    }
+    
     .location-name {
         font-size: 1.5rem;
     }
     
-    .location-details {
-        grid-template-columns: 1fr;
-    }
-    
-    .location-actions {
-        flex-direction: column;
+    .quote-card {
+        margin: 0 1rem;
+        padding: 2rem 1.5rem;
     }
 }
