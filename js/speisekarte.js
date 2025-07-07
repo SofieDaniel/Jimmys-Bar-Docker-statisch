@@ -323,7 +323,7 @@ function createMenuItemOriginal(item) {
 }
 
 /**
- * Show menu item detail in right panel - Original Design
+ * Show menu item detail in right panel - Original Design WITHOUT IMAGES
  */
 function showMenuItemDetail(item) {
     const detailPanel = document.getElementById('menuDetailPanel');
@@ -334,10 +334,6 @@ function showMenuItemDetail(item) {
     
     detailPanel.innerHTML = `
         <div class="menu-detail-content">
-            <img src="${item.image || 'https://images.unsplash.com/photo-1544025162-d76694265947'}" 
-                 alt="${item.name}" 
-                 class="detail-image">
-            
             <h2 class="detail-title">${vegetarianIcon} ${item.name}</h2>
             <div class="detail-price">${item.price}${currencySymbol}</div>
             
