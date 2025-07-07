@@ -283,7 +283,7 @@ function initializeMenuGrid() {
 }
 
 /**
- * Create menu item HTML element - Original Design with Allergens
+ * Create menu item HTML element - Fixed Hover
  */
 function createMenuItemOriginal(item) {
     const menuItem = document.createElement('div');
@@ -311,9 +311,13 @@ function createMenuItemOriginal(item) {
         </div>
     `;
     
-    // Add hover handler for detail panel
-    menuItem.addEventListener('mouseenter', () => showMenuItemDetail(item));
-    menuItem.addEventListener('mouseleave', () => hideMenuItemDetail());
+    // Fixed hover handlers
+    menuItem.addEventListener('mouseenter', () => {
+        showMenuItemDetail(item);
+        menuItem.classList.add('active');
+    });
+    
+    // Remove the mouseleave that was causing issues
     menuItem.addEventListener('click', () => {
         // Remove active from all items
         document.querySelectorAll('.menu-item-original').forEach(el => el.classList.remove('active'));
