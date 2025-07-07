@@ -137,9 +137,15 @@
 
 .review-info-card {
     background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #8B4513;
-    border-radius: 1rem;
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+    border-radius: 8px; /* Weniger rund = professioneller */
     padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.review-info-card:hover {
+    transform: translateY(-2px); /* Weniger Animation = professioneller */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .review-info-card h3 {
