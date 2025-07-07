@@ -116,7 +116,7 @@
     padding-bottom: 1rem;
 }
 
-/* Menu Item - Original List Style */
+/* Menu Item - Original List Style WITHOUT IMAGES */
 .menu-item-original {
     background: rgba(45, 31, 26, 0.85);
     border: 1px solid rgba(245, 230, 211, 0.1);
@@ -173,8 +173,33 @@
     color: var(--light-beige);
     font-weight: 300;
     line-height: 1.5;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-size: 0.9rem;
+}
+
+.menu-item-detailed-description {
+    color: var(--light-beige);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.menu-item-allergens {
+    color: #ff6b6b;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    background: rgba(255, 107, 107, 0.1);
+    border-left: 3px solid #ff6b6b;
+    border-radius: 0 4px 4px 0;
+}
+
+.menu-item-allergens strong {
+    color: #ff4757;
 }
 
 .menu-item-meta-original {
@@ -208,7 +233,7 @@
     border: 1px solid rgba(245, 230, 211, 0.3);
 }
 
-/* Menu Detail Panel - Original Right Side */
+/* Menu Detail Panel - NO IMAGES */
 .menu-detail-panel {
     background: rgba(45, 31, 26, 0.95);
     border: 2px solid var(--warm-brown);
@@ -246,13 +271,7 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.detail-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
+/* NO .detail-image rule - removed images */
 
 .detail-title {
     font-family: 'Playfair Display', serif;
