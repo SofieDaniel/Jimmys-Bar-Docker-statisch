@@ -230,23 +230,17 @@ function getFallbackMenuDataForSpeisekarte() {
 }
 
 /**
- * Initialize category filter buttons
+ * Initialize category filter buttons - Original Design
  */
 function initializeCategories() {
-    const categoryButtons = document.getElementById('categoryButtons');
-    if (!categoryButtons) return;
+    // All category buttons are already in HTML, just add event listeners
+    const categoryButtons = document.querySelectorAll('.category-btn');
     
-    categoryButtons.innerHTML = '';
-    
-    // Add category buttons
-    Object.entries(window.menuCategories || {}).forEach(([key, name]) => {
-        const button = document.createElement('button');
-        button.className = 'category-btn';
-        button.textContent = name;
-        button.dataset.category = key;
-        button.onclick = () => filterByCategory(key);
-        
-        categoryButtons.appendChild(button);
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category || 'all';
+            filterByCategory(category);
+        });
     });
 }
 
