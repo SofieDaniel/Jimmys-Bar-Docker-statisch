@@ -1,100 +1,87 @@
 <analysis>
-The AI engineer's trajectory for Jimmys Tapas Bar" highlights an intensive, iterative development cycle focused on stabilizing and enhancing a full-stack application. A persistent challenge was aligning the database to MySQL, despite recurrent MongoDB issues and user demands for MySQL compatibility for webspace deployment. The engineer demonstrated strong debugging skills, addressing critical issues like CMS login failures (due to incorrect frontend URL and missing backend endpoint), inconsistent API responses, and incomplete menu data. Key progress includes implementing MouseOver functionality for menu items, fixing various CMS content management flows, and dynamically updating pages like "About Us" and "Locations". Recent efforts meticulously addressed numerous user feedback points, including correcting business information (addresses, phone numbers, opening hours, email), refining website content (removing "Newsletter", "Follow Us", adjusting homepage specialties), and replacing imagery. The development was characterized by continuous adjustment to explicit user demands, often uncovering cascading issues requiring precise backend and frontend modifications. The project is currently focused on ensuring all menu items are correctly imported and displayed with full details.
+The AI engineer was tasked with converting a failing full-stack React/FastAPI/MongoDB application (Jimmy's Tapas Bar) into a purely static HTML/CSS/JavaScript website with INI-based menu configuration. The initial challenge involved diagnosing the original backend's MySQL connection failure. Upon user instruction, the AI then built a static version, focusing on replicating the existing UI. However, the user repeatedly emphasized a 1:1 design fidelity requirement, providing iterative feedback and images, which led to significant redesigns of the Speisekarte, Standorte, and other pages. The AI has been working in an iterative feedback loop, constantly adjusting the static site's design to match the user's evolving and more precise original design expectations. The work is currently focused on achieving pixel-perfect replication for specific pages, starting with Standorte.
 </analysis>
 
 <product_requirements>
-The core objective for "Jimmys Tapas Bar application is to transform an initial MVP (v7) into a fully functional and dynamically manageable system suitable for standard webspace deployment, strictly requiring MySQL. Initial issues included non-functional core pages, a broken backend database, and missing functionalities like newsletter subscriptions. A comprehensive menu overhaul was critical, demanding over 269 new food and drink items with detailed information (prices, descriptions, allergens, origin, preparation). An interactive MouseOver feature for menu details was also required, along with an intuitive Admin CMS Panel for all content (menu, About Us, Locations, Navigation, Footer, Buttons). Specific fixes included removing text from the contact page and resolving Invalid Date issues for newsletter data. All content must be dynamic and not hardcoded, with an ultimate goal of full functionality and dynamic content for deployment.
+The primary problem initially was a non-functional full-stack application (Jimmy's Tapas Bar) with a React frontend, FastAPI backend, and MongoDB, suffering from a backend MySQL connection error. The user's explicit request was to transform this into a purely static HTML, CSS, and JavaScript website. Key requirements included:
+1.  **Purely Static Architecture**: No backend frameworks or databases.
+2.  **INI-based Menu Configuration**: All menu categories, items, and prices defined in a  file, loaded dynamically via JavaScript.
+3.  **Exact Design Preservation**: Maintain original HTML structure, CSS values (colors, margins, fonts), and visual appearance.
+4.  **Live Preview**: An  file that loads locally via  with immediate updates.
+5.  **Comprehensive Documentation**: A  with installation, deployment,  editing instructions, and local preview URL/port.
+6.  **Quality Standards**: ES6+ JavaScript, clear structure, consistent file naming, no visual changes.
+7.  **Iterative Design Fidelity**: Subsequent requests focused on achieving a 1:1 pixel-perfect replication of the original dynamic site's design for individual pages (Speisekarte, Standorte, Bewertungen, Über uns, Kontakt), often correcting previous attempts based on user-provided screenshots. Specific design nuances included no images for menu items, prominent allergen displays, correct category button colors, and detailed layout for locations and reviews.
 </product_requirements>
 
 <key_technical_concepts>
-- **React.js**: Frontend framework for dynamic UIs.
-- **FastAPI**: Python backend for robust API services.
-- **MySQL/MariaDB**: The primary relational database for persistent data.
-- **MongoDB**: Previously used NoSQL database, phased out due to user requirements.
-- **Tailwind CSS**: Utility-first CSS for styling.
-- **Kubernetes/Supervisorctl**: Container orchestration and process management.
-- **PyMySQL**: Python client for MySQL interaction.
-- **JWT**: For secure user authentication.
+-   **Static Site Generation**: Transforming a dynamic application into pure HTML, CSS, and JavaScript files.
+-   **INI File Parsing**: Loading and interpreting data from  configuration files using JavaScript for dynamic content rendering.
+-   **Frontend Development**: HTML5, CSS3 (including advanced Tailwind-like patterns implicitly used for styling), ES6+ JavaScript.
+-   **Responsive Design**: Ensuring the website adapts correctly to various screen sizes.
+-   **Supervisor**: Tool for managing and controlling long-running processes (e.g., stopping old frontend/backend services).
 </key_technical_concepts>
 
 <code_architecture>
-The application employs a full-stack architecture with a React frontend and a FastAPI backend, primarily targeting MySQL/MariaDB for data persistence.
+The original application had a  (FastAPI, intended MySQL/MongoDB) and  (React) structure. The AI engineer transformed this into a new, purely static site within , which was later moved directly to  and the old dynamic app directories (, , , ) were removed.
+
+**Current Directory Structure (after removal of old app and moving static site to root):**
 
 
-
-**Key Files and Changes:**
-
--   ****:
-    -   **Importance**: Central FastAPI application handling all API routes and database logic.
-    -   **Summary of Changes**: Numerous fixes related to MySQL/MongoDB migration, including column name corrections ( vs ), adding and re-registering CMS API endpoints (, , , ), ensuring correct API route registration order, and updating response models.  Pydantic model was expanded to include detailed fields. Backend refactored to enforce strict MySQL usage, removing MongoDB dependencies. Added  for authentication and implemented CMS PUT endpoints for dynamic content updates, and a new contact form endpoint. Backend location data and opening hours were updated multiple times.
-
--   ****:
-    -   **Importance**: Main React component managing application routing, global state, and admin panel integration.
-    -   **Summary of Changes**: Corrected  in  for local backend communication. Router configuration was modified to add new pages (Google Reviews) and remove others (Bewertungen, Newsletter). CMS menu buttons and their corresponding rendering logic were removed (, , , ). Login logic was debugged and fixed. Footer rendering was adjusted due to repeated issues with newsletter content.  import corrected.
-
--   ****:
-    -   **Importance**: Displays menu items with MouseOver/Hover functionality.
-    -   **Summary of Changes**: Implemented and refined hover modal design for detailed item information, ensuring compactness, scrolling, and proper layout to prevent content overflow.
-
--   ****:
-    -   **Importance**: Renders About Us page content.
-    -   **Summary of Changes**: Modified to dynamically fetch content from CMS API. Explicitly removed Unser Team and Unsere Leidenschaft sections as requested.
-
--   ****:
-    -   **Importance**: Stores database and other environment variables.
-    -   **Summary of Changes**: Frequently modified to switch between  and MySQL configurations. Finally cleaned to strictly use MySQL-related variables.
-
--   ****:
-    -   **Importance**: New component to embed Google Reviews.
-    -   **Summary of Changes**: Newly created to incorporate Google Reviews, replacing the previous Bewertungen section.
-
--   ****:
-    -   **Importance**: Displays locations content.
-    -   **Summary of Changes**: Completely overhauled for design, updated to display correct addresses and opening hours dynamically. Integrated Google Maps for route planning, and removed Tisch reservieren buttons. Image was changed to a more Spanish-themed one.
-
--   ****:
-    -   **Importance**: Handles contact page content.
-    -   **Summary of Changes**: Refactored to only display a functional contact form, explicitly removing location-related content.
-
--   ****:
-    -   **Importance**: Renders imprint details.
-    -   **Summary of Changes**: Converted to a static page from dynamic fetching, and updated with correct contact details and owner information.
-
--   ****:
-    -   **Importance**: Renders privacy policy.
-    -   **Summary of Changes**: Converted to a static page and updated with correct contact details.
-
--   ****:
-    -   **Importance**: Displays site-wide footer content.
-    -   **Summary of Changes**: Removed Newsletter subscription section and Folgen Sie uns (Follow Us) social links. Opening hours and location contact details were updated multiple times.
-
--   **SQL/Python Scripts (, , , etc.)**:
-    -   **Importance**: Used for database schema setup, data migration, and content population.
-    -   **Summary of Changes**: Multiple scripts created/modified to handle database setup, initial menu imports (124 items), and ongoing efforts to import the complete 207+ item menu into MySQL, including detailed descriptions, after resolving database connection and schema issues.
+-   **/app/config/menu.ini**:
+    -   **Importance**: This file serves as the single source of truth for all menu data (categories, dishes, prices, descriptions, allergens). It's crucial for the dynamic rendering of the menu page without a database.
+    -   **Changes Made**: Initial creation with example menu items. Repeatedly updated throughout the conversation to reflect changes in menu structure (e.g., adding allergens) and ensure data validity.
+-   **/app/css/styles.css**:
+    -   **Importance**: Contains global and main styling for the entire static website.
+    -   **Changes Made**: Created by copying styles from the original React app. Extensively modified multiple times to match specific user-requested design elements, including category button colors, general layout, and responsiveness.
+-   **/app/css/speisekarte.css**:
+    -   **Importance**: Specific CSS rules for the menu page ().
+    -   **Changes Made**: Created to hold menu-specific styles. Modified to remove image displays, style allergen warnings, and adjust the side-by-side layout for dishes and details. Also updated to correct category button colors.
+-   **/app/css/standorte.css**:
+    -   **Importance**: Specific CSS rules for the locations page ().
+    -   **Changes Made**: Initially created to add basic styling for the locations page. Later modified significantly to implement the large modern cards with background images layout as per the user's latest specific design requirement.
+-   **/app/css/bewertungen.css**:
+    -   **Importance**: Specific CSS rules for the reviews page ().
+    -   **Changes Made**: Created to implement the Google Reviews integration design, structured info cards, and original blue Google button styling.
+-   **/app/js/main.js**:
+    -   **Importance**: Contains general JavaScript functionalities like cookie banner handling, scroll-to-top, and mobile navigation.
+    -   **Changes Made**: Initial creation for basic static site functionality. No specific major design-related changes noted, mainly structural.
+-   **/app/js/speisekarte.js**:
+    -   **Importance**: Handles the dynamic loading and rendering of menu items from , category filtering, and item detail display on hover/click.
+    -   **Changes Made**: Created to parse  and render the menu. Heavily modified to adapt to the user's 1:1 design feedback, including changing menu item presentation from cards to a list, implementing the side-by-side detail panel, removing image rendering, displaying allergens, and fixing the mouseover functionality.
+-   **/app/index.html**:
+    -   **Importance**: The main entry point for the static website.
+    -   **Changes Made**: Initially created as a static version of the original app's homepage. Modified to link to the new static CSS and JS files and to ensure the overall HTML structure matched the original design requirements.
+-   **/app/pages/*.html**:
+    -   **Importance**: These are the individual static content pages (Speisekarte, Standorte, Bewertungen, Über uns, Kontakt, Impressum, Datenschutz).
+    -   **Changes Made**: Initially created with minimal content. Subsequently, , ,  underwent multiple significant overhauls to achieve the precise 1:1 design requested by the user, including structural changes to accommodate new layouts and content. The other pages (, , , ) were created later in the process and were yet to be fully transformed to the original design.
+-   **/app/deploy.sh**:
+    -   **Importance**: A helper script for simple local deployment using .
+    -   **Changes Made**: Created to streamline the static site's local testing and deployment.
+-   **/app/README.md & /app/README_STATIC.md**:
+    -   **Importance**: Documentation for the static website.
+    -   **Changes Made**: Initial  created with usage instructions. A final  was later generated to summarize the completed static site.
 </code_architecture>
 
 <pending_tasks>
-- **Menu Item Count**: The user provided a list of over 207 menu items. The last successful import achieved 137 items, so the remaining items need to be added, ensuring all details (descriptions, allergens, etc.) are included.
-- **CMS Full Validation**: A complete end-to-end user validation of all remaining CMS functionalities (especially Standorte, and potentially others) is still implicitly pending.
-- **Image placeholders**: Replace placeholder images with appropriate Spanish-themed ones as requested, particularly for .
+The previous AI engineer was explicitly instructed to replicate the original design for several pages in a specific order:
+-   **Speisekarte** (Menu) - After Standorte, as it was fixed once but user was still not satisfied.
+-   **Bewertungen** (Reviews)
+-   **Über uns** (About Us)
+-   **Kontakt** (Contact)
 </pending_tasks>
 
 <current_work>
-Immediately prior to this summary, the AI engineer was engaged in a series of comprehensive updates based on direct user feedback:
+Immediately before this summary request, the previous AI engineer was deeply involved in addressing the user's persistent demand for 1:1 design replication, specifically for the Standorte (Locations) page. The user had explicitly expressed dissatisfaction with previous attempts, stating the current design was wrong and provided a new visual reference (Bild 2) showing large modern cards with pictures as the desired outcome.
 
-1.  **Menu Content & Database**: The user explicitly stated the menu was not current and provided a list of over 207 items. Previously, only 124 items were imported into MySQL, and then 137 items. The AI created and iterated on  and  scripts to import the full menu, addressing database connection issues and schema discrepancies ( column). The user then highlighted the missing detailed descriptions for dishes.
-2.  **Contact & Location Information**: The user provided definitive correct addresses, phone numbers, email, and opening hours for both Neustadt and Großenbrode locations (Neustadt: 015735256793, Großenbrode: 015782226373, Email: info@jimmys-tapasbar.de). The AI updated this information across the backend API, frontend , , , , and  components. Opening hours were later refined to be a consistent 12:00 - 22:00 Uhr for both locations.
-3.  **Content Refinement**:
-    *   **Footer**: Newsletter subscription section and Folgen Sie uns (Follow Us) social links were definitively removed from .
-    *   **Locations Page**: Redesigned for aesthetics, integrated Google Maps for route planning, removed Tisch reservieren buttons, and updated the header image to a Spanish theme.
-    *   **Contact Page**: Simplified to include only a functional contact form, removing location details. A backend endpoint for the contact form was also added.
-    *   **Impressum & Datenschutz**: Both pages were made static and updated with the correct business information and contact details.
-    *   **Homepage Specialties**: The number of displayed specialties was fixed to show 4 instead of 3, by correcting the frontend logic in . The homepage hero image was also updated to a Spanish-themed one.
-    *   **About Us content**: A specific introductory text (Wir laden Sie herzlich ein...) was implemented, replacing a previous version that explicitly mentioned the owner, as per user request.
+The AI engineer acknowledged this precise feedback, understood the discrepancy between the current small boxes and the desired large cards, and committed to building the Standorte page exactly like Bild 2. The last actions taken were:
+1.  Acknowledging the new visual requirement (Chat 273).
+2.  Modifying  (Chat 274), which contained the HTML structure for the locations page.
+    
+3.  Proceeding to adjust the CSS in Chat 275, specifically for , to implement the styling for the large modern cards layout. This edit was initiated but the output of the tool call is not shown, meaning the work on the CSS for the Standorte page was mid-process when the trajectory ended.
 
-The immediate state is that core contact information, location details, general content, and navigation elements have been extensively revised and appear to be largely correct and dynamic where intended. The critical remaining task revolves around the complete and accurate import of all menu items with their detailed descriptions.
+The Standorte page is currently being redesigned to match the specific large modern cards with background images style as per the user's latest provided image.
 </current_work>
 
 <optional_next_step>
-Complete the import of all 207+ menu items into the MySQL database, ensuring full detailed descriptions are included for each.
+Replicate the Speisekarte (Menu) page design to match the user's explicit 1:1 original design requirement, as it is the next page in the user's prioritized list.
 </optional_next_step>
