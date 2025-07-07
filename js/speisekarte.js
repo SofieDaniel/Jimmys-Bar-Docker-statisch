@@ -397,13 +397,19 @@ function showMenuItemDetail(item) {
 }
 
 /**
- * Hide menu item detail panel
+ * Hide menu item detail panel - Fixed
  */
 function hideMenuItemDetail() {
-    // Don't hide immediately, allow clicking
+    // Don't hide when hovering over detail panel or menu item
+    const detailPanel = document.getElementById('menuDetailPanel');
+    if (!detailPanel) return;
+    
+    // Only hide if not hovering over panel and no active item
     setTimeout(() => {
-        const detailPanel = document.getElementById('menuDetailPanel');
-        if (detailPanel && !detailPanel.matches(':hover')) {
+        const isHoveringPanel = detailPanel.matches(':hover');
+        const hasActiveItem = document.querySelector('.menu-item-original.active');
+        
+        if (!isHoveringPanel && !hasActiveItem) {
             detailPanel.innerHTML = `
                 <div class="detail-placeholder">
                     <div class="detail-icon">🍽️</div>
@@ -411,7 +417,7 @@ function hideMenuItemDetail() {
                 </div>
             `;
         }
-    }, 300);
+    }, 100);
 }
 
 /**
