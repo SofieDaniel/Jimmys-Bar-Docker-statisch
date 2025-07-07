@@ -1,39 +1,63 @@
-# Stage 1: Build React App
-FROM node:20 AS frontend-build
-ARG FRONTEND_ENV
-ENV FRONTEND_ENV=${FRONTEND_ENV}
-WORKDIR /app
-COPY frontend/ /app/
-RUN rm /app/.env
-RUN touch /app/.env
-RUN echo "${FRONTEND_ENV}" | tr ',' '\n' > /app/.env
-RUN cat /app/.env
-RUN yarn install --frozen-lockfile && yarn build
+FROM node:18-alpine as frontend-builder
 
-# Stage 2: Install Python Backend
-FROM python:3.11-slim as backend
-WORKDIR /app
-COPY backend/ /app/
-RUN rm /app/.env
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies
+WORKDIR /app/frontend
+COPY frontend/package*.json ./
+RUN npm install
 
-# Stage 3: Final Image
-FROM nginx:stable-alpine
+# Copy source and build
+COPY frontend/ ./
+RUN npm run build
+
+# Python backend with MySQL
+FROM python:3.11-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    mariadb-server \
+    mariadb-client \
+    nginx \
+    supervisor \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create app directory
+WORKDIR /app
+
+# Copy backend requirements and install
+COPY backend/requirements.txt ./backend/
+RUN pip install -r backend/requirements.txt
+
+# Copy backend code
+COPY backend/ ./backend/
+
 # Copy built frontend
-COPY --from=frontend-build /app/build /usr/share/nginx/html
-# Copy backend
-COPY --from=backend /app /backend
-# Copy nginx config
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY --from=frontend-builder /app/frontend/build ./frontend/build
 
-# Install Python and dependencies
-RUN apk add --no-cache python3 py3-pip \
-    && pip3 install --break-system-packages -r /backend/requirements.txt
+# Copy nginx configuration
+COPY docker/nginx.conf /etc/nginx/nginx.conf
 
-# Add env variables if needed
-ENV PYTHONUNBUFFERED=1
+# Copy supervisor configuration
+COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Start both services: Uvicorn and Nginx
-CMD ["/entrypoint.sh"]
+# Copy MySQL initialization script
+COPY docker/init-mysql.sql /docker-entrypoint-initdb.d/
+
+# Create necessary directories
+RUN mkdir -p /var/log/supervisor /app/backups /run/mysqld
+
+# Set permissions
+RUN chown -R mysql:mysql /var/lib/mysql /run/mysqld
+
+# Expose ports
+EXPOSE 80 8001
+
+# Copy startup script
+COPY docker/start.sh /start.sh
+RUN chmod +x /start.sh
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:80 || exit 1
+
+CMD ["/start.sh"]
