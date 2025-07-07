@@ -21,10 +21,11 @@
     max-width: 600px;
     margin: 0 auto;
     background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #8B4513;
-    border-radius: 1rem;
+    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
+    border-radius: 8px; /* Weniger rund = professioneller */
     padding: 3rem 2rem;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Weniger Schatten */
 }
 
 .google-logo {
