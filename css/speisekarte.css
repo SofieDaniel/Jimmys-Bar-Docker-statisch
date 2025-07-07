@@ -52,8 +52,8 @@
 }
 
 .category-btn {
-    background: #8B4513;
-    border: 1px solid #D2B48C;
+    background: #2D1F1A; /* Dunkler Hintergrund */
+    border: 1px solid #FFFFFF; /* WEISSE Umrandung */
     color: #F5E6D3;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -65,17 +65,19 @@
 }
 
 .category-btn:hover {
-    background: #A0522D;
+    background: #3D2B1F;
     color: #FFFFFF;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-color: #F5E6D3;
 }
 
 .category-btn.active {
-    background: #D2B48C;
-    color: #2D1F1A;
+    background: #FFFFFF; /* Aktiv: Weißer Hintergrund */
+    color: #2D1F1A; /* Dunkle Schrift */
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-color: #FFFFFF;
 }
 
 /* Menu Layout - Original Side-by-Side Design */
