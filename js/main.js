@@ -387,7 +387,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Frische Tintenfisch-Ringe gegrillt mit Knoblauch, Petersilie und Zitrone',
             price: '8.90',
             category: 'pescados',
-            image: 'images/value-seafood.jpg',
+            image: 'images/paella-specialty.jpg',
             allergens: 'Weichtiere',
             origin: 'Spanien'
         },
