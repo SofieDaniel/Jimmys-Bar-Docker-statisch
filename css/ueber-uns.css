@@ -65,8 +65,11 @@
 .paella-hero-image {
     height: 100%;
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
-                url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=1200&q=90') center/cover;
+                #8B4513;
+    background-size: cover;
+    background-position: center;
     position: relative;
+    /* Fallback ohne externes Bild */
 }
 
 .image-overlay {
