@@ -181,10 +181,16 @@ body {
     background: var(--dark-brown);
     border-top: 1px solid rgba(245, 230, 211, 0.1);
     padding: 1rem 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
 .mobile-menu.active {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .mobile-nav-link {
