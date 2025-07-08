@@ -557,7 +557,7 @@ function showMenuItemModal(item) {
     const currencySymbol = window.menuSettings?.currency_symbol || '€';
     
     modalBody.innerHTML = `
-        <img src="${item.image || 'https://images.unsplash.com/photo-1544025162-d76694265947'}" 
+        <img src="${item.image || 'images/placeholder-card.svg'}" 
              alt="${item.name}" 
              class="modal-image">
         
