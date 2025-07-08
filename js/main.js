@@ -376,7 +376,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Luftgetrockneter Serrano-Schinken gefüllt mit süßen Feigen und Frischkäse',
             price: '9.90',
             category: 'carnes',
-            image: 'images/serrano-ham.svg',
+            image: 'images/serrano-ham-real.jpg',
             allergens: 'Milch',
             origin: 'Spanien'
         },
@@ -387,7 +387,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Frische Tintenfisch-Ringe gegrillt mit Knoblauch, Petersilie und Zitrone',
             price: '8.90',
             category: 'pescados',
-            image: 'images/calamari-grilled.svg',
+            image: 'images/calamari-rings.jpg',
             allergens: 'Weichtiere',
             origin: 'Spanien'
         },
