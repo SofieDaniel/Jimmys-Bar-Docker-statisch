@@ -32,6 +32,7 @@ function initializeWebsite() {
     // Load menu data and initialize page-specific content
     loadMenuData().then(() => {
         initializeHomePage();
+        initializeContactForm();
         hideLoadingScreen();
     }).catch(error => {
         console.error('Error loading menu data:', error);
