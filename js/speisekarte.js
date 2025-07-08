@@ -236,6 +236,52 @@ function getFallbackMenuDataForSpeisekarte() {
 }
 
 /**
+ * Get category name from category key
+ */
+function getCategoryName(categoryKey) {
+    if (window.menuCategories && window.menuCategories[categoryKey]) {
+        return window.menuCategories[categoryKey];
+    }
+    
+    // Fallback mapping for common categories
+    const categoryMap = {
+        'inicio': 'Inicio / Vorspeisen',
+        'salat': 'Salat',
+        'kleiner-salat': 'Kleiner Salat',
+        'paellas': 'Tapa Paella',
+        'vegetarian': 'Tapas Vegetarian',
+        'tapas-pollo': 'Tapas de Pollo',
+        'carnes': 'Tapas de Carne',
+        'pescados': 'Tapas de Pescado',
+        'kroketten': 'Kroketten',
+        'pasta': 'Pasta',
+        'pizza': 'Pizza',
+        'kleine-grosse-hunger': 'Für den kleinen und großen Hunger',
+        'postres': 'Dessert',
+        'helados': 'Helados (Eis)',
+        'heissgetraenke': 'Heißgetränke',
+        'wasser': 'Wasser',
+        'softdrinks': 'Softdrinks',
+        'saefte': 'Säfte/Nektar',
+        'limonaden': 'Limonaden (hausgemacht)',
+        'weine-offen': 'Weine (offen)',
+        'flaschenweine': 'Flaschenweine',
+        'spanische-getraenke': 'Spanische Getränke',
+        'bier-fass': 'Bier vom Fass',
+        'flaschenbier': 'Flaschenbier',
+        'spirituosen': 'Spirituosen (Shots 2cl)',
+        'gin-longdrinks': 'Gin Longdrinks',
+        'whiskey': 'Whiskey (4cl)',
+        'shots': 'Shots (4cl)',
+        'brandy': 'Spanischer Brandy (4cl)',
+        'cocktails-alkoholfrei': 'Cocktails alkoholfrei',
+        'cocktails': 'Cocktails mit Alkohol'
+    };
+    
+    return categoryMap[categoryKey] || categoryKey;
+}
+
+/**
  * Initialize category filter buttons - Original Design
  */
 function initializeCategories() {
