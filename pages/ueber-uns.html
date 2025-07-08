@@ -6,44 +6,85 @@
     <title>Über uns - Jimmy's Tapas Bar</title>
     <meta name="description" content="Erfahren Sie mehr über Jimmy's Tapas Bar - authentische spanische Küche an der Ostsee.">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/ueber-uns.css">
+    
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-link">Startseite</a>
-            <a href="standorte.html" class="nav-link">Standorte</a>
-            <a href="speisekarte.html" class="nav-link">Speisekarte</a>
-            <a href="bewertungen.html" class="nav-link">Bewertungen</a>
-            <a href="ueber-uns.html" class="nav-link active">Über uns</a>
-            <a href="kontakt.html" class="nav-link">Kontakt</a>
-        </div>
-    </nav>
+    <!-- Fixed Navigation Header -->
+    <header class="fixed-header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="../index.html" class="logo-link">
+                        <span class="logo-text">JIMMY'S</span>
+                        <span class="logo-subtext">TAPAS BAR</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-menu desktop-menu">
+                    <a href="../index.html" class="nav-link">Startseite</a>
+                    <a href="standorte.html" class="nav-link">Standorte</a>
+                    <a href="speisekarte.html" class="nav-link">Speisekarte</a>
+                    <a href="bewertungen.html" class="nav-link">Bewertungen</a>
+                    <a href="ueber-uns.html" class="nav-link active">Über uns</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menü öffnen">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="../index.html" class="mobile-nav-link">Startseite</a>
+                <a href="standorte.html" class="mobile-nav-link">Standorte</a>
+                <a href="speisekarte.html" class="mobile-nav-link">Speisekarte</a>
+                <a href="bewertungen.html" class="mobile-nav-link">Bewertungen</a>
+                <a href="ueber-uns.html" class="mobile-nav-link active">Über uns</a>
+                <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+            </div>
+        </nav>
+    </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content" class="about-page">
         <!-- Page Header -->
-        <header class="page-header">
-            <h1 class="page-title">Über uns</h1>
-            <p class="page-subtitle">Die Geschichte hinter Jimmy's Tapas Bar</p>
-        </header>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Über uns</h1>
+                <p class="page-subtitle">Die Geschichte hinter Jimmy's Tapas Bar</p>
+            </div>
+        </section>
 
         <!-- Jimmy Rodriguez Section -->
         <section class="jimmy-section">
-            <div class="content-container">
-                <div class="image-column">
-                    <img src="../images/paella-authentic.jpg" alt="Authentische spanische Paella und Tapas" class="jimmy-image">
-                    <p class="image-caption">Authentische spanische Paella und Tapas</p>
-                </div>
-                
-                <div class="text-column">
-                    <h2 class="section-title">Jimmy Rodriguez</h2>
-                    <div class="text-content">
-                        <p>Seit über 15 Jahren bringe ich die authentischsten Aromen Spaniens an die deutsche Ostseeküste. Meine Leidenschaft für die spanische Küche begann in den kleinen Tapas-Bars von Sevilla, wo ich die Geheimnisse traditioneller Rezepte entdeckte.</p>
-                        
-                        <p>In Jimmy's Tapas Bar verwenden wir nur die besten Zutaten – von handverlesenem Olivenöl aus Andalusien bis hin zu frischen Meeresfrüchten aus der Ostsee. Jedes Gericht wird mit Liebe und Respekt vor der spanischen Tradition zubereitet.</p>
+            <div class="container">
+                <div class="content-container">
+                    <div class="image-column">
+                        <img src="../images/paella-authentic.jpg" alt="Authentische spanische Paella und Tapas" class="jimmy-image">
+                        <p class="image-caption">Authentische spanische Paella und Tapas</p>
+                    </div>
+                    
+                    <div class="text-column">
+                        <h2 class="section-title">Jimmy Rodriguez</h2>
+                        <div class="text-content">
+                            <p>Seit über 15 Jahren bringe ich die authentischsten Aromen Spaniens an die deutsche Ostseeküste. Meine Leidenschaft für die spanische Küche begann in den kleinen Tapas-Bars von Sevilla, wo ich die Geheimnisse traditioneller Rezepte entdeckte.</p>
+                            
+                            <p>In Jimmy's Tapas Bar verwenden wir nur die besten Zutaten – von handverlesenem Olivenöl aus Andalusien bis hin zu frischen Meeresfrüchten aus der Ostsee. Jedes Gericht wird mit Liebe und Respekt vor der spanischen Tradition zubereitet.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,30 +92,88 @@
 
         <!-- Unsere Leidenschaft Section -->
         <section class="passion-section">
-            <div class="passion-container">
-                <h2 class="section-title">Unsere Leidenschaft</h2>
-                <p class="section-subtitle">Entdecken Sie die Leidenschaft hinter Jimmy's Tapas Bar</p>
-                
-                <div class="passion-text">
-                    <p>Seit der Gründung steht Jimmy's Tapas Bar für authentische mediterrane Küche an der deutschen Ostseeküste.</p>
+            <div class="container">
+                <div class="passion-container">
+                    <h2 class="section-title">Unsere Leidenschaft</h2>
+                    <p class="section-subtitle">Entdecken Sie die Leidenschaft hinter Jimmy's Tapas Bar</p>
                     
-                    <p>Unsere Leidenschaft gilt den traditionellen Rezepten und frischen Zutaten, die wir täglich mit Liebe zubereiten.</p>
-                    
-                    <p>Von den ersten kleinen Tapas bis hin zu unseren berühmten Paellas – jedes Gericht erzählt eine Geschichte von Tradition und Qualität.</p>
-                    
-                    <p>An beiden Standorten erleben Sie die entspannte Atmosphäre des Mittelmeers, während Sie den Blick auf die Ostsee genießen können.</p>
-                </div>
+                    <div class="passion-text">
+                        <p>Seit der Gründung steht Jimmy's Tapas Bar für authentische mediterrane Küche an der deutschen Ostseeküste.</p>
+                        
+                        <p>Unsere Leidenschaft gilt den traditionellen Rezepten und frischen Zutaten, die wir täglich mit Liebe zubereiten.</p>
+                        
+                        <p>Von den ersten kleinen Tapas bis hin zu unseren berühmten Paellas – jedes Gericht erzählt eine Geschichte von Tradition und Qualität.</p>
+                        
+                        <p>An beiden Standorten erleben Sie die entspannte Atmosphäre des Mittelmeers, während Sie den Blick auf die Ostsee genießen können.</p>
+                    </div>
 
-                <!-- Quote Box -->
-                <div class="quote-box">
-                    <blockquote class="quote-text">
-                        „Essen ist nicht nur Nahrung – es ist Kultur, Tradition und Leidenschaft auf einem Teller."
-                    </blockquote>
-                    <cite class="quote-author">— Jimmy Rodriguez</cite>
+                    <!-- Quote Box -->
+                    <div class="quote-box">
+                        <blockquote class="quote-text">
+                            „Essen ist nicht nur Nahrung – es ist Kultur, Tradition und Leidenschaft auf einem Teller."
+                        </blockquote>
+                        <cite class="quote-author">— Jimmy Rodriguez</cite>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Jimmy's Tapas Bar</h3>
+                    <p class="footer-text">Authentische spanische Küche an der Ostsee</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Standorte</h3>
+                    <div class="footer-location">
+                        <p><strong>Neustadt</strong></p>
+                        <p>Am Strande 21 Promenade</p>
+                        <p>23730 Neustadt in Holstein</p>
+                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
+                    </div>
+                    <div class="footer-location">
+                        <p><strong>Großenbrode</strong></p>
+                        <p>Südstrand 54 Promenade</p>
+                        <p>23755 Großenbrode</p>
+                        <p>Mo-So: 12:00 - 22:00 Uhr</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <p>Telefon: +49 4561 123456</p>
+                    <p>E-Mail: info@jimmys-tapasbar.de</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Rechtliches</h3>
+                    <a href="impressum.html" class="footer-link">Impressum</a>
+                    <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jimmy's Tapas Bar. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
 
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
