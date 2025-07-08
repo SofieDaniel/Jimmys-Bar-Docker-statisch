@@ -111,23 +111,18 @@ body.locations-page {
     letter-spacing: 0.1em;
 }
 
-/* Locations Section - EXACT wie Bild 2 */
+/* Locations Section Layout */
 .locations-section {
     padding: 4rem 0;
-    background: var(--medium-brown);
+    background: var(--dark-brown);
 }
 
 .locations-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-@media (min-width: 1024px) {
-    .locations-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /* Location Cards - PROFESSIONELL und ELEGANT */
