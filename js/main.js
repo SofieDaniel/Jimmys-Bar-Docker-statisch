@@ -305,7 +305,7 @@ function getFallbackMenuData() {
             category: "paellas",
             allergens: "",
             origin: "Valencia",
-            image: "https://images.unsplash.com/photo-1534080564583-6be75777b70a",
+            image: "images/placeholder-card.svg",
             vegetarian: false
         },
         paellas_2: {
