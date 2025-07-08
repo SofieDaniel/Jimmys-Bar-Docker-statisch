@@ -365,7 +365,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Klassische Paella mit Bomba-Reis, Safran, Hähnchen und frischen Meeresfrüchten',
             price: '8.90',
             category: 'paellas',
-            image: 'https://images.unsplash.com/photo-1650964807311-970cb88d347c?auto=format&fit=crop&w=600&q=80',
+            image: 'images/paella-specialty.jpg',
             allergens: 'Krustentiere, Weichtiere',
             origin: 'Valencia'
         },
@@ -376,7 +376,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Luftgetrockneter Serrano-Schinken gefüllt mit süßen Feigen und Frischkäse',
             price: '9.90',
             category: 'carnes',
-            image: 'https://images.pexels.com/photos/24706530/pexels-photo-24706530.jpeg?auto=format&fit=crop&w=600&q=80',
+            image: 'images/serrano-ham.svg',
             allergens: 'Milch',
             origin: 'Spanien'
         },
@@ -387,7 +387,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Frische Tintenfisch-Ringe gegrillt mit Knoblauch, Petersilie und Zitrone',
             price: '8.90',
             category: 'pescados',
-            image: 'https://images.pexels.com/photos/4869328/pexels-photo-4869328.jpeg?auto=format&fit=crop&w=600&q=80',
+            image: 'images/calamari-grilled.svg',
             allergens: 'Weichtiere',
             origin: 'Spanien'
         },
@@ -398,7 +398,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Traditionelle Fleischbällchen in würziger Tomatensauce nach Großmutters Rezept',
             price: '6.90',
             category: 'carnes',
-            image: 'https://images.unsplash.com/photo-1605013343009-c126c3dc2f9d?auto=format&fit=crop&w=600&q=80',
+            image: 'images/meatballs-spanish.jpg',
             allergens: 'Gluten, Eier',
             origin: 'Spanien'
         }
