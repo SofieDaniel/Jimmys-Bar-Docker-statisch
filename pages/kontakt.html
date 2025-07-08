@@ -60,7 +60,7 @@
     </header>
 
     <!-- Main Content -->
-    <main id="main-content" class="locations-page">
+    <main id="main-content" class="contact-page">
         <!-- Page Header mit Hintergrundbild -->
         <section class="page-header">
             <div class="container">
@@ -69,124 +69,92 @@
             </div>
         </section>
 
-        <!-- Locations Section - EXACT wie Standorte -->
-        <section class="locations-section">
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
             <div class="container">
-                <div class="locations-grid">
-                    <!-- Standort Neustadt Card -->
-                    <div class="location-card-large">
-                        <div class="location-hero">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Neustadt in Holstein - Kontakt" class="location-hero-image">
-                            <div class="location-title-overlay">
-                                <h2 class="location-title">Neustadt in Holstein</h2>
-                            </div>
-                        </div>
+                <div class="contact-form-container">
+                    <div class="contact-form-card">
+                        <h2 class="form-title">Schreiben Sie uns</h2>
+                        <p class="form-subtitle">Haben Sie Fragen zu unserer Speisekarte, möchten Sie eine größere Gruppe anmelden oder haben anderes Anliegen? Schreiben Sie uns gerne eine Nachricht!</p>
                         
-                        <div class="location-info">
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">📍</span>
-                                    <h3>Adresse</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName" class="form-label">Name</label>
+                                    <input type="text" id="contactName" name="contactName" class="form-input" placeholder="Vor- und Nachname" required>
                                 </div>
-                                <p>Am Strande 21 Promenade<br>23730 Neustadt in Holstein</p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">📞</span>
-                                    <h3>Telefon</h3>
-                                </div>
-                                <p><a href="tel:+4915735256793" style="color: var(--warm-beige); text-decoration: none;">015735256793</a></p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">✉️</span>
-                                    <h3>E-Mail</h3>
-                                </div>
-                                <p><a href="mailto:info@jimmys-tapasbar.de" style="color: var(--warm-beige); text-decoration: none;">info@jimmys-tapasbar.de</a></p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">🕐</span>
-                                    <h3>Öffnungszeiten</h3>
-                                </div>
-                                <div class="opening-schedule">
-                                    <div class="schedule-row">
-                                        <span>Montag - Sonntag:</span>
-                                        <span>12:00 - 22:00</span>
-                                    </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactEmail" class="form-label">E-Mail *</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" class="form-input" placeholder="ihre@email.de" required>
                                 </div>
                             </div>
-
-                            <button class="route-button" onclick="window.open('https://maps.google.com/?q=Am+Strande+21+Neustadt+in+Holstein', '_blank')">
-                                <span class="route-icon">🗺️</span>
-                                Route planen
-                            </button>
-                        </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactPhone" class="form-label">Telefon</label>
+                                    <input type="tel" id="contactPhone" name="contactPhone" class="form-input" placeholder="+49 123 456789">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactLocation" class="form-label">Standort *</label>
+                                    <select id="contactLocation" name="contactLocation" class="form-select" required>
+                                        <option value="">Bitte wählen</option>
+                                        <option value="neustadt">Neustadt in Holstein</option>
+                                        <option value="grossenbrode">Großenbrode</option>
+                                        <option value="both">Beide Standorte</option>
+                                        <option value="general">Allgemeine Anfrage</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage" class="form-label">Nachricht</label>
+                                <textarea id="contactMessage" name="contactMessage" class="form-textarea" rows="5" placeholder="Teilen Sie uns mit, wie wir Ihnen helfen können..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">Nachricht senden</button>
+                        </form>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Standort Großenbrode Card -->
-                    <div class="location-card-large">
-                        <div class="location-hero">
-                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Großenbrode - Kontakt" class="location-hero-image">
-                            <div class="location-title-overlay">
-                                <h2 class="location-title">Großenbrode</h2>
-                            </div>
+        <!-- Contact Options Section -->
+        <section class="contact-options-section">
+            <div class="container">
+                <h2 class="section-title">Weitere Kontaktmöglichkeiten</h2>
+                <div class="contact-options-grid">
+                    <div class="contact-option">
+                        <div class="contact-option-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
                         </div>
-                        
-                        <div class="location-info">
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">📍</span>
-                                    <h3>Adresse</h3>
-                                </div>
-                                <p>Südstrand 54 Promenade<br>23755 Großenbrode</p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">📞</span>
-                                    <h3>Telefon</h3>
-                                </div>
-                                <p><a href="tel:+4915782226373" style="color: var(--warm-beige); text-decoration: none;">015782226373</a></p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">✉️</span>
-                                    <h3>E-Mail</h3>
-                                </div>
-                                <p><a href="mailto:info@jimmys-tapasbar.de" style="color: var(--warm-beige); text-decoration: none;">info@jimmys-tapasbar.de</a></p>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">🕐</span>
-                                    <h3>Öffnungszeiten</h3>
-                                </div>
-                                <div class="opening-schedule">
-                                    <div class="schedule-row">
-                                        <span>Montag - Sonntag:</span>
-                                        <span>12:00 - 22:00</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="info-section">
-                                <div class="info-header">
-                                    <span class="info-icon">💌</span>
-                                    <h3>Reservierung</h3>
-                                </div>
-                                <p>Gerne nehmen wir Ihre Reservierung telefonisch oder per E-Mail entgegen. Für spontane Besuche sind wir auch da!</p>
-                            </div>
-
-                            <button class="route-button" onclick="window.open('https://maps.google.com/?q=Südstrand+54+Großenbrode', '_blank')">
-                                <span class="route-icon">🗺️</span>
-                                Route planen
-                            </button>
+                        <h3 class="contact-option-title">Telefon</h3>
+                        <p class="contact-option-text">0157 35256793</p>
+                    </div>
+                    
+                    <div class="contact-option">
+                        <div class="contact-option-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
                         </div>
+                        <h3 class="contact-option-title">E-Mail</h3>
+                        <p class="contact-option-text">info@jimmys-tapasbar.de</p>
+                    </div>
+                    
+                    <div class="contact-option">
+                        <div class="contact-option-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="contact-option-title">Ansprechzeit</h3>
+                        <p class="contact-option-text">Neustadt und Kiel</p>
                     </div>
                 </div>
             </div>
