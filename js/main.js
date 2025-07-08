@@ -316,7 +316,7 @@ function getFallbackMenuData() {
             category: "paellas",
             allergens: "Krustentiere, Weichtiere",
             origin: "Valencia",
-            image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b",
+            image: "images/placeholder-card.svg",
             vegetarian: false
         }
     };
