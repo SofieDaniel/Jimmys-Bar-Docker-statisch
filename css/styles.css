@@ -635,6 +635,32 @@ body {
     opacity: 0.8;
 }
 
+/* WebVision-Nord Link Styling */
+.footer-bottom a {
+    color: var(--light-beige);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Split footer bottom into two lines for better readability */
+.footer-bottom p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer-bottom .footer-credit {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
 /* Cookie Banner */
 .cookie-banner {
     position: fixed;
