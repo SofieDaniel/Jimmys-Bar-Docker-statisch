@@ -125,20 +125,19 @@ body.locations-page {
     margin: 0 auto;
 }
 
-/* Location Cards - PROFESSIONELL und ELEGANT */
 .location-card-large {
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung wie gewünscht */
-    border-radius: 8px; /* Weniger rund = professioneller */
+    background: rgba(245, 230, 211, 0.05);
+    border-radius: 20px;
     overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .location-card-large:hover {
-    transform: translateY(-4px); /* Weniger Bewegung = professioneller */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    border-color: #F5E6D3; /* Hover: beige */
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Hero Image - EXACT wie Bild 2 */
