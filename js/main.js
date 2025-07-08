@@ -376,8 +376,9 @@ function createSpecialtyCard(item) {
     const card = document.createElement('div');
     card.className = 'specialty-card';
     card.onclick = () => {
-        // Navigate to menu page (in a real implementation)
-        window.location.href = 'pages/speisekarte.html';
+        // Navigate to specific category in menu page
+        const categoryId = item.category || 'inicio';
+        window.location.href = `pages/speisekarte.html#${categoryId}`;
     };
     
     const currencySymbol = menuData.settings?.currency_symbol || '€';
