@@ -1,10 +1,11 @@
 /* Über uns Page - Mit konsistenter Navigation und dunkelbraunem Design */
 
-/* Page Header nach Navigation */
+/* Page Header nach Navigation - WIE BEI BEWERTUNGEN */
 .page-header {
     background: transparent;
-    padding: 8rem 0 3rem;
-    text-align: center;
+    padding: 6rem 0 2rem;
+    text-align: left;
+    margin-left: 2rem;
 }
 
 .page-title {
