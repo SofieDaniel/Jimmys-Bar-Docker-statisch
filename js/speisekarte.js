@@ -282,6 +282,22 @@ function getCategoryName(categoryKey) {
 }
 
 /**
+ * Toggle extended categories display
+ */
+function toggleCategories() {
+    const extendedCategories = document.querySelector('.extended-categories');
+    const showMoreBtn = document.querySelector('.show-more-btn');
+    
+    if (extendedCategories.style.display === 'none' || extendedCategories.style.display === '') {
+        extendedCategories.style.display = 'flex';
+        showMoreBtn.textContent = 'Weniger Kategorien anzeigen';
+    } else {
+        extendedCategories.style.display = 'none';
+        showMoreBtn.textContent = 'Mehr Kategorien anzeigen';
+    }
+}
+
+/**
  * Initialize category filter buttons - Original Design
  */
 function initializeCategories() {
