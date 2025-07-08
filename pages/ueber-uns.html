@@ -16,131 +16,153 @@
     <!-- Skip to content for accessibility -->
     <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 </head>
-<body class="about-page">
-    <!-- Loading Screen -->
-    <div id="loadingScreen" class="loading-screen">
-        <div class="loading-spinner"></div>
-        <p class="loading-text">Lade Seite...</p>
-    </div>
-
+<body>
     <!-- Fixed Navigation Header -->
     <header class="fixed-header">
-        <div class="nav-content">
-            <div class="nav-logo">
-                <a href="../index.html" class="logo-link">
-                    <span class="logo-text">Jimmy's Tapas Bar</span>
-                </a>
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="../index.html" class="logo-link">
+                        <span class="logo-text">JIMMY'S</span>
+                        <span class="logo-subtext">TAPAS BAR</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-menu desktop-menu">
+                    <a href="../index.html" class="nav-link">Startseite</a>
+                    <a href="standorte.html" class="nav-link">Standorte</a>
+                    <a href="speisekarte.html" class="nav-link">Speisekarte</a>
+                    <a href="bewertungen.html" class="nav-link">Bewertungen</a>
+                    <a href="ueber-uns.html" class="nav-link active">Über uns</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menü öffnen">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
             
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-links">
-                    <li><a href="../index.html" class="nav-link">Startseite</a></li>
-                    <li><a href="speisekarte.html" class="nav-link">Speisekarte</a></li>
-                    <li><a href="standorte.html" class="nav-link">Standorte</a></li>
-                    <li><a href="bewertungen.html" class="nav-link">Bewertungen</a></li>
-                    <li><a href="ueber-uns.html" class="nav-link active">Über uns</a></li>
-                    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
-                </ul>
-            </nav>
-            
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <a href="../index.html" class="mobile-nav-link">Startseite</a>
+                    <a href="standorte.html" class="mobile-nav-link">Standorte</a>
+                    <a href="speisekarte.html" class="mobile-nav-link">Speisekarte</a>
+                    <a href="bewertungen.html" class="mobile-nav-link">Bewertungen</a>
+                    <a href="ueber-uns.html" class="mobile-nav-link active">Über uns</a>
+                    <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Page Header - WIE STANDORTE/BEWERTUNGEN -->
-        <section class="page-header">
+        <!-- Page Header Section -->
+        <section class="page-hero">
             <div class="container">
-                <h1 class="page-title">Über uns</h1>
-                <p class="page-subtitle">Die Geschichte hinter Jimmy's Tapas Bar</p>
+                <div class="hero-content">
+                    <h1 class="page-title">Über uns</h1>
+                    <p class="page-subtitle">Die Geschichte hinter Jimmy's Tapas Bar</p>
+                </div>
             </div>
         </section>
 
-        <!-- Jimmy Rodriguez Section - WIE STANDORTE KARTEN -->
-        <section class="about-section">
+        <!-- Locations Section -->
+        <section class="locations-section">
             <div class="container">
-                <div class="about-grid">
-                    <!-- Jimmy Rodriguez Karte -->
-                    <div class="about-card">
-                        <div class="card-header">
-                            <h2 class="card-title">Jimmy Rodriguez</h2>
-                            <p class="card-subtitle">Inhaber & Küchenchef</p>
+                <div class="locations-grid">
+                    
+                    <!-- Jimmy Rodriguez Card -->
+                    <div class="location-card-large">
+                        <div class="location-header">
+                            <h2 class="location-title">Jimmy Rodriguez</h2>
+                            <p class="location-subtitle">Inhaber & Küchenchef</p>
                         </div>
-                        <div class="card-content">
-                            <p class="card-text">
-                                Seit über 15 Jahren bringe ich die authentischsten Aromen Spaniens an die deutsche Ostseeküste. Meine Leidenschaft für die spanische Küche begann während meines Studiums in Valencia.
-                            </p>
-                            <p class="card-text">
-                                In Jimmy's Tapas Bar verbinden wir jahrhundertealte Traditionen – von handverlesenem Olivenöl aus Andalusien bis hin zu frischen Meeresfrüchten aus der Ostsee.
-                            </p>
+                        
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">🏆</div>
+                                <div class="detail-text">
+                                    <strong>Erfahrung:</strong>
+                                    <span>Über 15 Jahre in der spanischen Gastronomie</span>
+                                </div>
+                            </div>
                             
-                            <div class="credentials-list">
-                                <div class="credential">
-                                    <span class="credential-icon">🏆</span>
-                                    <span class="credential-text">15+ Jahre Erfahrung</span>
+                            <div class="detail-item">
+                                <div class="detail-icon">🎓</div>
+                                <div class="detail-text">
+                                    <strong>Ausbildung:</strong>
+                                    <span>Studium der Gastronomie in Valencia, Spanien</span>
                                 </div>
-                                <div class="credential">
-                                    <span class="credential-icon">🏢</span>
-                                    <span class="credential-text">2 Standorte an der Ostsee</span>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">🥘</div>
+                                <div class="detail-text">
+                                    <strong>Spezialität:</strong>
+                                    <span>Authentische Paellas und regionale Tapas</span>
                                 </div>
-                                <div class="credential">
-                                    <span class="credential-icon">⭐</span>
-                                    <span class="credential-text">1000+ zufriedene Gäste</span>
+                            </div>
+
+                            <div class="story-text">
+                                <p>Seit über 15 Jahren bringe ich die authentischsten Aromen Spaniens an die deutsche Ostseeküste. Meine Leidenschaft für die spanische Küche begann während meines Studiums in Valencia.</p>
+                                <p>In Jimmy's Tapas Bar verbinden wir jahrhundertealte Traditionen – von handverlesenem Olivenöl aus Andalusien bis hin zu frischen Meeresfrüchten aus der Ostsee.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Philosophie Card -->
+                    <div class="location-card-large">
+                        <div class="location-header">
+                            <h2 class="location-title">Unsere Philosophie</h2>
+                            <p class="location-subtitle">Authentizität trifft Innovation</p>
+                        </div>
+                        
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">🥘</div>
+                                <div class="detail-text">
+                                    <strong>Authentizität:</strong>
+                                    <span>Originalrezepte aus Valencia, Andalusien und dem Baskenland</span>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">🌊</div>
+                                <div class="detail-text">
+                                    <strong>Frische:</strong>
+                                    <span>Täglich frische Zutaten von lokalen Lieferanten</span>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">❤️</div>
+                                <div class="detail-text">
+                                    <strong>Leidenschaft:</strong>
+                                    <span>Jedes Gericht wird mit Liebe zubereitet</span>
+                                </div>
+                            </div>
+
+                            <div class="story-text">
+                                <p>Seit der Gründung bietet Jimmy's Tapas Bar die authentischste mediterrane Küche an der deutschen Ostseeküste.</p>
+                                <p>Unsere Leidenschaft gilt den traditionellen Rezepten und frischen Zutaten, die wir täglich mit Liebe zubereiten.</p>
+                                
+                                <div class="quote-box">
+                                    <blockquote>
+                                        "Essen ist nicht nur Nahrung – es ist Kultur, Tradition und Leidenschaft auf einem Teller."
+                                    </blockquote>
+                                    <cite>— Jimmy Rodriguez</cite>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Philosophie Karte -->
-                    <div class="about-card">
-                        <div class="card-header">
-                            <h2 class="card-title">Unsere Philosophie</h2>
-                            <p class="card-subtitle">Authentizität trifft Innovation</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="philosophy-item">
-                                <span class="philosophy-icon">🥘</span>
-                                <div class="philosophy-text">
-                                    <h3>Authentizität</h3>
-                                    <p>Originalrezepte aus Valencia, Andalusien und dem Baskenland</p>
-                                </div>
-                            </div>
-                            
-                            <div class="philosophy-item">
-                                <span class="philosophy-icon">🌊</span>
-                                <div class="philosophy-text">
-                                    <h3>Frische</h3>
-                                    <p>Täglich frische Zutaten von lokalen Lieferanten</p>
-                                </div>
-                            </div>
-                            
-                            <div class="philosophy-item">
-                                <span class="philosophy-icon">❤️</span>
-                                <div class="philosophy-text">
-                                    <h3>Leidenschaft</h3>
-                                    <p>Jedes Gericht wird mit Liebe zubereitet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Zitat Karte - ZENTRAL WIE BEI BEWERTUNGEN -->
-                <div class="quote-card">
-                    <div class="quote-content">
-                        <blockquote class="main-quote">
-                            "Essen ist nicht nur Nahrung – es ist Kultur, Tradition und Leidenschaft auf einem Teller. Wenn ich koche, bringe ich ein Stück Spanien nach Deutschland."
-                        </blockquote>
-                        <div class="quote-attribution">
-                            <span class="quote-author">Jimmy Rodriguez</span>
-                            <span class="quote-title">Küchenchef & Gründer</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
