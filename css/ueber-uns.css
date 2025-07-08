@@ -1,4 +1,4 @@
-/* Über uns Page Styles - EXAKT wie Bild 1 */
+/* Über uns Page Styles - EXAKT WIE IM BILD */
 
 /* Hero Section */
 .hero-section {
@@ -30,13 +30,13 @@
     opacity: 0.9;
 }
 
-/* Jimmy Rodriguez Section - EXAKT wie im Bild */
-.jimmy-section {
+/* Main Content Section - EXAKT WIE IM BILD */
+.main-content-section {
     padding: 5rem 0;
     background: var(--medium-brown);
 }
 
-.jimmy-content {
+.content-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -46,33 +46,34 @@
     padding: 0 2rem;
 }
 
-.jimmy-image {
+/* Linke Seite: Großes Paella Bild */
+.content-image {
     position: relative;
 }
 
-.food-image {
+.main-food-image {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid #FFFFFF; /* Weißer Rand */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 0; /* Keine Rundung wie im Bild */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.jimmy-text {
+/* Rechte Seite: Jimmy Rodriguez Text */
+.content-text {
     padding-left: 2rem;
 }
 
-.jimmy-title {
+.jimmy-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     color: var(--warm-beige);
     margin-bottom: 2rem;
     font-weight: 600;
     letter-spacing: 0.02em;
 }
 
-.jimmy-description {
+.jimmy-paragraph {
     color: var(--light-beige);
     font-size: 1.125rem;
     line-height: 1.8;
@@ -80,11 +81,11 @@
     text-align: left;
 }
 
-.jimmy-description:last-child {
+.jimmy-paragraph:last-child {
     margin-bottom: 0;
 }
 
-/* Leidenschaft Section - EXAKT wie im Bild */
+/* Unsere Leidenschaft Section - EXAKT WIE IM BILD */
 .passion-section {
     padding: 5rem 0;
     background: var(--dark-brown);
@@ -92,7 +93,7 @@
 
 .passion-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     color: var(--warm-beige);
     text-align: center;
     margin-bottom: 1rem;
@@ -108,22 +109,19 @@
     opacity: 0.9;
 }
 
-.passion-content {
+/* WEISSE BOX - EXAKT WIE IM BILD */
+.passion-white-box {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.passion-box {
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* Weißer Rand */
+    background: #FFFFFF; /* KOMPLETT WEISSER HINTERGRUND */
     border-radius: 12px;
     padding: 3rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    color: #2D1F1A; /* DUNKLE SCHRIFT AUF WEISS */
 }
 
 .passion-text {
-    color: var(--light-beige);
+    color: #2D1F1A; /* DUNKLE SCHRIFT */
     font-size: 1.125rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -134,42 +132,42 @@
     margin: 2rem 0;
 }
 
-.passion-features p {
-    color: var(--light-beige);
+.feature-text {
+    color: #2D1F1A; /* DUNKLE SCHRIFT */
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
     padding-left: 0;
 }
 
-/* Quote Section - EXAKT wie im Bild */
-.quote-section {
+/* Quote Section - EXAKT WIE IM BILD */
+.quote-box {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(245, 230, 211, 0.2);
+    border-top: 1px solid rgba(45, 31, 26, 0.2);
     text-align: center;
 }
 
-.passion-quote {
+.jimmy-quote {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    color: var(--warm-beige);
+    color: #2D1F1A; /* DUNKLE SCHRIFT */
     font-style: italic;
     margin-bottom: 1rem;
     line-height: 1.6;
     quotes: """ """;
 }
 
-.passion-quote:before {
+.jimmy-quote:before {
     content: open-quote;
 }
 
-.passion-quote:after {
+.jimmy-quote:after {
     content: close-quote;
 }
 
 .quote-author {
-    color: var(--light-beige);
+    color: #2D1F1A; /* DUNKLE SCHRIFT */
     font-size: 1rem;
     font-weight: 600;
     opacity: 0.8;
@@ -181,29 +179,30 @@
         font-size: 2.5rem;
     }
     
-    .jimmy-content {
+    .content-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
-    .jimmy-text {
+    .content-text {
         padding-left: 0;
     }
     
-    .food-image {
-        height: 300px;
+    .main-food-image {
+        height: 350px;
     }
     
-    .jimmy-title,
+    .jimmy-name,
     .passion-title {
         font-size: 2rem;
     }
     
-    .passion-box {
+    .passion-white-box {
+        margin: 0 1rem;
         padding: 2rem;
     }
     
-    .passion-quote {
+    .jimmy-quote {
         font-size: 1.25rem;
     }
 }
