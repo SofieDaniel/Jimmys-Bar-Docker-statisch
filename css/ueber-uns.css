@@ -1,9 +1,22 @@
 /* Über uns Page Styles - WIE STANDORTE UND BEWERTUNGEN */
 
+/* Body Override für about-page */
+body.about-page {
+    background: linear-gradient(145deg, 
+        #2D1F1A 0%,   /* Dark Brown */
+        #3D2B1F 30%,  /* Medium Brown */
+        #2D1F1A 60%,  /* Dark Brown */
+        #3D2B1F 100%  /* Medium Brown */
+    );
+    background-attachment: fixed;
+    color: #F5E6D3;
+    min-height: 100vh;
+}
+
 /* Page Header - IDENTISCH MIT ANDEREN SEITEN */
 .page-header {
     padding: 8rem 0 3rem;
-    background: var(--dark-brown);
+    background: transparent; /* Verwendet den Body-Hintergrund */
     text-align: center;
 }
 
@@ -24,7 +37,7 @@
 /* About Section - WIE STANDORTE KARTEN */
 .about-section {
     padding: 4rem 0;
-    background: var(--dark-brown);
+    background: transparent; /* Verwendet den Body-Hintergrund */
 }
 
 .about-grid {
