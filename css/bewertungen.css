@@ -358,16 +358,7 @@ body.reviews-page {
 .card-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
     margin-bottom: 1.5rem;
-}
-
-.reviewer-avatar img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #D4AF37;
 }
 
 .reviewer-details {
