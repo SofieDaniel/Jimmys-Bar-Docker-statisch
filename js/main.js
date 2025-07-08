@@ -387,7 +387,7 @@ function getFeaturedMenuItems() {
             detailed_description: 'Frische Tintenfisch-Ringe gegrillt mit Knoblauch, Petersilie und Zitrone',
             price: '8.90',
             category: 'pescados',
-            image: 'images/calamari-correct.jpg',
+            image: 'images/calamari-real-dish.jpg',
             allergens: 'Weichtiere',
             origin: 'Spanien'
         },
