@@ -294,7 +294,7 @@ function getFallbackMenuData() {
             category: "inicio",
             allergens: "Eier (Aioli)",
             origin: "Madrid",
-            image: "https://images.unsplash.com/photo-1565599837634-134bc3aadce8",
+            image: "images/placeholder-card.svg",
             vegetarian: true
         },
         paellas_1: {
