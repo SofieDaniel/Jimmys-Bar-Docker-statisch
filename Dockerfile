@@ -1,63 +1,40 @@
-FROM node:18-alpine as frontend-builder
+# Dockerfile für Jimmy's Tapas Bar Website - Unraid Ready
+FROM nginx:alpine
 
-# Install dependencies
-WORKDIR /app/frontend
-COPY frontend/package*.json ./
-RUN npm install
+# Arbeitsverzeichnis setzen
+WORKDIR /usr/share/nginx/html
 
-# Copy source and build
-COPY frontend/ ./
-RUN npm run build
+# Alle Website-Dateien kopieren
+COPY . .
 
-# Python backend with MySQL
-FROM python:3.11-slim
+# Nginx Konfiguration für statische Website erstellen
+RUN echo 'server {' > /etc/nginx/conf.d/default.conf && \
+    echo '    listen 80;' >> /etc/nginx/conf.d/default.conf && \
+    echo '    server_name localhost;' >> /etc/nginx/conf.d/default.conf && \
+    echo '    root /usr/share/nginx/html;' >> /etc/nginx/conf.d/default.conf && \
+    echo '    index index.html;' >> /etc/nginx/conf.d/default.conf && \
+    echo '' >> /etc/nginx/conf.d/default.conf && \
+    echo '    # Gzip Kompression aktivieren' >> /etc/nginx/conf.d/default.conf && \
+    echo '    gzip on;' >> /etc/nginx/conf.d/default.conf && \
+    echo '    gzip_types text/plain text/css application/json application/javascript text/xml application/xml text/javascript;' >> /etc/nginx/conf.d/default.conf && \
+    echo '' >> /etc/nginx/conf.d/default.conf && \
+    echo '    # Cache für statische Dateien' >> /etc/nginx/conf.d/default.conf && \
+    echo '    location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg)$ {' >> /etc/nginx/conf.d/default.conf && \
+    echo '        expires 1y;' >> /etc/nginx/conf.d/default.conf && \
+    echo '        add_header Cache-Control "public, immutable";' >> /etc/nginx/conf.d/default.conf && \
+    echo '    }' >> /etc/nginx/conf.d/default.conf && \
+    echo '' >> /etc/nginx/conf.d/default.conf && \
+    echo '    # Alle Routen zu index.html weiterleiten' >> /etc/nginx/conf.d/default.conf && \
+    echo '    location / {' >> /etc/nginx/conf.d/default.conf && \
+    echo '        try_files $uri $uri/ /index.html;' >> /etc/nginx/conf.d/default.conf && \
+    echo '    }' >> /etc/nginx/conf.d/default.conf && \
+    echo '' >> /etc/nginx/conf.d/default.conf && \
+    echo '    # Fehlerseiten' >> /etc/nginx/conf.d/default.conf && \
+    echo '    error_page 404 /index.html;' >> /etc/nginx/conf.d/default.conf && \
+    echo '}' >> /etc/nginx/conf.d/default.conf
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    mariadb-server \
-    mariadb-client \
-    nginx \
-    supervisor \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+# Container auf Port 80 lauschen lassen  
+EXPOSE 80
 
-# Create app directory
-WORKDIR /app
-
-# Copy backend requirements and install
-COPY backend/requirements.txt ./backend/
-RUN pip install -r backend/requirements.txt
-
-# Copy backend code
-COPY backend/ ./backend/
-
-# Copy built frontend
-COPY --from=frontend-builder /app/frontend/build ./frontend/build
-
-# Copy nginx configuration
-COPY docker/nginx.conf /etc/nginx/nginx.conf
-
-# Copy supervisor configuration
-COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
-# Copy MySQL initialization script
-COPY docker/init-mysql.sql /docker-entrypoint-initdb.d/
-
-# Create necessary directories
-RUN mkdir -p /var/log/supervisor /app/backups /run/mysqld
-
-# Set permissions
-RUN chown -R mysql:mysql /var/lib/mysql /run/mysqld
-
-# Expose ports
-EXPOSE 80 8001
-
-# Copy startup script
-COPY docker/start.sh /start.sh
-RUN chmod +x /start.sh
-
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:80 || exit 1
-
-CMD ["/start.sh"]
+# Nginx starten
+CMD ["nginx", "-g", "daemon off;"]
