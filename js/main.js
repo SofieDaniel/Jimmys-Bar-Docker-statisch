@@ -356,17 +356,53 @@ function populateSpecialties() {
  * Get featured menu items for homepage
  */
 function getFeaturedMenuItems() {
-    const featured = [];
-    
-    // Get menu items (excluding settings and categories)
-    Object.keys(menuData).forEach(key => {
-        if (key !== 'settings' && key !== 'categories' && menuData[key].name) {
-            featured.push(menuData[key]);
+    // Return specific featured dishes with their images and IDs
+    return [
+        {
+            id: 'paellas_1',
+            name: 'Paella',
+            description: 'Traditionelle spanische Paella',
+            detailed_description: 'Klassische Paella mit Bomba-Reis, Safran, Hähnchen und frischen Meeresfrüchten',
+            price: '8.90',
+            category: 'paellas',
+            image: 'https://images.unsplash.com/photo-1650964807311-970cb88d347c',
+            allergens: 'Krustentiere, Weichtiere',
+            origin: 'Valencia'
+        },
+        {
+            id: 'carne_6',
+            name: 'Rollitos de Serrano con Higo',
+            description: 'Serrano-Schinken-Röllchen mit Feigen',
+            detailed_description: 'Luftgetrockneter Serrano-Schinken gefüllt mit süßen Feigen und Frischkäse',
+            price: '9.90',
+            category: 'carnes',
+            image: 'https://images.pexels.com/photos/17336549/pexels-photo-17336549.jpeg',
+            allergens: 'Milch',
+            origin: 'Spanien'
+        },
+        {
+            id: 'pescado_2',
+            name: 'Calamares a la Plancha',
+            description: 'Gegrillte Tintenfisch-Ringe',
+            detailed_description: 'Frische Tintenfisch-Ringe gegrillt mit Knoblauch, Petersilie und Zitrone',
+            price: '8.90',
+            category: 'pescados',
+            image: 'https://images.pexels.com/photos/4869328/pexels-photo-4869328.jpeg',
+            allergens: 'Weichtiere',
+            origin: 'Spanien'
+        },
+        {
+            id: 'carne_2',
+            name: 'Albóndigas a la Casera',
+            description: 'Hausgemachte spanische Fleischbällchen',
+            detailed_description: 'Traditionelle Fleischbällchen in würziger Tomatensauce nach Großmutters Rezept',
+            price: '6.90',
+            category: 'carnes',
+            image: 'https://images.unsplash.com/photo-1605013343009-c126c3dc2f9d',
+            allergens: 'Gluten, Eier',
+            origin: 'Spanien'
         }
-    });
-    
-    // Return first 4 items for homepage display
-    return featured.slice(0, 4);
+    ];
 }
 
 /**
