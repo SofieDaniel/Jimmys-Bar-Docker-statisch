@@ -1,29 +1,32 @@
+# Docker Compose für Jimmy's Tapas Bar Website
+# Einfache Installation auf Unraid mit docker-compose
+
 version: '3.8'
 
 services:
-  jimmys-tapas:
+  jimmys-tapas-bar:
     build: .
     container_name: jimmys-tapas-bar
+    image: jimmys-tapas-bar:latest
     ports:
-      - "80:80"
-      - "8001:8001"
-    environment:
-      - MYSQL_ROOT_PASSWORD=jimmy2024
-      - MYSQL_DATABASE=jimmys_tapas_bar
-      - JWT_SECRET_KEY=jimmy-tapas-bar-mysql-secret-2024
+      - "8080:80"  # Ändern Sie 8080 zu Ihrem gewünschten Port
     volumes:
-      - mysql_data:/var/lib/mysql
-      - backup_data:/app/backups
+      - ./:/usr/share/nginx/html:ro  # Website-Dateien als Read-Only einbinden
     restart: unless-stopped
+    environment:
+      - TZ=Europe/Berlin  # Zeitzone anpassen
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80/"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
+    labels:
+      - "traefik.enable=true"  # Für Traefik Reverse Proxy (optional)
+      - "traefik.http.routers.jimmys-tapas-bar.rule=Host(`jimmys-tapas-bar.local`)"
+      - "traefik.http.services.jimmys-tapas-bar.loadbalancer.server.port=80"
 
-volumes:
-  mysql_data:
-    driver: local
-  backup_data:
-    driver: local
+# Optionale Netzwerke für erweiterte Setups
+networks:
+  default:
+    name: jimmys-tapas-bar-network
