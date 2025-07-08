@@ -434,6 +434,14 @@ body.about-page {
     opacity: 0.8;
 }
 
+/* Tablet Responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero-title {
