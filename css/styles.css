@@ -376,18 +376,32 @@ body {
     }
 }
 
+/* Feature Cards with Link Styling */
 .feature-card {
-    background: var(--dark-brown);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    border: 1px solid var(--warm-brown);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .feature-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.feature-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 30px;
+}
+
+.feature-link:hover {
+    color: inherit;
+    text-decoration: none;
 }
 
 .feature-image {
