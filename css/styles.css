@@ -525,9 +525,13 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.delivery-icon {
-    font-size: 3rem;
+.delivery-icon-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 1rem;
+    border: 2px solid #D4AF37;
 }
 
 .delivery-card-title {
