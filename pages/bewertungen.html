@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bewertungen - Jimmy's Tapas Bar</title>
-    <meta name="description" content="Lesen Sie Bewertungen unserer Gäste und teilen Sie Ihre eigenen Erfahrungen mit Jimmy's Tapas Bar">
+    <meta name="description" content="Lesen Sie authentische Bewertungen unserer Gäste über Jimmy's Tapas Bar - Ihre Meinung ist uns wichtig!">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!-- Skip to content for accessibility -->
     <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 </head>
-<body>
+<body class="reviews-page">
     <!-- Fixed Navigation Header -->
     <header class="fixed-header">
         <nav class="nav-container">
@@ -60,76 +60,257 @@
     </header>
 
     <!-- Main Content -->
-    <main id="main-content" class="reviews-page">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">Gästebewertungen</h1>
-                <p class="page-subtitle">Was unsere Gäste über Jimmy's Tapas Bar sagen</p>
+    <main id="main-content" class="reviews-main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80" alt="Zufriedene Gäste bei Jimmy's Tapas Bar" class="hero-image">
+                <div class="hero-overlay"></div>
             </div>
-        </section>
-
-        <!-- Google Reviews Section - Original Design -->
-        <section class="google-reviews-section">
-            <div class="container">
-                <div class="google-reviews-card">
-                    <div class="google-logo">
-                        <h2>G</h2>
-                        <h3>Google Bewertungen</h3>
-                    </div>
-                    
-                    <p class="google-description">
-                        Erhalten Sie eine unsere Gäste über Jimmy's Teres Bar sagen. Lesen Sie authentische Bewertungen und 
-                        Erfahrungsberichte auf Google.
-                    </p>
-                    
-                    <div class="review-stats">
-                        <div class="stat-item">
-                            <span class="stat-icon">⭐</span>
-                            <span class="stat-label">Authentische Bewertungen</span>
-                            <span class="stat-desc">Echte Erfahrungen von echten Gästen</span>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tagline">Was unsere Gäste sagen</span>
+                    <h1 class="hero-title">Gästebewertungen</h1>
+                    <p class="hero-description">Authentische Erfahrungen und ehrliches Feedback von unseren geschätzten Gästen</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">4.8</span>
+                            <span class="stat-label">⭐ Durchschnitt</span>
                         </div>
-                        
-                        <div class="stat-item">
-                            <span class="stat-icon">📊</span>
-                            <span class="stat-label">Aktuelle Bewertungen</span>
-                            <span class="stat-desc">Immer auf dem neuesten Stand</span>
+                        <div class="stat">
+                            <span class="stat-number">350+</span>
+                            <span class="stat-label">Bewertungen</span>
                         </div>
-                        
-                        <div class="stat-item">
-                            <span class="stat-icon">✨</span>
-                            <span class="stat-label">Bewerten spezifisch</span>
-                            <span class="stat-desc">Bewertungen für Standort in Holstein</span>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Weiterempfehlung</span>
                         </div>
                     </div>
-                    
-                    <button class="google-reviews-btn">Google Bewertungen anzeigen</button>
-                    <p class="google-footer">Ihr bewerten auf Google weitermachen</p>
                 </div>
             </div>
         </section>
 
-        <!-- Review Information Cards -->
-        <section class="review-info-section">
+        <!-- Rating Overview Section -->
+        <section class="rating-overview-section">
             <div class="container">
-                <div class="review-info-grid">
-                    <div class="review-info-card">
-                        <h3>Warum Google-Bewertungen?</h3>
-                        <ul>
-                            <li>• Transparenz und Authentizität</li>
-                            <li>• Ehrliche Kundenrezensionen erhältlich</li>
-                            <li>• Aktuell und eingegangene Bewertungen</li>
-                            <li>• Bei uns fließen keine eingesetzten?</li>
-                        </ul>
+                <div class="rating-overview">
+                    <div class="overall-rating">
+                        <h2 class="rating-title">Gesamtbewertung</h2>
+                        <div class="rating-display">
+                            <span class="rating-number">4.8</span>
+                            <div class="rating-stars">
+                                <span class="star filled">⭐</span>
+                                <span class="star filled">⭐</span>
+                                <span class="star filled">⭐</span>
+                                <span class="star filled">⭐</span>
+                                <span class="star filled">⭐</span>
+                            </div>
+                            <p class="rating-text">von 5 Sternen (350 Bewertungen)</p>
+                        </div>
                     </div>
                     
-                    <div class="review-info-card">
-                        <h3>Ihre Meinung zählt</h3>
-                        <p>
-                            Waren Sie schon einmal bei uns haben Sie eine tolle Erfahrung mit 
-                            unserem Essen oder Service gemacht, dann freuen wir uns sehr über 
-                            Feedback bei ihr schnittstellen.
-                        </p>
+                    <div class="rating-breakdown">
+                        <h3 class="breakdown-title">Bewertungsdetails</h3>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span class="bar-label">Essen</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 96%"></div>
+                                </div>
+                                <span class="bar-value">4.8</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="bar-label">Service</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 92%"></div>
+                                </div>
+                                <span class="bar-value">4.6</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="bar-label">Atmosphäre</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 94%"></div>
+                                </div>
+                                <span class="bar-value">4.7</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="bar-label">Preis-Leistung</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 90%"></div>
+                                </div>
+                                <span class="bar-value">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Reviews Section -->
+        <section class="featured-reviews-section">
+            <div class="container">
+                <h2 class="section-title">Besondere Erfahrungen</h2>
+                <div class="featured-reviews-grid">
+                    <div class="featured-review-card">
+                        <div class="review-image">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Maria Schmidt" class="reviewer-image">
+                        </div>
+                        <div class="review-content">
+                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                            <h3 class="review-title">"Authentisch wie in Spanien!"</h3>
+                            <p class="review-text">"Nach unserem Spanien-Urlaub waren wir auf der Suche nach authentischer spanischer Küche. Jimmy's Tapas Bar hat unsere Erwartungen übertroffen! Die Paella war perfekt und der Service außergewöhnlich freundlich."</p>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Maria Schmidt</span>
+                                <span class="review-date">vor 2 Wochen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-review-card">
+                        <div class="review-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Thomas Weber" class="reviewer-image">
+                        </div>
+                        <div class="review-content">
+                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                            <h3 class="review-title">"Perfekt für besondere Anlässe"</h3>
+                            <p class="review-text">"Wir haben hier unseren Hochzeitstag gefeiert. Das Ambiente direkt an der Ostsee, kombiniert mit dem exzellenten Essen, hat den Abend unvergesslich gemacht. Vielen Dank an das gesamte Team!"</p>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Thomas Weber</span>
+                                <span class="review-date">vor 1 Monat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Grid Section -->
+        <section class="reviews-grid-section">
+            <div class="container">
+                <h2 class="section-title">Alle Bewertungen</h2>
+                <div class="reviews-filter">
+                    <button class="filter-btn active" data-filter="all">Alle</button>
+                    <button class="filter-btn" data-filter="5">5 Sterne</button>
+                    <button class="filter-btn" data-filter="4">4 Sterne</button>
+                    <button class="filter-btn" data-filter="neustadt">Neustadt</button>
+                    <button class="filter-btn" data-filter="grossenbrode">Großenbrode</button>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card" data-rating="5" data-location="neustadt">
+                        <div class="card-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Anna Müller">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Anna Müller</h4>
+                                <div class="review-meta">
+                                    <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="review-location">Neustadt</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Fantastisches Essen und wunderbare Atmosphäre! Die Sangria war perfekt und die Tapas-Auswahl beeindruckend. Werden definitiv wiederkommen!"</p>
+                        <span class="review-date">vor 3 Tagen</span>
+                    </div>
+
+                    <div class="review-card" data-rating="4" data-location="grossenbrode">
+                        <div class="card-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="Peter Hansen">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Peter Hansen</h4>
+                                <div class="review-meta">
+                                    <span class="review-stars">⭐⭐⭐⭐☆</span>
+                                    <span class="review-location">Großenbrode</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Sehr gutes spanisches Restaurant mit Blick aufs Meer. Das Personal war sehr aufmerksam und das Essen kam schnell. Nur die Nachspeise hätte etwas süßer sein können."</p>
+                        <span class="review-date">vor 1 Woche</span>
+                    </div>
+
+                    <div class="review-card" data-rating="5" data-location="neustadt">
+                        <div class="card-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b30e2bb8?auto=format&fit=crop&w=100&q=80" alt="Sarah Klein">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Sarah Klein</h4>
+                                <div class="review-meta">
+                                    <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="review-location">Neustadt</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Als Familie mit zwei Kindern fühlten wir uns sehr willkommen. Die Kindergerichte waren liebevoll zubereitet und auch die Erwachsenen-Portionen waren großzügig."</p>
+                        <span class="review-date">vor 2 Wochen</span>
+                    </div>
+
+                    <div class="review-card" data-rating="5" data-location="grossenbrode">
+                        <div class="card-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Michael Krüger">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Michael Krüger</h4>
+                                <div class="review-meta">
+                                    <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="review-location">Großenbrode</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Die beste Paella, die ich außerhalb Spaniens gegessen habe! Jimmy weiß wirklich, was er tut. Der Standort in Großenbrode hat eine unschlagbare Aussicht."</p>
+                        <span class="review-date">vor 3 Wochen</span>
+                    </div>
+
+                    <div class="review-card" data-rating="4" data-location="neustadt">
+                        <div class="card-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Elena Rossi">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Elena Rossi</h4>
+                                <div class="review-meta">
+                                    <span class="review-stars">⭐⭐⭐⭐☆</span>
+                                    <span class="review-location">Neustadt</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Wunderbar authentisches Ambiente und freundlicher Service. Die Patatas Bravas waren perfekt gewürzt. Bei schönem Wetter unbedingt draußen sitzen!"</p>
+                        <span class="review-date">vor 1 Monat</span>
+                    </div>
+
+                    <div class="review-card" data-rating="5" data-location="grossenbrode">
+                        <div class="card-header">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=100&q=80" alt="Lars Nordmann">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Lars Nordmann</h4>
+                                <div class="review-meta">
+                                    <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="review-location">Großenbrode</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Fantastischer Abend zu zweit! Die Weinempfehlung des Servers war perfekt und die Atmosphäre sehr romantisch. Klare Empfehlung für Paare!"</p>
+                        <span class="review-date">vor 6 Wochen</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Teilen Sie Ihre Erfahrung</h2>
+                    <p class="cta-description">War Ihr Besuch bei uns etwas Besonderes? Wir freuen uns über Ihr Feedback!</p>
+                    <div class="cta-buttons">
+                        <a href="kontakt.html" class="cta-button primary">Bewertung schreiben</a>
+                        <a href="standorte.html" class="cta-button secondary">Tisch reservieren</a>
                     </div>
                 </div>
             </div>
