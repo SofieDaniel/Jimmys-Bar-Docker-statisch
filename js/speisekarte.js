@@ -198,7 +198,7 @@ function getFallbackMenuDataForSpeisekarte() {
                 category: "inicio",
                 allergens: "Krustentiere",
                 origin: "Andalusien",
-                image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b",
+                image: "images/placeholder-card.svg",
                 vegetarian: false,
                 preparation: "In Knoblauchöl",
                 ingredients: "Garnelen, Knoblauch, Petersilie, Olivenöl, Chili"
