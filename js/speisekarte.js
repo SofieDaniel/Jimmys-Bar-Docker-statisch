@@ -212,7 +212,7 @@ function getFallbackMenuDataForSpeisekarte() {
                 category: "inicio",
                 allergens: "Eier (Aioli)",
                 origin: "Madrid",
-                image: "https://images.unsplash.com/photo-1565599837634-134bc3aadce8",
+                image: "images/placeholder-card.svg",
                 vegetarian: true,
                 preparation: "Frittiert",
                 ingredients: "Kartoffeln, Tomaten, Paprika, Knoblauch, Olivenöl"
