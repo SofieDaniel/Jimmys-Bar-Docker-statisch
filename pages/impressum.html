@@ -11,12 +11,17 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/impressum.css">
+    
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 </head>
 <body>
     <!-- Fixed Navigation Header -->
     <header class="fixed-header">
         <nav class="nav-container">
             <div class="nav-content">
+                <!-- Logo -->
                 <div class="nav-logo">
                     <a href="../index.html" class="logo-link">
                         <span class="logo-text">JIMMY'S</span>
@@ -24,6 +29,7 @@
                     </a>
                 </div>
                 
+                <!-- Desktop Navigation -->
                 <div class="nav-menu desktop-menu">
                     <a href="../index.html" class="nav-link">Startseite</a>
                     <a href="standorte.html" class="nav-link">Standorte</a>
@@ -33,6 +39,7 @@
                     <a href="kontakt.html" class="nav-link">Kontakt</a>
                 </div>
                 
+                <!-- Mobile Menu Button -->
                 <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menü öffnen">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -40,6 +47,7 @@
                 </button>
             </div>
             
+            <!-- Mobile Navigation -->
             <div class="mobile-menu" id="mobileMenu">
                 <a href="../index.html" class="mobile-nav-link">Startseite</a>
                 <a href="standorte.html" class="mobile-nav-link">Standorte</a>
@@ -51,7 +59,9 @@
         </nav>
     </header>
 
-    <main id="main-content" class="legal-page">
+    <!-- Main Content -->
+    <main id="main-content" class="locations-page">
+        <!-- Page Header mit Hintergrundbild -->
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title">Impressum</h1>
@@ -59,67 +69,129 @@
             </div>
         </section>
 
-        <section class="legal-content">
+        <!-- Locations Section - EXACT wie Standorte -->
+        <section class="locations-section">
             <div class="container">
-                <div class="legal-text">
-                    <h2>Angaben gemäß § 5 TMG</h2>
-                    <p>
-                        Jimmy's Tapas Bar GmbH<br>
-                        Am Strande 21<br>
-                        23730 Neustadt in Holstein
-                    </p>
+                <div class="locations-grid">
+                    <!-- Angaben gemäß TMG Card -->
+                    <div class="location-card-large">
+                        <div class="location-hero">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Jimmy's Tapas Bar - Impressum" class="location-hero-image">
+                            <div class="location-title-overlay">
+                                <h2 class="location-title">Angaben gemäß § 5 TMG</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="location-info">
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">🏢</span>
+                                    <h3>Unternehmen</h3>
+                                </div>
+                                <p>Jimmy's Tapas Bar GmbH<br>Am Strande 21<br>23730 Neustadt in Holstein</p>
+                            </div>
 
-                    <h3>Vertreten durch:</h3>
-                    <p>
-                        Geschäftsführer: Jimmy Rodriguez
-                    </p>
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">👨‍💼</span>
+                                    <h3>Vertreten durch</h3>
+                                </div>
+                                <p>Geschäftsführer: Jimmy Rodriguez</p>
+                            </div>
 
-                    <h3>Kontakt:</h3>
-                    <p>
-                        Telefon: +49 4561 123456<br>
-                        E-Mail: info@jimmys-tapasbar.de
-                    </p>
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">📋</span>
+                                    <h3>Registereintrag</h3>
+                                </div>
+                                <div class="opening-schedule">
+                                    <div class="schedule-row">
+                                        <span>Handelsregister:</span>
+                                        <span>Amtsgericht Lübeck</span>
+                                    </div>
+                                    <div class="schedule-row">
+                                        <span>Registernummer:</span>
+                                        <span>HRB 12345</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <h3>Registereintrag:</h3>
-                    <p>
-                        Eintragung im Handelsregister<br>
-                        Registergericht: Amtsgericht Lübeck<br>
-                        Registernummer: HRB 12345
-                    </p>
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">💼</span>
+                                    <h3>Umsatzsteuer-ID</h3>
+                                </div>
+                                <p>DE123456789</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <h3>Umsatzsteuer-ID:</h3>
-                    <p>
-                        Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: DE123456789
-                    </p>
+                    <!-- Kontakt & Verantwortlichkeit Card -->
+                    <div class="location-card-large">
+                        <div class="location-hero">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Kontakt & Verantwortlichkeit" class="location-hero-image">
+                            <div class="location-title-overlay">
+                                <h2 class="location-title">Kontakt & Verantwortlichkeit</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="location-info">
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">📞</span>
+                                    <h3>Kontakt</h3>
+                                </div>
+                                <div class="opening-schedule">
+                                    <div class="schedule-row">
+                                        <span>Telefon:</span>
+                                        <span>+49 4561 123456</span>
+                                    </div>
+                                    <div class="schedule-row">
+                                        <span>E-Mail:</span>
+                                        <span>info@jimmys-tapasbar.de</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h3>
-                    <p>
-                        Jimmy Rodriguez<br>
-                        Am Strande 21<br>
-                        23730 Neustadt in Holstein
-                    </p>
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">📝</span>
+                                    <h3>Verantwortlich für Inhalte</h3>
+                                </div>
+                                <p>Jimmy Rodriguez<br>Am Strande 21<br>23730 Neustadt in Holstein</p>
+                            </div>
 
-                    <h2>Haftungsausschluss</h2>
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">⚖️</span>
+                                    <h3>Haftungsausschluss</h3>
+                                </div>
+                                <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität können wir jedoch keine Gewähr übernehmen.</p>
+                            </div>
 
-                    <h3>Haftung für Inhalte</h3>
-                    <p>
-                        Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
-                    </p>
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">🔗</span>
+                                    <h3>Links zu externen Seiten</h3>
+                                </div>
+                                <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte können wir keine Gewähr übernehmen.</p>
+                            </div>
 
-                    <h3>Haftung für Links</h3>
-                    <p>
-                        Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
-                    </p>
-
-                    <h3>Urheberrecht</h3>
-                    <p>
-                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                    </p>
+                            <div class="info-section">
+                                <div class="info-header">
+                                    <span class="info-icon">©️</span>
+                                    <h3>Urheberrecht</h3>
+                                </div>
+                                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Vervielfältigung bedarf der schriftlichen Zustimmung.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -163,6 +235,19 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="../js/main.js"></script>
 </body>
 </html>
