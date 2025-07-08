@@ -94,38 +94,66 @@
         <section class="menu-categories">
             <div class="container">
                 <div class="categories-wrapper">
-                    <button class="category-btn active" data-category="all">Alle Kategorien</button>
-                    <button class="category-btn" data-category="inicio">Inicio / Vorspeisen</button>
-                    <button class="category-btn" data-category="salat">Salat</button>
-                    <button class="category-btn" data-category="kleiner-salat">Kleiner Salat</button>
-                    <button class="category-btn" data-category="paellas">Tapa Paella</button>
-                    <button class="category-btn" data-category="vegetarian">Tapas Vegetarian</button>
-                    <button class="category-btn" data-category="tapas-pollo">Tapas de Pollo</button>
-                    <button class="category-btn" data-category="carnes">Tapas de Carne</button>
-                    <button class="category-btn" data-category="pescados">Tapas de Pescado</button>
-                    <button class="category-btn" data-category="kroketten">Kroketten</button>
-                    <button class="category-btn" data-category="pasta">Pasta</button>
-                    <button class="category-btn" data-category="pizza">Pizza</button>
-                    <button class="category-btn" data-category="kleine-grosse-hunger">Für den kleinen und großen Hunger</button>
-                    <button class="category-btn" data-category="postres">Dessert</button>
-                    <button class="category-btn" data-category="helados">Helados (Eis)</button>
-                    <button class="category-btn" data-category="heissgetraenke">Heißgetränke</button>
-                    <button class="category-btn" data-category="wasser">Wasser</button>
-                    <button class="category-btn" data-category="softdrinks">Softdrinks</button>
-                    <button class="category-btn" data-category="saefte">Säfte/Nektar</button>
-                    <button class="category-btn" data-category="limonaden">Limonaden (hausgemacht)</button>
-                    <button class="category-btn" data-category="weine-offen">Weine (offen)</button>
-                    <button class="category-btn" data-category="flaschenweine">Flaschenweine</button>
-                    <button class="category-btn" data-category="spanische-getraenke">Spanische Getränke</button>
-                    <button class="category-btn" data-category="bier-fass">Bier vom Fass</button>
-                    <button class="category-btn" data-category="flaschenbier">Flaschenbier</button>
-                    <button class="category-btn" data-category="spirituosen">Spirituosen (Shots 2cl)</button>
-                    <button class="category-btn" data-category="gin-longdrinks">Gin Longdrinks</button>
-                    <button class="category-btn" data-category="whiskey">Whiskey (4cl)</button>
-                    <button class="category-btn" data-category="shots">Shots (4cl)</button>
-                    <button class="category-btn" data-category="brandy">Spanischer Brandy (4cl)</button>
-                    <button class="category-btn" data-category="cocktails-alkoholfrei">Cocktails alkoholfrei</button>
-                    <button class="category-btn" data-category="cocktails">Cocktails mit Alkohol</button>
+                    <h2>Unsere Speisekarten</h2>
+                    <div class="categories-grid">
+                        <!-- Vorspeisen & Salate -->
+                        <div class="category-group">
+                            <div class="category-group-title">Vorspeisen & Salate</div>
+                            <button class="category-btn active" data-category="all">Alle anzeigen</button>
+                            <button class="category-btn" data-category="inicio">Vorspeisen</button>
+                            <button class="category-btn" data-category="salat">Salate</button>
+                            <button class="category-btn" data-category="kleiner-salat">Kleine Salate</button>
+                        </div>
+                        
+                        <!-- Hauptgerichte -->
+                        <div class="category-group">
+                            <div class="category-group-title">Hauptgerichte</div>
+                            <button class="category-btn" data-category="paellas">Paellas</button>
+                            <button class="category-btn" data-category="pasta">Pasta</button>
+                            <button class="category-btn" data-category="pizza">Pizza</button>
+                            <button class="category-btn" data-category="kleine-grosse-hunger">Kleine & Große Hunger</button>
+                        </div>
+                        
+                        <!-- Tapas -->
+                        <div class="category-group">
+                            <div class="category-group-title">Tapas</div>
+                            <button class="category-btn" data-category="vegetarian">Vegetarisch</button>
+                            <button class="category-btn" data-category="tapas-pollo">Hähnchen</button>
+                            <button class="category-btn" data-category="carnes">Fleisch</button>
+                            <button class="category-btn" data-category="pescados">Fisch</button>
+                            <button class="category-btn" data-category="kroketten">Kroketten</button>
+                        </div>
+                        
+                        <!-- Desserts -->
+                        <div class="category-group">
+                            <div class="category-group-title">Desserts</div>
+                            <button class="category-btn" data-category="postres">Desserts</button>
+                            <button class="category-btn" data-category="helados">Eis</button>
+                        </div>
+                        
+                        <!-- Getränke -->
+                        <div class="category-group">
+                            <div class="category-group-title">Getränke</div>
+                            <button class="category-btn" data-category="heissgetraenke">Heißgetränke</button>
+                            <button class="category-btn" data-category="wasser">Wasser</button>
+                            <button class="category-btn" data-category="softdrinks">Softdrinks</button>
+                            <button class="category-btn" data-category="saefte">Säfte</button>
+                            <button class="category-btn" data-category="limonaden">Limonaden</button>
+                        </div>
+                        
+                        <!-- Alkoholische Getränke -->
+                        <div class="category-group">
+                            <div class="category-group-title">Alkoholische Getränke</div>
+                            <button class="category-btn" data-category="weine-offen">Weine (offen)</button>
+                            <button class="category-btn" data-category="flaschenweine">Flaschenweine</button>
+                            <button class="category-btn" data-category="bier-fass">Bier (Fass)</button>
+                            <button class="category-btn" data-category="flaschenbier">Flaschenbier</button>
+                            <button class="category-btn" data-category="spanische-getraenke">Spanische Getränke</button>
+                            <button class="category-btn" data-category="cocktails">Cocktails</button>
+                            <button class="category-btn" data-category="cocktails-alkoholfrei">Cocktails (alkoholfrei)</button>
+                            <button class="category-btn" data-category="spirituosen">Spirituosen</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
