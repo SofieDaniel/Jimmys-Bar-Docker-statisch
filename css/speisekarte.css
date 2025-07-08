@@ -127,26 +127,62 @@ body.menu-page {
 }
 
 .categories-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    padding: 2rem 0;
+    margin-top: 120px;
+    background: rgba(45, 31, 26, 0.9);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.categories-wrapper h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #F5E6D3;
+    margin-bottom: 2rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 0.75rem;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.category-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-group-title {
+    font-size: 0.8rem;
+    color: #D4AF37;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .category-btn {
-    background: #2D1F1A; /* Dunkler Hintergrund */
-    border: 1px solid #FFFFFF; /* WEISSE Umrandung */
+    background: #2D1F1A;
+    border: 1px solid #FFFFFF;
     color: #F5E6D3;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 25px;
     font-weight: 500;
     font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    text-align: center;
+    min-width: 140px;
 }
 
 .category-btn:hover {
@@ -158,8 +194,8 @@ body.menu-page {
 }
 
 .category-btn.active {
-    background: #FFFFFF; /* Aktiv: Weißer Hintergrund */
-    color: #2D1F1A; /* Dunkle Schrift */
+    background: #FFFFFF;
+    color: #2D1F1A;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-color: #FFFFFF;
