@@ -1,265 +1,306 @@
-/* Über uns Page Styles - WIE STANDORTE UND BEWERTUNGEN */
+/* Über uns Page - Exakte Design-Spezifikationen */
 
-/* Body Override für about-page */
-body.about-page {
-    background: linear-gradient(145deg, 
-        #2D1F1A 0%,   /* Dark Brown */
-        #3D2B1F 30%,  /* Medium Brown */
-        #2D1F1A 60%,  /* Dark Brown */
-        #3D2B1F 100%  /* Medium Brown */
-    );
-    background-attachment: fixed;
-    color: #F5E6D3;
+/* Page Reset und Basis-Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3A2C23;
+    color: #E4CFA3;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
     min-height: 100vh;
+    
+    /* Strukturierte Hintergrundtextur */
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+    background-attachment: fixed;
 }
 
-/* Page Header - IDENTISCH MIT ANDEREN SEITEN */
-.page-header {
-    padding: 8rem 0 3rem;
-    background: transparent; /* Verwendet den Body-Hintergrund */
-    text-align: center;
+/* Navigation */
+.main-nav {
+    background-color: #3A2C23;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.page-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--warm-beige);
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.page-subtitle {
-    color: var(--light-beige);
-    font-size: 1.125rem;
-    opacity: 0.9;
-}
-
-/* About Section - WIE STANDORTE KARTEN */
-.about-section {
-    padding: 4rem 0;
-    background: transparent; /* Verwendet den Body-Hintergrund */
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+.nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-/* About Cards - WIE STANDORTE KARTEN MIT WEISSEN RÄNDERN */
-.about-card {
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung wie bei Standorte */
-    border-radius: 12px;
-    overflow: hidden;
+.nav-link {
+    color: #E4CFA3;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.about-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    border-color: #F5E6D3;
-}
-
-.card-header {
-    padding: 2rem 2rem 1rem;
-    border-bottom: 1px solid rgba(245, 230, 211, 0.2);
-}
-
-.card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    color: var(--warm-beige);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.card-subtitle {
+.nav-link:hover {
+    background-color: rgba(228, 207, 163, 0.1);
     color: #F5E6D3;
-    font-size: 1rem;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
 }
 
-.card-content {
-    padding: 2rem;
-}
-
-.card-text {
-    color: var(--light-beige);
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.card-text:last-child {
-    margin-bottom: 0;
-}
-
-/* Credentials List - WIE BEI STANDORTE ÖFFNUNGSZEITEN */
-.credentials-list {
-    margin-top: 2rem;
-}
-
-.credential {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.75rem 0;
-}
-
-.credential:last-child {
-    margin-bottom: 0;
-}
-
-.credential-icon {
-    font-size: 1.25rem;
-    width: 30px;
-    text-align: center;
-}
-
-.credential-text {
-    color: var(--light-beige);
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
-/* Philosophy Items - WIE BEI BEWERTUNGEN */
-.philosophy-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.philosophy-item:last-child {
-    margin-bottom: 0;
-}
-
-.philosophy-icon {
-    font-size: 1.5rem;
-    margin-top: 0.25rem;
-    flex-shrink: 0;
-}
-
-.philosophy-text h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    color: var(--warm-beige);
-    margin-bottom: 0.5rem;
+.nav-link.active {
+    background-color: rgba(228, 207, 163, 0.15);
+    color: #F5E6D3;
     font-weight: 600;
 }
 
-.philosophy-text p {
-    color: var(--light-beige);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Quote Card - WIE BEI BEWERTUNGEN ZENTRAL */
-.quote-card {
-    max-width: 800px;
-    margin: 3rem auto 0;
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
-    border-radius: 12px;
-    padding: 3rem;
+/* Page Header */
+.page-header {
     text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-.quote-content {
-    max-width: 600px;
+    padding: 4rem 2rem 3rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.main-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+.page-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    color: #E4CFA3;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.25rem;
+    color: #E4CFA3;
+    opacity: 0.9;
     font-style: italic;
-    color: var(--warm-beige);
-    line-height: 1.6;
+}
+
+/* Jimmy Rodriguez Section */
+.jimmy-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.image-column {
+    text-align: center;
+}
+
+.jimmy-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #E4CFA3;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.text-column {
+    padding-left: 1rem;
+}
+
+.section-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2rem;
+    color: #E4CFA3;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.text-content p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    color: #E4CFA3;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.text-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Unsere Leidenschaft Section */
+.passion-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.passion-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.passion-section .section-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2rem;
+    color: #E4CFA3;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.25rem;
+    color: #E4CFA3;
+    opacity: 0.9;
     margin-bottom: 2rem;
-    quotes: """ """;
+    font-style: italic;
 }
 
-.main-quote:before {
-    content: open-quote;
-    font-size: 2rem;
-    opacity: 0.5;
+.passion-text {
+    text-align: left;
+    margin-bottom: 3rem;
 }
 
-.main-quote:after {
-    content: close-quote;
-    font-size: 2rem;
-    opacity: 0.5;
+.passion-text p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    color: #E4CFA3;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
-.quote-attribution {
-    border-top: 1px solid rgba(245, 230, 211, 0.2);
-    padding-top: 1.5rem;
+.passion-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Quote Box */
+.quote-box {
+    background-color: rgba(58, 44, 35, 0.7);
+    border: 2px solid rgba(228, 207, 163, 0.3);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.quote-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.25rem;
+    color: #E4CFA3;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 1rem;
+    quotes: none;
 }
 
 .quote-author {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1rem;
+    color: #E4CFA3;
+    opacity: 0.9;
+    font-style: normal;
     font-weight: 600;
-    color: var(--warm-beige);
-    margin-bottom: 0.25rem;
 }
 
-.quote-title {
-    color: var(--light-beige);
-    font-size: 0.9rem;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-/* Mobile Responsive */
-@media (max-width: 1024px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .nav-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
     .page-title {
         font-size: 2rem;
     }
     
-    .about-card {
-        margin: 0 1rem;
+    .page-subtitle {
+        font-size: 1.1rem;
     }
     
-    .card-header {
-        padding: 1.5rem 1.5rem 1rem;
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
     }
     
-    .card-content {
+    .text-column {
+        padding-left: 0;
+    }
+    
+    .jimmy-section {
+        padding: 2rem 1rem;
+    }
+    
+    .passion-section {
+        padding: 3rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .quote-box {
         padding: 1.5rem;
     }
     
-    .card-title {
+    .quote-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .page-header {
+        padding: 3rem 1rem 2rem;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
         font-size: 1.5rem;
     }
     
-    .main-quote {
-        font-size: 1.25rem;
+    .quote-box {
+        padding: 1rem;
     }
     
-    .quote-card {
-        margin: 2rem 1rem 0;
-        padding: 2rem;
+    .quote-text {
+        font-size: 1rem;
     }
 }
