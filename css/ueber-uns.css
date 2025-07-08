@@ -1,9 +1,9 @@
-/* Über uns Page Styles - EXAKT WIE IM BILD */
+/* Über uns Page Styles - PROFESSIONELLER HINGUCKER */
 
 /* Hero Section */
 .hero-section {
     background: linear-gradient(145deg, #2D1F1A 0%, #3D2B1F 100%);
-    padding: 8rem 0 2rem; /* Weniger Padding unten */
+    padding: 8rem 0 2rem;
     text-align: center;
     position: relative;
 }
@@ -30,179 +30,364 @@
     opacity: 0.9;
 }
 
-/* Main Content Section - EXAKT WIE IM BILD */
-.main-content-section {
-    padding: 5rem 0;
+/* Jimmy Showcase Section - HINGUCKER MIT GROSSEM BILD */
+.jimmy-showcase-section {
+    padding: 6rem 0;
     background: var(--medium-brown);
+    position: relative;
 }
 
-.content-layout {
+.showcase-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Linke Seite: Großes Paella Bild */
-.content-image {
+/* GROSSES, BEEINDRUCKENDES BILD */
+.showcase-image-container {
+    position: relative;
+    height: 600px;
+}
+
+.image-wrapper {
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    border: 3px solid #FFFFFF;
+}
+
+.paella-hero-image {
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=1200&q=90') center/cover;
     position: relative;
 }
 
-.main-food-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 0; /* Keine Rundung wie im Bild */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 3rem 2rem 2rem;
 }
 
-/* Rechte Seite: Jimmy Rodriguez Text */
-.content-text {
-    padding-left: 2rem;
+.image-caption {
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* PROFESSIONELLER CONTENT RECHTS */
+.showcase-content {
+    padding: 2rem 0;
+}
+
+.content-header {
+    margin-bottom: 3rem;
 }
 
 .jimmy-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2.75rem;
+    font-size: 3.5rem;
     color: var(--warm-beige);
-    margin-bottom: 2rem;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
     letter-spacing: 0.02em;
+    line-height: 1.1;
 }
 
-.jimmy-paragraph {
-    color: var(--light-beige);
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-.jimmy-paragraph:last-child {
-    margin-bottom: 0;
-}
-
-/* Unsere Leidenschaft Section - EXAKT WIE IM BILD */
-.passion-section {
-    padding: 5rem 0;
-    background: var(--dark-brown);
-}
-
-.passion-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.75rem;
-    color: var(--warm-beige);
-    text-align: center;
-    margin-bottom: 1rem;
+.jimmy-subtitle {
+    color: #F5E6D3;
+    font-size: 1.25rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
-.passion-subtitle {
-    color: var(--light-beige);
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     opacity: 0.9;
 }
 
-/* WEISSE BOX - EXAKT WIE IM BILD */
-.passion-white-box {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: #FFFFFF; /* KOMPLETT WEISSER HINTERGRUND */
-    border-radius: 12px;
-    padding: 3rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    color: #2D1F1A; /* DUNKLE SCHRIFT AUF WEISS */
+.content-text {
+    margin-bottom: 3rem;
 }
 
-.passion-text {
-    color: #2D1F1A; /* DUNKLE SCHRIFT */
-    font-size: 1.125rem;
+.content-paragraph {
+    color: var(--light-beige);
+    font-size: 1.25rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: left;
 }
 
-.passion-features {
-    margin: 2rem 0;
+.content-paragraph.highlight {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #F5E6D3;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 4px solid #F5E6D3;
+    background: rgba(245, 230, 211, 0.1);
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    border-radius: 8px;
 }
 
-.feature-text {
-    color: #2D1F1A; /* DUNKLE SCHRIFT */
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    padding-left: 0;
+.content-paragraph:last-child {
+    margin-bottom: 0;
 }
 
-/* Quote Section - EXAKT WIE IM BILD */
-.quote-box {
+/* CREDENTIALS - STATISTISCHE HIGHLIGHTS */
+.credentials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(45, 31, 26, 0.2);
+}
+
+.credential-item {
     text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(245, 230, 211, 0.1);
+    border-radius: 15px;
+    border: 2px solid #FFFFFF;
+    transition: all 0.3s ease;
 }
 
-.jimmy-quote {
+.credential-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: #F5E6D3;
+}
+
+.credential-number {
+    display: block;
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: #2D1F1A; /* DUNKLE SCHRIFT */
-    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #F5E6D3;
+    margin-bottom: 0.5rem;
+}
+
+.credential-text {
+    color: var(--light-beige);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Passion Showcase Section - MODERNE KARTEN */
+.passion-showcase-section {
+    padding: 6rem 0;
+    background: var(--dark-brown);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--warm-beige);
     margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.section-subtitle {
+    color: var(--light-beige);
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* PASSION GRID - MODERNE KARTEN */
+.passion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    padding: 0 2rem;
+}
+
+.passion-card {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #FFFFFF;
+}
+
+.passion-card.primary {
+    background: linear-gradient(135deg, #F5E6D3 0%, #D2B48C 100%);
+    color: #2D1F1A;
+}
+
+.passion-card.secondary {
+    background: linear-gradient(135deg, #2D1F1A 0%, #3D2B1F 100%);
+    color: #F5E6D3;
+}
+
+.passion-card.accent {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: #FFFFFF;
+}
+
+.passion-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.1rem;
     line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Quote Showcase - ELEGANT UND PROMINENT */
+.quote-showcase {
+    background: linear-gradient(135deg, #F5E6D3 0%, #D2B48C 100%);
+    border-radius: 25px;
+    padding: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    border: 3px solid #FFFFFF;
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.featured-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #2D1F1A;
+    line-height: 1.6;
+    margin-bottom: 2rem;
     quotes: """ """;
+    position: relative;
 }
 
-.jimmy-quote:before {
+.featured-quote:before {
     content: open-quote;
+    font-size: 4rem;
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    opacity: 0.3;
 }
 
-.jimmy-quote:after {
+.featured-quote:after {
     content: close-quote;
+    font-size: 4rem;
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    opacity: 0.3;
 }
 
 .quote-author {
-    color: #2D1F1A; /* DUNKLE SCHRIFT */
-    font-size: 1rem;
+    border-top: 2px solid rgba(45, 31, 26, 0.2);
+    padding-top: 2rem;
+}
+
+.author-name {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     font-weight: 600;
+    color: #2D1F1A;
+    margin-bottom: 0.5rem;
+}
+
+.author-title {
+    color: #2D1F1A;
+    font-size: 1rem;
     opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 /* Mobile Responsive */
+@media (max-width: 1024px) {
+    .showcase-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .showcase-image-container {
+        height: 400px;
+    }
+    
+    .passion-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .credentials {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
     }
     
-    .content-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .jimmy-name {
+        font-size: 2.5rem;
     }
     
-    .content-text {
-        padding-left: 0;
-    }
-    
-    .main-food-image {
-        height: 350px;
-    }
-    
-    .jimmy-name,
-    .passion-title {
+    .section-title {
         font-size: 2rem;
     }
     
-    .passion-white-box {
-        margin: 0 1rem;
+    .content-paragraph {
+        font-size: 1.1rem;
+    }
+    
+    .content-paragraph.highlight {
+        font-size: 1.2rem;
+    }
+    
+    .featured-quote {
+        font-size: 1.5rem;
+    }
+    
+    .quote-showcase {
         padding: 2rem;
     }
     
-    .jimmy-quote {
-        font-size: 1.25rem;
+    .showcase-layout,
+    .passion-grid {
+        padding: 0 1rem;
     }
 }
