@@ -1,66 +1,65 @@
-/* Kontakt Page Styles - ULTRA PROFESSIONELL */
+/* Kontakt Page Styles - EXAKTE KOPIE von standorte.css mit Kontakt-Header */
 
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(145deg, #2D1F1A 0%, #3D2B1F 100%);
-    padding: 8rem 0 4rem;
-    text-align: center;
+/* Page Header - Mit Hintergrundbild und reduzierter Höhe */
+.page-header {
     position: relative;
+    padding: 6rem 0 4rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1920&q=80') center/cover;
+    text-align: center;
+    overflow: hidden;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(58, 44, 35, 0.3);
+    z-index: 1;
 }
 
-.hero-title {
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-title {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
-    color: var(--warm-beige);
+    color: #FFFFFF;
     margin-bottom: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.hero-subtitle {
+.page-subtitle {
+    color: #F5E6D3;
     font-size: 1.25rem;
-    color: var(--light-beige);
-    font-weight: 400;
-    opacity: 0.9;
+    opacity: 0.95;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-/* Contact Info Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
-.contact-info-section {
-    padding: 5rem 0;
-    background: var(--medium-brown);
+/* Locations Section - IDENTISCH MIT STANDORTE */
+.locations-section {
+    padding: 4rem 0;
+    background: transparent;
 }
 
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--warm-beige);
-    text-align: center;
-    margin-bottom: 4rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
-.contact-locations-grid {
+.locations-grid {
     display: grid;
-    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-@media (min-width: 1024px) {
-    .contact-locations-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.contact-location-card {
+/* Location Cards - IDENTISCH MIT STANDORTE MIT WEISSEN RÄNDERN */
+.location-card-large {
     background: rgba(45, 31, 26, 0.95);
     border: 2px solid #FFFFFF; /* WEISSE Umrandung */
     border-radius: 12px;
@@ -69,367 +68,164 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.contact-location-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+.location-card-large:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     border-color: #F5E6D3;
 }
 
-.location-header {
-    background: linear-gradient(135deg, #F5E6D3 0%, #D2B48C 100%);
-    padding: 2rem;
-    text-align: center;
+.location-hero {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
 }
 
-.location-name {
+.location-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.location-card-large:hover .location-hero-image {
+    transform: scale(1.05);
+}
+
+.location-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 2rem 1.5rem 1rem;
+}
+
+.location-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.75rem;
-    color: #2D1F1A;
-    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+    margin: 0;
     font-weight: 600;
 }
 
-.location-address {
-    color: #2D1F1A;
-    font-size: 1rem;
-    line-height: 1.5;
-    opacity: 0.8;
-}
-
-.contact-details {
+.location-info {
     padding: 2rem;
 }
 
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.contact-item:last-child {
-    margin-bottom: 0;
-}
-
-.contact-icon {
-    color: #F5E6D3;
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.contact-text {
-    flex: 1;
-}
-
-.contact-label {
-    display: block;
-    color: var(--warm-beige);
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.contact-link {
-    color: #4285F4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 1rem;
-}
-
-.contact-link:hover {
-    color: #3367D6;
-    text-decoration: underline;
-}
-
-.contact-value {
-    color: var(--light-beige);
-    font-size: 1rem;
-}
-
-/* Contact Form Section - PROFESSIONELL MIT WEISSEN RÄNDERN */
-.contact-form-section {
-    padding: 5rem 0;
-    background: var(--dark-brown);
-}
-
-.form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
-    border-radius: 12px;
-    padding: 3rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-.form-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.form-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.25rem;
-    color: var(--warm-beige);
-    margin-bottom: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
-.form-subtitle {
-    color: var(--light-beige);
-    font-size: 1.125rem;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-/* Form Elements - PROFESSIONELL GESTYLT */
-.form-grid {
-    display: grid;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .form-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-label {
-    display: block;
-    color: var(--warm-beige);
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    background: rgba(245, 230, 211, 0.08);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
-    border-radius: 8px;
-    color: var(--light-beige);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-family: inherit;
-}
-
-.form-input:focus,
-.form-select:focus,
-.form-textarea:focus {
-    outline: none;
-    border-color: #F5E6D3;
-    background: rgba(245, 230, 211, 0.12);
-    box-shadow: 0 0 0 3px rgba(245, 230, 211, 0.1);
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-    color: rgba(245, 230, 211, 0.5);
-}
-
-.form-textarea {
-    min-height: 120px;
-    resize: vertical;
-    line-height: 1.6;
-}
-
-.form-select {
-    cursor: pointer;
-}
-
-/* Checkbox Styling - PROFESSIONELL */
-.checkbox-group {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+.info-section {
     margin-bottom: 2rem;
 }
 
-.form-checkbox {
-    margin-top: 0.25rem;
-    accent-color: #FFFFFF;
-    transform: scale(1.2);
+.info-section:last-child {
+    margin-bottom: 0;
 }
 
-.checkbox-label {
-    color: var(--light-beige);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    cursor: pointer;
-}
-
-.privacy-link {
-    color: #4285F4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.privacy-link:hover {
-    color: #3367D6;
-    text-decoration: underline;
-}
-
-/* Submit Button - PROFESSIONELL MIT WEISSEM DESIGN */
-.submit-button {
-    width: 100%;
-    background: #FFFFFF; /* Weißer Hintergrund */
-    color: #2D1F1A; /* Dunkle Schrift */
-    border: 2px solid #FFFFFF; /* Weiße Umrandung */
-    padding: 1.25rem 2rem;
-    border-radius: 8px;
-    font-size: 1.125rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: inherit;
-}
-
-.submit-button:hover {
-    background: #F5E6D3; /* Hover: Beige */
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.submit-button:active {
-    transform: translateY(0);
-}
-
-/* Required Field Indicator */
-.required {
-    color: #ff6b6b;
-    margin-left: 0.25rem;
-}
-
-.form-note {
-    color: var(--light-beige);
-    font-size: 0.9rem;
-    text-align: center;
-    margin-top: 1.5rem;
-    opacity: 0.8;
-}
-
-/* Quick Contact Section - PROFESSIONELL */
-.quick-contact-section {
-    padding: 5rem 0;
-    background: var(--medium-brown);
-}
-
-.quick-contact-grid {
-    display: grid;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-@media (min-width: 768px) {
-    .quick-contact-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.quick-contact-card {
-    background: rgba(45, 31, 26, 0.95);
-    border: 2px solid #FFFFFF; /* WEISSE Umrandung */
-    border-radius: 12px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.quick-contact-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    border-color: #F5E6D3;
-}
-
-.quick-contact-icon {
-    color: #F5E6D3;
-    margin-bottom: 1.5rem;
+.info-header {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
-.quick-contact-icon svg {
-    stroke-width: 1.5;
+.info-icon {
+    font-size: 1.25rem;
+    width: 30px;
+    text-align: center;
 }
 
-.quick-contact-title {
+.info-header h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--warm-beige);
-    margin-bottom: 1rem;
+    margin: 0;
     font-weight: 600;
 }
 
-.quick-contact-description {
+.info-section p {
     color: var(--light-beige);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
     font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
-.quick-contact-btn {
-    background: #FFFFFF; /* Weißer Hintergrund */
-    color: #2D1F1A; /* Dunkle Schrift */
-    border: 2px solid #FFFFFF;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
+.opening-schedule {
+    margin-top: 0.5rem;
+}
+
+.schedule-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(245, 230, 211, 0.1);
+}
+
+.schedule-row:last-child {
+    border-bottom: none;
+}
+
+.schedule-row span:first-child {
+    color: var(--light-beige);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.schedule-row span:last-child {
+    color: var(--warm-beige);
     font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
-.quick-contact-btn:hover {
-    background: #F5E6D3;
+.route-button {
+    width: 100%;
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.route-button:hover {
+    background: linear-gradient(135deg, #A0522D, #CD853F);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
+}
+
+.route-icon {
+    font-size: 1.25rem;
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+@media (max-width: 1024px) {
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
     }
-    
-    .section-title {
+}
+
+@media (max-width: 768px) {
+    .page-title {
         font-size: 2rem;
     }
     
-    .contact-locations-grid,
-    .quick-contact-grid {
-        padding: 0 1rem;
-        grid-template-columns: 1fr;
-    }
-    
-    .form-container {
+    .location-card-large {
         margin: 0 1rem;
-        padding: 2rem;
     }
     
-    .form-title {
-        font-size: 1.75rem;
+    .location-info {
+        padding: 1.5rem;
     }
     
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .checkbox-group {
-        align-items: flex-start;
+    .location-title {
+        font-size: 1.5rem;
     }
 }
