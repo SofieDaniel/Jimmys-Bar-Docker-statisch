@@ -469,6 +469,87 @@ window.JimmysApp = {
     hideLoadingScreen
 };
 
+/**
+ * Initialize contact form with mailto functionality
+ */
+function initializeContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const name = formData.get('contactName');
+            const email = formData.get('contactEmail');
+            const phone = formData.get('contactPhone');
+            const location = formData.get('contactLocation');
+            const subject = formData.get('contactSubject');
+            const message = formData.get('contactMessage');
+            
+            // Get location name
+            const locationNames = {
+                'neustadt': 'Neustadt in Holstein',
+                'grossenbrode': 'Großenbrode',
+                'both': 'Beide Standorte',
+                'general': 'Allgemeine Anfrage'
+            };
+            
+            const locationName = locationNames[location] || location;
+            
+            // Create email subject
+            const emailSubject = subject ? `Kontaktanfrage: ${subject}` : 'Kontaktanfrage von der Website';
+            
+            // Create email body
+            const emailBody = `
+Neue Kontaktanfrage von der Jimmy's Tapas Bar Website:
+
+Name: ${name}
+E-Mail: ${email}
+Telefon: ${phone || 'Nicht angegeben'}
+Standort: ${locationName}
+Betreff: ${subject || 'Nicht angegeben'}
+
+Nachricht:
+${message}
+
+---
+Diese Nachricht wurde über das Kontaktformular auf jimmys-tapasbar.de gesendet.
+            `.trim();
+            
+            // Create mailto URL
+            const mailtoUrl = `mailto:info@jimmys-tapasbar.de?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoUrl;
+            
+            // Show success message
+            showContactSuccess();
+        });
+    }
+}
+
+/**
+ * Show contact form success message
+ */
+function showContactSuccess() {
+    const submitButton = document.querySelector('#contactForm button[type="submit"]');
+    
+    if (submitButton) {
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<span class="button-text">✓ E-Mail-Programm geöffnet</span>';
+        submitButton.style.backgroundColor = '#28a745';
+        submitButton.disabled = true;
+        
+        setTimeout(() => {
+            submitButton.innerHTML = originalText;
+            submitButton.style.backgroundColor = '';
+            submitButton.disabled = false;
+        }, 3000);
+    }
+}
+
 // Console welcome message
 console.log(`
 🌶️ Jimmy's Tapas Bar - Static Website
