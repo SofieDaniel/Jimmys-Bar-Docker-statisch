@@ -24,7 +24,7 @@ sleep 2
 
 # Test Über uns API
 echo "   Testing Über uns API..."
-ueber_uns_test=$(curl -s https://474548d4-f224-4909-b9fb-4f230e1c0df6.preview.emergentagent.com/api/cms/about 2>/dev/null || echo "ERROR")
+ueber_uns_test=$(curl -s https://1486c558-3e96-4b09-8c4a-c43b05744885.preview.emergentagent.com/api/cms/about 2>/dev/null || echo "ERROR")
 if [[ $ueber_uns_test == *"ERROR"* ]] || [[ $ueber_uns_test == *"Internal Server Error"* ]]; then
     echo "   ❌ Über uns API failed - running repair..."
     python3 setup_about_content.py
@@ -34,7 +34,7 @@ fi
 
 # Test Delivery API
 echo "   Testing Delivery API..."
-delivery_test=$(curl -s https://474548d4-f224-4909-b9fb-4f230e1c0df6.preview.emergentagent.com/api/delivery/info 2>/dev/null || echo "ERROR")
+delivery_test=$(curl -s https://1486c558-3e96-4b09-8c4a-c43b05744885.preview.emergentagent.com/api/delivery/info 2>/dev/null || echo "ERROR")
 if [[ $delivery_test == *"ERROR"* ]] || [[ $delivery_test == *"Internal Server Error"* ]]; then
     echo "   ❌ Delivery API failed"
 else
@@ -43,7 +43,7 @@ fi
 
 # Test Standorte API  
 echo "   Testing Standorte API..."
-standorte_test=$(curl -s https://474548d4-f224-4909-b9fb-4f230e1c0df6.preview.emergentagent.com/api/cms/standorte-enhanced 2>/dev/null || echo "ERROR")
+standorte_test=$(curl -s https://1486c558-3e96-4b09-8c4a-c43b05744885.preview.emergentagent.com/api/cms/standorte-enhanced 2>/dev/null || echo "ERROR")
 if [[ $standorte_test == *"ERROR"* ]] || [[ $standorte_test == *"Internal Server Error"* ]]; then
     echo "   ❌ Standorte API failed - running repair..."
     python3 setup_standorte_enhanced.py
@@ -53,7 +53,7 @@ fi
 
 # Test Kontakt API
 echo "   Testing Kontakt API..."
-kontakt_test=$(curl -s https://474548d4-f224-4909-b9fb-4f230e1c0df6.preview.emergentagent.com/api/cms/kontakt-page 2>/dev/null || echo "ERROR")
+kontakt_test=$(curl -s https://1486c558-3e96-4b09-8c4a-c43b05744885.preview.emergentagent.com/api/cms/kontakt-page 2>/dev/null || echo "ERROR")
 if [[ $kontakt_test == *"ERROR"* ]] || [[ $kontakt_test == *"Internal Server Error"* ]]; then
     echo "   ❌ Kontakt API failed - running repair..."
     python3 setup_kontakt_cms.py
